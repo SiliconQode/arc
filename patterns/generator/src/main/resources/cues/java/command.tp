@@ -1,0 +1,74 @@
+start_pattern: basic
+start_type: ConcreteCommand
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    start_field: r
+    private [[Receiver.name]] [[r.name]];
+    end_field: r
+
+    [[fields]]
+
+    start_method: Execute
+    public void [[name]]() {
+        [[r.name]].[[Receiver.Action.name]]();
+    }
+    end_method: Execute
+    [[methods]]
+
+    public [[InstName]]([[Receiver.name]] rcvr) {
+        this.[[r.name]] = rcvr;
+    }
+}
+end_type: ConcreteCommand
+
+start_type: Command
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+
+    [[fields]]
+
+    [[methods]]
+
+}
+end_type: Command
+
+start_type: AbstractCommand
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    [[fields]]
+
+    [[methods]]
+
+}
+end_type: AbstractCommand
+
+start_type: Client
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    start_field: rcvr
+    private [[Receiver.name]] [[rcvr.name]];
+    end_field: rcvr
+
+    [[fields]]
+
+    public [[InstName]]() {
+        [[rcvr.name]] = new [[Receiver.random]]();
+        [[Command.name]] cmd = new [[ConcreteCommand.random]]([[rcvr.name]]);
+    }
+
+    [[methods]]
+}
+end_type: Client
+end_pattern: basic

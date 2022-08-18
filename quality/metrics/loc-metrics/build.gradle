@@ -1,0 +1,19 @@
+plugins {
+    id 'groovy-conventions'
+
+    id 'application'
+}
+
+dependencies {
+    implementation project(':quality:metrics')
+    implementation project(':cli')
+
+    // https://mvnrepository.com/artifact/commons-cli/commons-cli
+    implementation 'commons-cli:commons-cli:1.5.0'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'com.empirilytics.arc.quality.metrics.loc.App'
+    applicationName = 'eloc'
+}

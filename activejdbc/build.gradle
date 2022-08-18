@@ -1,0 +1,118 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+  id 'groovy'
+  id 'java-gradle-plugin'
+  id 'com.gradle.plugin-publish' version '0.15.0'
+  id "net.researchgate.release" version "2.7.0"
+  id 'maven-publish'
+}
+
+group = 'dev.siliconcode.gradle'
+description = """Gradle plugin for instrumenting ActiveJDBC model classes."""
+
+def activeJdbcVersion = '3.0-j11'
+def slf4JSimpleVersion = '1.7.29'
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+
+}
+
+dependencies {
+  implementation localGroovy()
+
+  implementation group: 'org.javalite', name: 'activejdbc-instrumentation', version: "${activeJdbcVersion}"
+
+  // Debugging your plugin code with Gradle TestKit: set system property org.gradle.testkit.debug to true in the unit test's run configuration of your IDE
+  testImplementation gradleTestKit()
+
+  testImplementation ("org.spockframework:spock-core:2.0-groovy-3.0") {
+    exclude group: "org.codehaus.groovy", module: "groovy-all"
+  }
+  testImplementation "org.apache.logging.log4j:log4j-api:2.11.1", "org.apache.logging.log4j:log4j-core:2.11.1"
+}
+
+task processVersionFile(type: WriteProperties) {
+  outputFile file("$buildDir/resources/main/activejdbc-gradle-plugin.properties")
+
+  property 'activejdbc-version', activeJdbcVersion
+  property 'slf4j-simple-version', slf4JSimpleVersion
+}
+tasks.classes.dependsOn processVersionFile
+
+processTestResources {
+  filter ReplaceTokens, tokens: ["gradle-test-kit-dir" : new File(project.buildDir, "tmp").absolutePath.replace('\\', '/')]
+}
+
+task docJar(type: Jar, dependsOn: groovydoc) {
+    archiveClassifier.set('javadoc')
+    from 'build/docs/groovydoc'
+}
+
+task sourceJar(type: Jar) {
+  archiveClassifier.set('sources')
+  from sourceSets.main.allSource
+}
+
+
+task createPluginClasspath {
+  def outputDir = file("${buildDir}/resources/test")
+
+  inputs.files sourceSets.test.runtimeClasspath
+  outputs.dir outputDir
+
+  doLast {
+    outputDir.mkdirs()
+    file("${outputDir}/plugin-classpath.txt").text = sourceSets.test.runtimeClasspath.join('\n',)
+  }
+}
+
+test {
+  useJUnitPlatform()
+}
+
+test.dependsOn << 'createPluginClasspath'
+
+jar {
+  manifest {
+    attributes("Name": project.group + '.' + rootProject.name,
+            "Implementation-Title": project.description,
+            "Build-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+            "Implementation-Version":  project.version)
+  }
+}
+
+gradlePlugin {
+  plugins {
+    activeJdbcPlugin {
+      id = 'dev.siliconcode.activejdbc-gradle-plugin'
+      displayName = 'ActiveJDBC instrumentation plugin'
+      description = 'A plugin to instrument your project\'s model classes for the ActiveJDBC ORM framework.'
+      implementationClass = 'dev.siliconcode.gradle.activejdbc.ActiveJDBCGradlePlugin'
+    }
+  }
+}
+
+pluginBundle {
+  website = 'https://github.com/empirilytics/activejdbc-gradle-plugin'
+  vcsUrl = 'https://github.com/empirilytics/activejdbc-gradle-plugin.git'
+  tags = ['activejdbc']
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'om.empirilytics.gradle'
+            artifactId = 'activejdbc-gradle-plugin'
+            version = '3.0-j11'
+
+            from components.java
+        }
+    }
+}
+
+assemble.dependsOn += [ 'sourceJar', 'docJar']

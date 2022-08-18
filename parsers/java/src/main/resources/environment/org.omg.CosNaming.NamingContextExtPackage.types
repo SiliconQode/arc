@@ -1,0 +1,8 @@
+package org.omg.CosNaming.NamingContextExtPackage
+
+class AddressHelper
+class InvalidAddressHelper
+class InvalidAddressHolder
+class StringNameHelper
+class URLStringHelper
+class InvalidAddress

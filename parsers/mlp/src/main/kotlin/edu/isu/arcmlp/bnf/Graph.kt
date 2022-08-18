@@ -1,0 +1,227 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2018-2019, Idaho State University, Empirical Software Engineering
+ * Laboratory and Isaac Griffith
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ */
+package edu.isu.arcmlp.bnf
+
+import org.jgrapht.Graph
+import org.jgrapht.graph.DefaultDirectedGraph
+import java.io.Serializable
+
+/**
+ * An alias for a graph with nodes representing constructs in a grammar.
+ */
+typealias GrammarGraph = Graph<GrammarGraphNode, GrammarGraphEdge>
+
+/**
+ * Converts a grammar to a graph.
+ */
+fun BnfGrammar.toGraph(): GrammarGraph {
+    val builder = GrammarGraphBuilder()
+    
+    rules().forEach { builder.addRule(it) }
+    
+    return builder.graph
+}
+
+/**
+ * A node in the graph representing a grammar.
+ */
+sealed class GrammarGraphNode : Serializable {
+    /**
+     * This node represents a rule in the original grammar.
+     * @property name The name of the rule.
+     */
+    data class Rule(val name: String) : GrammarGraphNode() {
+        override fun toString(): String {
+            return BnfToken.Rule(name).repr()
+        }
+    }
+    
+    /**
+     * This node represents a literal in the original grammar.
+     * @property term The literal in the grammar.
+     */
+    data class Literal(val term: String) : GrammarGraphNode() {
+        override fun toString(): String {
+            return BnfToken.Literal(term).repr()
+        }
+    }
+    
+    /**
+     * This node represents a list of items. E.g. `<a> "b" <c>`.
+     * This should always have two edges going out from it: NEXT and VALUE.
+     * VALUE should point to the head element of this list. E.g. `<a>`
+     * NEXT should point to the node representing the rest of this list. In this way,
+     * we get a chain of vertices representing a list:
+     * ```
+     * LIST --NEXT--> LIST --NEXT--> LIST
+     *   |              |              |
+     * VALUE          VALUE          VALUE
+     *   |              |              |
+     *   v              v              v
+     *  <a>            "b"            <c>
+     * ```
+     * @property id An id to distinguish List vertices.
+     */
+    data class List(val id: Int) : GrammarGraphNode() {
+        override fun toString(): String {
+            return "LIST"
+        }
+    }
+}
+
+/**
+ * Represents an edge in a graph representing a grammar.
+ * @property id An identifier used to distinguish this edge from edges of the same type.
+ * @property type The type of this edge.
+ */
+data class GrammarGraphEdge(val id: Int, val type: Type) : Serializable {
+    
+    /**
+     * These are the possible types of an edge.
+     */
+    enum class Type {
+        /**
+         * Used to represent an edge between a node and one of its options. E.g. `<p> ::= "a" | "b"`
+         * would be represented by:
+         * ```
+         * <p>-OR->"a"
+         *  |
+         *  OR
+         *  |
+         *  v
+         * "b"
+         * ```
+         */
+        OR,
+        /**
+         * Used to point to the next List node in a chain of List vertices. @see GrammarGraphNode.List
+         */
+        NEXT,
+        /**
+         * Used by a List node to point to the head element in the list. @see GrammarGraphNode.List
+         */
+        VALUE
+    }
+    
+    override fun toString(): String {
+        return "$type"
+    }
+}
+
+/**
+ * A factory that generates List vertices with unique ids.
+ */
+class GrammarGraphNodeListFactory {
+    /**
+     * Instantiates a new [GrammarGraphNode.List] item.
+     */
+    operator fun invoke(): GrammarGraphNode.List = GrammarGraphNode.List(num++)
+    
+    private var num = 0
+}
+
+/**
+ * A factory that generates edges with unique ids.
+ */
+class GrammarGraphEdgeFactory {
+    /**
+     * Instantiates a new [GrammarGraphEdge] item with the specified [type].
+     */
+    operator fun invoke(type: GrammarGraphEdge.Type) = GrammarGraphEdge(nextId++, type)
+    
+    private var nextId = 0
+}
+
+/**
+ * A utility class for building the graph generated for a grammar.
+ */
+private class GrammarGraphBuilder {
+    /**
+     * The graph generated by this builder.
+     */
+    val graph = DefaultDirectedGraph<GrammarGraphNode, GrammarGraphEdge>(GrammarGraphEdge::class.java)
+    
+    private val listFactory = GrammarGraphNodeListFactory()
+    private val edgeFactory = GrammarGraphEdgeFactory()
+    
+    /**
+     * Adds the specified rule and its production to this graph
+     */
+    fun addRule(rule: BnfRule) {
+        val ruleNode = GrammarGraphNode.Rule(rule.name)
+        graph.addVertex(ruleNode)
+        
+        when (val prod = rule.production) {
+            null -> {
+            } // Ignore rules with no productions.
+            is BnfOptions -> prod.options.forEach { addOption(it, ruleNode) }
+            is BnfOption -> addOption(prod, ruleNode) // If there's just one option, it's fine for now to add it.
+            else -> throw IllegalArgumentException("$prod has unexpected type.")
+        }
+    }
+    
+    /**
+     * Adds [opt] to [graph] and attaches it to [parent]
+     */
+    private fun addOption(opt: BnfOption, parent: GrammarGraphNode) {
+        val child = when (opt) {
+            is BnfRule -> GrammarGraphNode.Rule(opt.name)
+            is BnfLiteral -> GrammarGraphNode.Literal(opt.value)
+            is BnfList -> createListChain(opt)
+        }
+        graph.addVertex(child)
+        graph.addEdge(parent, child, edgeFactory(GrammarGraphEdge.Type.OR))
+    }
+    
+    /**
+     * Adds a list chain for [andList] to [graph]. @see GrammarGraphNode.List for details on what a list chain is.
+     * @return The first node in the chain.
+     */
+    private fun createListChain(andList: BnfList): GrammarGraphNode.List {
+        // Create a list node for every item.
+        val nodes = andList.items.map { listFactory() }
+        
+        // Add each list node to the graph.
+        nodes.forEach { graph.addVertex(it) }
+        
+        // Attach each list node to its head element.
+        nodes.zip(andList.items).forEach { (n, item) ->
+            val child = when (item) {
+                is BnfRule -> GrammarGraphNode.Rule(item.name)
+                is BnfLiteral -> GrammarGraphNode.Literal(item.value)
+            }
+            graph.addVertex(child)
+            graph.addEdge(n, child, edgeFactory(GrammarGraphEdge.Type.VALUE))
+        }
+        
+        // Attach each list node to the next list node.
+        nodes.zipWithNext().forEach { (a, b) ->
+            graph.addEdge(a, b, edgeFactory(GrammarGraphEdge.Type.NEXT))
+        }
+        
+        return nodes[0]
+    }
+}

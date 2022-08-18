@@ -1,0 +1,20 @@
+package javax.swing.tree
+
+interface MutableTreeNode
+interface RowMapper
+interface TreeCellEditor
+interface TreeCellRenderer
+interface TreeModel
+interface TreeNode
+interface TreeSelectionModel
+class AbstractLayoutCache
+class AbstractLayoutCache.NodeDimensions
+class DefaultMutableTreeNode
+class DefaultTreeCellEditor
+class DefaultTreeCellRenderer
+class DefaultTreeModel
+class DefaultTreeSelectionModel
+class FixedHeightLayoutCache
+class TreePath
+class VariableHeightLayoutCache
+class ExpandVetoException

@@ -1,0 +1,70 @@
+start_pattern: basic
+start_type: ConcreteDecorator
+import java.util.*;
+
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    [[fields]]
+
+    [[methods]]
+    start_method: Operation
+    public void [[name]]() {
+        super.[[name]]();
+        [[AddedBehavior.name]]();
+    }
+    end_method: Operation
+
+    public [[InstName]]([[Component.name]] component) {
+        super(component);
+    }
+}
+end_type: ConcreteDecorator
+
+start_type: Decorator
+import java.util.*;
+
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    start_field: absComp
+    protected [[Component.name]] [[absComp.name]];
+    end_field: absComp
+
+    [[fields]]
+
+    [[methods]]
+    start_method: Operation
+    public void [[name]]() {
+        [[absComp.name]].[[name]]();
+    }
+    end_method: Operation
+
+    public [[InstName]]([[Component.name]] component) {
+        this.[[absComp.name]] = component;
+    }
+}
+end_type: Decorator
+
+start_type: AbstractDecorator
+import java.util.*;
+
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    [[fields]]
+
+    [[methods]]
+
+    public [[InstName]]([[Component.name]] component) {
+        super(component);
+    }
+}
+end_type: AbstractDecorator
+end_pattern: basic

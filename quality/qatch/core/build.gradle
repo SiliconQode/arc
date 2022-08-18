@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library-conventions'
+}
+
+group = 'dev.siliconcode.qatch.core'
+version = '1.0.0'
+
+dependencies {
+}
+
+javadoc {
+    destinationDir = new File(project.rootDir.toString() + "/docs/quality/qatch/core/javadoc")
+}

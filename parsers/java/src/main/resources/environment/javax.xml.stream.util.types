@@ -1,0 +1,6 @@
+package javax.xml.stream.util
+
+interface XMLEventAllocator
+interface XMLEventConsumer
+class EventReaderDelegate
+class StreamReaderDelegate

@@ -1,0 +1,5 @@
+package java.rmi.dgc
+
+interface DGC
+class Lease
+class VMID

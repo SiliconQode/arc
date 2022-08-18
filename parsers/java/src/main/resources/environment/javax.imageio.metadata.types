@@ -1,0 +1,8 @@
+package javax.imageio.metadata
+
+interface IIOMetadataController
+interface IIOMetadataFormat
+class IIOMetadata
+class IIOMetadataFormatImpl
+class IIOMetadataNode
+class IIOInvalidTreeException

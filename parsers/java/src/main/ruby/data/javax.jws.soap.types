@@ -1,0 +1,9 @@
+package javax.jws.soap
+
+enum SOAPBinding.ParameterStyle
+enum SOAPBinding.Style
+enum SOAPBinding.Use
+annotation InitParam
+annotation SOAPBinding
+annotation SOAPMessageHandler
+annotation SOAPMessageHandlers

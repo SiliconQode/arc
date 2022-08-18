@@ -1,0 +1,7 @@
+ID,PatternType,InjectionType,InjectionSeverity,Key1,Key2,Path1,Path2,QMEFFECT,QMEXTEND,QMFLEX,QMFUNC,QMREUSE,QMUNDER,Functional Correctness,Performance Efficiency,Compatibility,Usability,Reliability,Security,Maintainability,Portability,cast_td
+1,state,pig,1,state:state-1:1.0.0,state:state-1_copy:1.0.0,grime_data/state/state-1/,grime_data/state/state-1_copy/,,,,,,,,,,,,,,,
+2,state,tig,1,state:state-2:1.0.0,state:state-2_copy:1.0.0,grime_data/state/state-2/,grime_data/state/state-2_copy/,,,,,,,,,,,,,,,
+3,state,peeg,1,state:state-3:1.0.0,state:state-3_copy:1.0.0,grime_data/state/state-3/,grime_data/state/state-3_copy/,,,,,,,,,,,,,,,
+4,state,peag,1,state:state-4:1.0.0,state:state-4_copy:1.0.0,grime_data/state/state-4/,grime_data/state/state-4_copy/,,,,,,,,,,,,,,,
+5,state,teag,1,state:state-5:1.0.0,state:state-5_copy:1.0.0,grime_data/state/state-5/,grime_data/state/state-5_copy/,,,,,,,,,,,,,,,
+6,state,teeg,1,state:state-6:1.0.0,state:state-6_copy:1.0.0,grime_data/state/state-6/,grime_data/state/state-6_copy/,,,,,,,,,,,,,,,

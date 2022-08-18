@@ -1,0 +1,13 @@
+package javax.swing.border
+
+interface Border
+class AbstractBorder
+class BevelBorder
+class CompoundBorder
+class EmptyBorder
+class EtchedBorder
+class LineBorder
+class MatteBorder
+class SoftBevelBorder
+class StrokeBorder
+class TitledBorder

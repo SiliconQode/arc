@@ -1,0 +1,14 @@
+package javax.xml.transform
+
+interface ErrorListener
+interface Result
+interface Source
+interface SourceLocator
+interface Templates
+interface URIResolver
+class OutputKeys
+class Transformer
+class TransformerFactory
+class TransformerConfigurationException
+class TransformerException
+class TransformerFactoryConfigurationError

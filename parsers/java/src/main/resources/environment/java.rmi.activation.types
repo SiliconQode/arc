@@ -1,0 +1,18 @@
+package java.rmi.activation
+
+interface ActivationInstantiator
+interface ActivationMonitor
+interface ActivationSystem
+interface Activator
+class Activatable
+class ActivationDesc
+class ActivationGroup
+class ActivationGroup_Stub
+class ActivationGroupDesc
+class ActivationGroupDesc.CommandEnvironment
+class ActivationGroupID
+class ActivationID
+class ActivateFailedException
+class ActivationException
+class UnknownGroupException
+class UnknownObjectException

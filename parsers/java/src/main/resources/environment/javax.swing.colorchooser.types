@@ -1,0 +1,6 @@
+package javax.swing.colorchooser
+
+interface ColorSelectionModel
+class AbstractColorChooserPanel
+class ColorChooserComponentFactory
+class DefaultColorSelectionModel

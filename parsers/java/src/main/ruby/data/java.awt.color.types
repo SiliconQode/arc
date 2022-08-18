@@ -1,0 +1,9 @@
+package java.awt.color
+
+class ColorSpace
+class ICC_ColorSpace
+class ICC_Profile
+class ICC_ProfileGray
+class ICC_ProfileRGB
+class CMMException
+class ProfileDataException

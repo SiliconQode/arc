@@ -1,0 +1,37 @@
+python
+ - pylint: /usr/bin/pylint -f json -s n --rcfile={{ruleset_file}} --exit-zero -j 2 --output={{output_file}} {{src_dir}}
+ - ck4p: $QATCH_HOME/tools/ckpm/ck4p -d {{src_dir}} -o {{output_file}} -n -j
+
+java
+ - ckjm: $QATCH_HOME/tools/ckjm-ext/bin/ckjm -x -n -d {{src_dir}} -o {{output_file}}
+ - pmd: $QATCH_HOME/tools/pmd/bin/run.sh pmd -d {{src_dir}} -f xml -l java -R {{rule_set}} -r {{output_file}}
+
+javascript
+ - ckjs: $QATCH_HOME/tools/ckjs/bin/ckjs -j -n -d {{src_dir}} -o {{output_file}}
+ - eslint: eslint ...
+
+cpp
+ - cppcheck:
+ - cqmetrics:
+
+c
+ - cppcheck:
+ - cqmetrics:
+
+scala
+ - ckjm: $QATCH_HOME/tools/ckjm-ext/bin/ckjm -x -n -d {{src_dir}} -o {{output_file}}
+ - pmd:
+ - linter:
+
+clojure
+ - ckjm: $QATCH_HOME/tools/ckjm-ext/bin/ckjm -x -n -d {{src_dir}} -o {{output_file}}
+ - clj-kondo
+
+kotlin
+ - ckjm: $QATCH_HOME/tools/ckjm-ext/bin/ckjm -x -n -d {{src_dir}} -o {{output_file}}
+ - detekt:
+
+csharp
+ - ckcs:
+ - infer#:
+ - roslyn_analytics:

@@ -1,0 +1,14 @@
+package javax.sql.rowset
+
+interface CachedRowSet
+interface FilteredRowSet
+interface JdbcRowSet
+interface Joinable
+interface JoinRowSet
+interface Predicate
+interface RowSetFactory
+interface WebRowSet
+class BaseRowSet
+class RowSetMetaDataImpl
+class RowSetProvider
+class RowSetWarning

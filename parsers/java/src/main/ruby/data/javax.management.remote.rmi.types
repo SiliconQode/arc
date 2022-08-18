@@ -1,0 +1,12 @@
+package javax.management.remote.rmi
+
+interface RMIConnection
+interface RMIServer
+class RMIConnectionImpl
+class RMIConnectionImpl_Stub
+class RMIConnector
+class RMIConnectorServer
+class RMIIIOPServerImpl
+class RMIJRMPServerImpl
+class RMIServerImpl
+class RMIServerImpl_Stub

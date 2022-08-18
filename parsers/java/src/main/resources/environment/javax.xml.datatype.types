@@ -1,0 +1,8 @@
+package javax.xml.datatype
+
+class DatatypeConstants
+class DatatypeConstants.Field
+class DatatypeFactory
+class Duration
+class XMLGregorianCalendar
+class DatatypeConfigurationException

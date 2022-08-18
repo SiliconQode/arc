@@ -1,0 +1,2208 @@
+<!--
+
+    The MIT License (MIT)
+
+    MSUSEL Arc Framework
+    Copyright (c) 2015-2019 Montana State University, Gianforte School of Computing,
+    Software Engineering Laboratory and Idaho State University, Informatics and
+    Computer Science, Empirical Software Engineering Laboratory
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+-->
+<rules>
+  <rule key='AbstractClassWithoutAbstractMethod'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>The abstract class does not contain any abstract methods. An abstract class suggests
+an incomplete implementation, which is to be completed by subclasses implementing the
+abstract methods. If the class is intended to be used as a base class only (not to be instantiated
+directly) a protected constructor can be provided prevent direct instantiation.</description>
+    <configKey>category/java/bestpractices.xml/AbstractClassWithoutAbstractMethod</configKey>
+  </rule>
+  <rule key='AccessorClassGeneration'>
+    <since>PMD 1.04</since>
+    <priority>MAJOR</priority>
+    <description>Instantiation by way of private constructors from outside of the constructor’s class often causes the
+generation of an accessor. A factory method, or non-privatization of the constructor can eliminate this
+situation. The generated class file is actually an interface.  It gives the accessing class the ability
+to invoke a new hidden package scope constructor that takes the interface as a supplementary parameter.
+This turns a private constructor effectively into one with package scope, and is challenging to discern.</description>
+    <configKey>category/java/bestpractices.xml/AccessorClassGeneration</configKey>
+  </rule>
+  <rule key='AccessorMethodGeneration'>
+    <since>PMD 5.5.4</since>
+    <priority>MAJOR</priority>
+    <description>When accessing a private field / method from another class, the Java compiler will generate a accessor methods
+with package-private visibility. This adds overhead, and to the dex method count on Android. This situation can
+be avoided by changing the visibility of the field / method from private to package-private.</description>
+    <configKey>category/java/bestpractices.xml/AccessorMethodGeneration</configKey>
+  </rule>
+  <rule key='ArrayIsStoredDirectly'>
+    <since>PMD 2.2</since>
+    <priority>MAJOR</priority>
+    <description>Constructors and methods receiving arrays should clone objects and store the copy.
+This prevents future changes from the user from affecting the original array.</description>
+    <configKey>category/java/bestpractices.xml/ArrayIsStoredDirectly</configKey>
+  </rule>
+  <rule key='AvoidMessageDigestField'>
+    <since>PMD 6.18.0</since>
+    <priority>MAJOR</priority>
+    <description>Declaring a MessageDigest instance as a field make this instance directly available to multiple threads.
+Such sharing of MessageDigest instances should be avoided if possible since it leads to wrong results
+if the access is not synchronized correctly.
+Just create a new instance and use it locally, where you need it.
+Creating a new instance is easier than synchronizing access to a shared instance.</description>
+    <configKey>category/java/bestpractices.xml/AvoidMessageDigestField</configKey>
+  </rule>
+  <rule key='AvoidPrintStackTrace'>
+    <since>PMD 3.2</since>
+    <priority>MAJOR</priority>
+    <description>Avoid printStackTrace(); use a logger call instead.</description>
+    <configKey>category/java/bestpractices.xml/AvoidPrintStackTrace</configKey>
+  </rule>
+  <rule key='AvoidReassigningLoopVariables'>
+    <since>PMD 6.11.0</since>
+    <priority>MAJOR</priority>
+    <description>Reassigning loop variables can lead to hard-to-find bugs. Prevent or limit how these variables can be changed.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidReassigningParameters'>
+    <since>PMD 1.0</since>
+    <priority>BLOCKER</priority>
+    <description>Reassigning values to incoming parameters is not recommended.  Use temporary local variables instead.</description>
+    <configKey>category/java/bestpractices.xml/AvoidReassigningParameters</configKey>
+  </rule>
+  <rule key='AvoidStringBufferField'>
+    <since>PMD 4.2</since>
+    <priority>MAJOR</priority>
+    <description>StringBuffers/StringBuilders can grow considerably, and so may become a source of memory leaks
+if held within objects with long lifetimes.</description>
+    <configKey>category/java/bestpractices.xml/AvoidStringBufferField</configKey>
+  </rule>
+  <rule key='AvoidUsingHardCodedIP'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>Application with hard-coded IP addresses can become impossible to deploy in some cases.
+Externalizing IP adresses is preferable.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CheckResultSet'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>Always check the return values of navigation methods (next, previous, first, last) of a ResultSet.
+If the value return is ‘false’, it should be handled properly.</description>
+    <configKey>category/java/bestpractices.xml/CheckResultSet</configKey>
+  </rule>
+  <rule key='ConstantsInInterface'>
+    <since>PMD 5.5</since>
+    <priority>MAJOR</priority>
+    <description>Avoid constants in interfaces. Interfaces should define types, constants are implementation details
+better placed in classes or enums. See Effective Java, item 19.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='DefaultLabelNotLastInSwitchStmt'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>By convention, the default label should be the last label in a switch statement.</description>
+    <configKey>category/java/bestpractices.xml/DefaultLabelNotLastInSwitchStmt</configKey>
+  </rule>
+  <rule key='DoubleBraceInitialization'>
+    <since>PMD 6.16.0</since>
+    <priority>MAJOR</priority>
+    <description>Double brace initialisation is a pattern to initialise eg collections concisely. But it implicitly
+generates a new .class file, and the object holds a strong reference to the enclosing object. For those
+reasons, it is preferable to initialize the object normally, even though it’s verbose.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ForLoopCanBeForeach'>
+    <since>PMD 6.0.0</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.5</description>
+    <configKey>category/java/bestpractices.xml/ForLoopCanBeForeach</configKey>
+  </rule>
+  <rule key='ForLoopVariableCount'>
+    <since>PMD 6.11.0</since>
+    <priority>MAJOR</priority>
+    <description>Having a lot of control variables in a ‘for’ loop makes it harder to see what range of values
+the loop iterates over. By default this rule allows a regular ‘for’ loop with only one variable.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='GuardLogStatement'>
+    <since>PMD 5.1.0</since>
+    <priority>BLOCKER</priority>
+    <description>Whenever using a log level, one should check if the loglevel is actually enabled, or
+otherwise skip the associate String creation and manipulation.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='JUnit4SuitesShouldUseSuiteAnnotation'>
+    <since>PMD 4.0</since>
+    <priority>MAJOR</priority>
+    <description>In JUnit 3, test suites are indicated by the suite() method. In JUnit 4, suites are indicated
+through the @RunWith(Suite.class) annotation.</description>
+    <configKey>category/java/bestpractices.xml/JUnit4SuitesShouldUseSuiteAnnotation</configKey>
+  </rule>
+  <rule key='JUnit4TestShouldUseAfterAnnotation'>
+    <since>PMD 4.0</since>
+    <priority>MAJOR</priority>
+    <description>In JUnit 3, the tearDown method was used to clean up all data entities required in running tests.
+JUnit 4 skips the tearDown method and executes all methods annotated with @After after running each test.
+JUnit 5 introduced @AfterEach and @AfterAll annotations to execute methods after each test or after all tests in the class, respectively.</description>
+    <configKey>category/java/bestpractices.xml/JUnit4TestShouldUseAfterAnnotation</configKey>
+  </rule>
+  <rule key='JUnit4TestShouldUseBeforeAnnotation'>
+    <since>PMD 4.0</since>
+    <priority>MAJOR</priority>
+    <description>In JUnit 3, the setUp method was used to set up all data entities required in running tests.
+JUnit 4 skips the setUp method and executes all methods annotated with @Before before all tests.
+JUnit 5 introduced @BeforeEach and @BeforeAll annotations to execute methods before each test or before all tests in the class, respectively.</description>
+    <configKey>category/java/bestpractices.xml/JUnit4TestShouldUseBeforeAnnotation</configKey>
+  </rule>
+  <rule key='JUnit4TestShouldUseTestAnnotation'>
+    <since>PMD 4.0</since>
+    <priority>MAJOR</priority>
+    <description>In JUnit 3, the framework executed all methods which started with the word test as a unit test.
+In JUnit 4, only methods annotated with the @Test annotation are executed.
+In JUnit 5, one of the following annotations should be used for tests: @Test, @RepeatedTest, @TestFactory, @TestTemplate or @ParameterizedTest.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='JUnitAssertionsShouldIncludeMessage'>
+    <since>PMD 1.04</since>
+    <priority>MAJOR</priority>
+    <description>JUnit assertions should include an informative message - i.e., use the three-argument version of
+assertEquals(), not the two-argument version.</description>
+    <configKey>category/java/bestpractices.xml/JUnitAssertionsShouldIncludeMessage</configKey>
+  </rule>
+  <rule key='JUnitTestContainsTooManyAsserts'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Unit tests should not contain too many asserts. Many asserts are indicative of a complex test, for which
+it is harder to verify correctness.  Consider breaking the test scenario into multiple, shorter test scenarios.
+Customize the maximum number of assertions used by this Rule to suit your needs.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='JUnitTestsShouldIncludeAssert'>
+    <since>PMD 2.0</since>
+    <priority>MAJOR</priority>
+    <description>JUnit tests should include at least one assertion.  This makes the tests more robust, and using assert
+with messages provide the developer a clearer idea of what the test does.</description>
+    <configKey>category/java/bestpractices.xml/JUnitTestsShouldIncludeAssert</configKey>
+  </rule>
+  <rule key='JUnitUseExpected'>
+    <since>PMD 4.0</since>
+    <priority>MAJOR</priority>
+    <description>In JUnit4, use the @Test(expected) annotation to denote tests that should throw exceptions.</description>
+    <configKey>category/java/bestpractices.xml/JUnitUseExpected</configKey>
+  </rule>
+  <rule key='LiteralsFirstInComparisons'>
+    <since>PMD 6.24.0</since>
+    <priority>MAJOR</priority>
+    <description>Position literals first in all String comparisons, if the second argument is null then NullPointerExceptions
+can be avoided, they will just return false. Note that switching literal positions for compareTo and
+compareToIgnoreCase may change the result, see examples.</description>
+    <configKey>category/java/bestpractices.xml/LiteralsFirstInComparisons</configKey>
+  </rule>
+  <rule key='LooseCoupling'>
+    <since>PMD 0.7</since>
+    <priority>MAJOR</priority>
+    <description>The use of implementation types (i.e., HashSet) as object references limits your ability to use alternate
+implementations in the future as requirements change. Whenever available, referencing objects
+by their interface types (i.e, Set) provides much more flexibility.</description>
+    <configKey>category/java/bestpractices.xml/LooseCoupling</configKey>
+  </rule>
+  <rule key='MethodReturnsInternalArray'>
+    <since>PMD 2.2</since>
+    <priority>MAJOR</priority>
+    <description>Exposing internal arrays to the caller violates object encapsulation since elements can be
+removed or replaced outside of the object that owns it. It is safer to return a copy of the array.</description>
+    <configKey>category/java/bestpractices.xml/MethodReturnsInternalArray</configKey>
+  </rule>
+  <rule key='MissingOverride'>
+    <since>PMD 6.2.0</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.5</description>
+    <configKey>category/java/bestpractices.xml/MissingOverride</configKey>
+  </rule>
+  <rule key='OneDeclarationPerLine'>
+    <since>PMD 5.0</since>
+    <priority>MINOR</priority>
+    <description>Java allows the use of several variables declaration of the same type on one line. However, it
+can lead to quite messy code. This rule looks for several declarations on the same line.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='PositionLiteralsFirstInCaseInsensitiveComparisons'>
+    <since>PMD 5.1</since>
+    <priority>MAJOR</priority>
+    <description>Position literals first in comparisons, if the second argument is null then NullPointerExceptions
+can be avoided, they will just return false.</description>
+    <configKey>category/java/bestpractices.xml/PositionLiteralsFirstInCaseInsensitiveComparisons</configKey>
+  </rule>
+  <rule key='PositionLiteralsFirstInComparisons'>
+    <since>PMD 3.3</since>
+    <priority>MAJOR</priority>
+    <description>Position literals first in comparisons, if the second argument is null then NullPointerExceptions
+can be avoided, they will just return false.</description>
+    <configKey>category/java/bestpractices.xml/PositionLiteralsFirstInComparisons</configKey>
+  </rule>
+  <rule key='PreserveStackTrace'>
+    <since>PMD 3.7</since>
+    <priority>MAJOR</priority>
+    <description>Throwing a new exception from a catch block without passing the original exception into the
+new exception will cause the original stack trace to be lost making it difficult to debug
+effectively.</description>
+    <configKey>category/java/bestpractices.xml/PreserveStackTrace</configKey>
+  </rule>
+  <rule key='ReplaceEnumerationWithIterator'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Consider replacing Enumeration usages with the newer java.util.Iterator</description>
+    <configKey>category/java/bestpractices.xml/ReplaceEnumerationWithIterator</configKey>
+  </rule>
+  <rule key='ReplaceHashtableWithMap'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Consider replacing Hashtable usage with the newer java.util.Map if thread safety is not required.</description>
+    <configKey>category/java/bestpractices.xml/ReplaceHashtableWithMap</configKey>
+  </rule>
+  <rule key='ReplaceVectorWithList'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Consider replacing Vector usages with the newer java.util.ArrayList if expensive thread-safe operations are not required.</description>
+    <configKey>category/java/bestpractices.xml/ReplaceVectorWithList</configKey>
+  </rule>
+  <rule key='SwitchStmtsShouldHaveDefault'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>All switch statements should include a default option to catch any unspecified values.</description>
+    <configKey>category/java/bestpractices.xml/SwitchStmtsShouldHaveDefault</configKey>
+  </rule>
+  <rule key='SystemPrintln'>
+    <since>PMD 2.1</since>
+    <priority>BLOCKER</priority>
+    <description>References to System.(out|err).print are usually intended for debugging purposes and can remain in
+the codebase even in production code. By using a logger one can enable/disable this behaviour at
+will (and by priority) and avoid clogging the Standard out log.</description>
+    <configKey>category/java/bestpractices.xml/SystemPrintln</configKey>
+  </rule>
+  <rule key='UnusedFormalParameter'>
+    <since>PMD 0.8</since>
+    <priority>MAJOR</priority>
+    <description>Avoid passing parameters to methods or constructors without actually referencing them in the method body.
+Removing unused formal parameters from public methods could cause a ripple effect through the code base.
+Hence, by default, this rule only considers private methods. To include non-private methods, set the
+checkAll property to true.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnusedImports'>
+    <since>PMD 1.0</since>
+    <priority>MINOR</priority>
+    <description>Avoid unused import statements to prevent unwanted dependencies.
+This rule will also find unused on demand imports, i.e. import com.foo.*.</description>
+    <configKey>category/java/bestpractices.xml/UnusedImports</configKey>
+  </rule>
+  <rule key='UnusedLocalVariable'>
+    <since>PMD 0.1</since>
+    <priority>MAJOR</priority>
+    <description>Detects when a local variable is declared and/or assigned, but not used.</description>
+    <configKey>category/java/bestpractices.xml/UnusedLocalVariable</configKey>
+  </rule>
+  <rule key='UnusedPrivateField'>
+    <since>PMD 0.1</since>
+    <priority>MAJOR</priority>
+    <description>Detects when a private field is declared and/or assigned a value, but not used.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnusedPrivateMethod'>
+    <since>PMD 0.7</since>
+    <priority>MAJOR</priority>
+    <description>Unused Private Method detects when a private method is declared but is unused.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseAssertEqualsInsteadOfAssertTrue'>
+    <since>PMD 3.1</since>
+    <priority>MAJOR</priority>
+    <description>This rule detects JUnit assertions in object equality. These assertions should be made by more specific methods, like assertEquals.</description>
+    <configKey>category/java/bestpractices.xml/UseAssertEqualsInsteadOfAssertTrue</configKey>
+  </rule>
+  <rule key='UseAssertNullInsteadOfAssertTrue'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>This rule detects JUnit assertions in object references equality. These assertions should be made by
+more specific methods, like assertNull, assertNotNull.</description>
+    <configKey>category/java/bestpractices.xml/UseAssertNullInsteadOfAssertTrue</configKey>
+  </rule>
+  <rule key='UseAssertSameInsteadOfAssertTrue'>
+    <since>PMD 3.1</since>
+    <priority>MAJOR</priority>
+    <description>This rule detects JUnit assertions in object references equality. These assertions should be made
+by more specific methods, like assertSame, assertNotSame.</description>
+    <configKey>category/java/bestpractices.xml/UseAssertSameInsteadOfAssertTrue</configKey>
+  </rule>
+  <rule key='UseAssertTrueInsteadOfAssertEquals'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>When asserting a value is the same as a literal or Boxed boolean, use assertTrue/assertFalse, instead of assertEquals.</description>
+    <configKey>category/java/bestpractices.xml/UseAssertTrueInsteadOfAssertEquals</configKey>
+  </rule>
+  <rule key='UseCollectionIsEmpty'>
+    <since>PMD 3.9</since>
+    <priority>MAJOR</priority>
+    <description>The isEmpty() method on java.util.Collection is provided to determine if a collection has any elements.
+Comparing the value of size() to 0 does not convey intent as well as the isEmpty() method.</description>
+    <configKey>category/java/bestpractices.xml/UseCollectionIsEmpty</configKey>
+  </rule>
+  <rule key='UseTryWithResources'>
+    <since>PMD 6.12.0</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.7</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseVarargs'>
+    <since>PMD 5.0</since>
+    <priority>MINOR</priority>
+    <description>Minimum Language Version: Java 1.5</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='WhileLoopWithLiteralBoolean'>
+    <since>PMD 6.13.0</since>
+    <priority>MAJOR</priority>
+    <description>do {} while (true); requires reading the end of the statement before it is
+apparent that it loops forever, whereas while (true) {} is easier to understand.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AbstractNaming'>
+    <since>PMD 1.4</since>
+    <priority>MAJOR</priority>
+    <description>Abstract classes should be named ‘AbstractXXX’.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AtLeastOneConstructor'>
+    <since>PMD 1.04</since>
+    <priority>MAJOR</priority>
+    <description>Each non-static class should declare at least one constructor.
+Classes with solely static members are ignored, refer to UseUtilityClassRule to detect those.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidDollarSigns'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using dollar signs in variable/method/class/interface names.</description>
+    <configKey>category/java/codestyle.xml/AvoidDollarSigns</configKey>
+  </rule>
+  <rule key='AvoidFinalLocalVariable'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using final local variables, turn them into fields.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidPrefixingMethodParameters'>
+    <since>PMD 5.0</since>
+    <priority>MINOR</priority>
+    <description>Prefixing parameters by ‘in’ or ‘out’ pollutes the name of the parameters and reduces code readability.
+To indicate whether or not a parameter will be modify in a method, its better to document method
+behavior with Javadoc.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidProtectedFieldInFinalClass'>
+    <since>PMD 2.1</since>
+    <priority>MAJOR</priority>
+    <description>Do not use protected fields in final classes since they cannot be subclassed.
+Clarify your intent by using private or package access modifiers instead.</description>
+    <configKey>category/java/codestyle.xml/AvoidProtectedFieldInFinalClass</configKey>
+  </rule>
+  <rule key='AvoidProtectedMethodInFinalClassNotExtending'>
+    <since>PMD 5.1</since>
+    <priority>MAJOR</priority>
+    <description>Do not use protected methods in most final classes since they cannot be subclassed. This should
+only be allowed in final classes that extend other classes with protected methods (whose
+visibility cannot be reduced). Clarify your intent by using private or package access modifiers instead.</description>
+    <configKey>category/java/codestyle.xml/AvoidProtectedMethodInFinalClassNotExtending</configKey>
+  </rule>
+  <rule key='AvoidUsingNativeCode'>
+    <since>PMD 4.1</since>
+    <priority>BLOCKER</priority>
+    <description>Unnecessary reliance on Java Native Interface (JNI) calls directly reduces application portability
+and increases the maintenance burden.</description>
+    <configKey>category/java/codestyle.xml/AvoidUsingNativeCode</configKey>
+  </rule>
+  <rule key='BooleanGetMethodName'>
+    <since>PMD 4.0</since>
+    <priority>MINOR</priority>
+    <description>Methods that return boolean results should be named as predicate statements to denote this.
+I.e, ‘isReady()’, ‘hasValues()’, ‘canCommit()’, ‘willFail()’, etc.   Avoid the use of the ‘get’
+prefix for these methods.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CallSuperInConstructor'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>It is a good practice to call super() in a constructor. If super() is not called but
+another constructor (such as an overloaded constructor) is called, this rule will not report it.</description>
+    <configKey>category/java/codestyle.xml/CallSuperInConstructor</configKey>
+  </rule>
+  <rule key='ClassNamingConventions'>
+    <since>PMD 1.2</since>
+    <priority>CRITICAL</priority>
+    <description>Configurable naming conventions for type declarations. This rule reports
+type declarations which do not match the regex that applies to their
+specific kind (e.g. enum or interface). Each regex can be configured through
+properties.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CommentDefaultAccessModifier'>
+    <since>PMD 5.4.0</since>
+    <priority>MAJOR</priority>
+    <description>To avoid mistakes if we want that an Annotation, Class, Enum, Method, Constructor or Field have a default access modifier
+we must add a comment at the beginning of it’s declaration.
+By default the comment must be /* default */ or /* package */, if you want another, you have to provide a regular expression.
+This rule ignores by default all cases that have a @VisibleForTesting annotation. Use the
+property "ignoredAnnotations" to customize the recognized annotations.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ConfusingTernary'>
+    <since>PMD 1.9</since>
+    <priority>MAJOR</priority>
+    <description>Avoid negation within an "if" expression with an "else" clause.  For example, rephrase:
+if (x != y) diff(); else same(); as: if (x == y) same(); else diff();.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ControlStatementBraces'>
+    <since>PMD 6.2.0</since>
+    <priority>MAJOR</priority>
+    <description>Enforce a policy for braces on control statements. It is recommended to use braces on ‘if … else’
+statements and loop statements, even if they are optional. This usually makes the code clearer, and
+helps prepare the future when you need to add another statement. That said, this rule lets you control
+which statements are required to have braces via properties.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='DefaultPackage'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Use explicit scoping instead of accidental usage of default package private level.
+The rule allows methods and fields annotated with Guava’s @VisibleForTesting.</description>
+    <configKey>category/java/codestyle.xml/DefaultPackage</configKey>
+  </rule>
+  <rule key='DontImportJavaLang'>
+    <since>PMD 0.5</since>
+    <priority>MINOR</priority>
+    <description>Avoid importing anything from the package ‘java.lang’.  These classes are automatically imported (JLS 7.5.3).</description>
+    <configKey>category/java/codestyle.xml/DontImportJavaLang</configKey>
+  </rule>
+  <rule key='DuplicateImports'>
+    <since>PMD 0.5</since>
+    <priority>MINOR</priority>
+    <description>Duplicate or overlapping import statements should be avoided.</description>
+    <configKey>category/java/codestyle.xml/DuplicateImports</configKey>
+  </rule>
+  <rule key='EmptyMethodInAbstractClassShouldBeAbstract'>
+    <since>PMD 4.1</since>
+    <priority>CRITICAL</priority>
+    <description>Empty or auto-generated methods in an abstract class should be tagged as abstract. This helps to remove their inapproprate
+usage by developers who should be implementing their own versions in the concrete subclasses.</description>
+    <configKey>category/java/codestyle.xml/EmptyMethodInAbstractClassShouldBeAbstract</configKey>
+  </rule>
+  <rule key='ExtendsObject'>
+    <since>PMD 5.0</since>
+    <priority>MINOR</priority>
+    <description>No need to explicitly extend Object.</description>
+    <configKey>category/java/codestyle.xml/ExtendsObject</configKey>
+  </rule>
+  <rule key='FieldDeclarationsShouldBeAtStartOfClass'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='FieldNamingConventions'>
+    <since>PMD 6.7.0</since>
+    <priority>CRITICAL</priority>
+    <description>Configurable naming conventions for field declarations. This rule reports variable declarations
+which do not match the regex that applies to their specific kind —e.g. constants (static final),
+enum constant, final field. Each regex can be configured through properties.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ForLoopShouldBeWhileLoop'>
+    <since>PMD 1.02</since>
+    <priority>MAJOR</priority>
+    <description>Some for loops can be simplified to while loops, this makes them more concise.</description>
+    <configKey>category/java/codestyle.xml/ForLoopShouldBeWhileLoop</configKey>
+  </rule>
+  <rule key='ForLoopsMustUseBraces'>
+    <since>PMD 0.7</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using ‘for’ statements without using curly braces. If the code formatting or
+indentation is lost then it becomes difficult to separate the code being controlled
+from the rest.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='FormalParameterNamingConventions'>
+    <since>PMD 6.6.0</since>
+    <priority>CRITICAL</priority>
+    <description>Configurable naming conventions for formal parameters of methods and lambdas.
+This rule reports formal parameters which do not match the regex that applies to their
+specific kind (e.g. lambda parameter, or final formal parameter). Each regex can be
+configured through properties.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='GenericsNaming'>
+    <since>PMD 4.2.6</since>
+    <priority>MINOR</priority>
+    <description>Names for references to generic values should be limited to a single uppercase letter.</description>
+    <configKey>category/java/codestyle.xml/GenericsNaming</configKey>
+  </rule>
+  <rule key='IdenticalCatchBranches'>
+    <since>PMD 6.4.0</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.7</description>
+    <configKey>category/java/codestyle.xml/IdenticalCatchBranches</configKey>
+  </rule>
+  <rule key='IfElseStmtsMustUseBraces'>
+    <since>PMD 0.2</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using if..else statements without using surrounding braces. If the code formatting
+or indentation is lost then it becomes difficult to separate the code being controlled
+from the rest.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='IfStmtsMustUseBraces'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using if statements without using braces to surround the code block. If the code
+formatting or indentation is lost then it becomes difficult to separate the code being
+controlled from the rest.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='LinguisticNaming'>
+    <since>PMD 6.7.0</since>
+    <priority>MAJOR</priority>
+    <description>This rule finds Linguistic Naming Antipatterns. It checks for fields, that are named, as if they should
+be boolean but have a different type. It also checks for methods, that according to their name, should
+return a boolean, but don’t. Further, it checks, that getters return something and setters won’t.
+Finally, it checks that methods, that start with "to" - so called transform methods - actually return
+something, since according to their name, they should convert or transform one object into another.
+There is additionally an option, to check for methods that contain "To" in their name - which are
+also transform methods. However, this is disabled by default, since this detection is prone to
+false positives.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='LocalHomeNamingConvention'>
+    <since>PMD 4.0</since>
+    <priority>MINOR</priority>
+    <description>The Local Home interface of a Session EJB should be suffixed by ‘LocalHome’.</description>
+    <configKey>category/java/codestyle.xml/LocalHomeNamingConvention</configKey>
+  </rule>
+  <rule key='LocalInterfaceSessionNamingConvention'>
+    <since>PMD 4.0</since>
+    <priority>MINOR</priority>
+    <description>The Local Interface of a Session EJB should be suffixed by ‘Local’.</description>
+    <configKey>category/java/codestyle.xml/LocalInterfaceSessionNamingConvention</configKey>
+  </rule>
+  <rule key='LocalVariableCouldBeFinal'>
+    <since>PMD 2.2</since>
+    <priority>MAJOR</priority>
+    <description>A local variable assigned only once can be declared final.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='LocalVariableNamingConventions'>
+    <since>PMD 6.6.0</since>
+    <priority>CRITICAL</priority>
+    <description>Configurable naming conventions for local variable declarations and other locally-scoped
+variables. This rule reports variable declarations which do not match the regex that applies to their
+specific kind (e.g. final variable, or catch-clause parameter). Each regex can be configured through
+properties.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='LongVariable'>
+    <since>PMD 0.3</since>
+    <priority>MAJOR</priority>
+    <description>Fields, formal arguments, or local variable names that are too long can make the code difficult to follow.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='MDBAndSessionBeanNamingConvention'>
+    <since>PMD 4.0</since>
+    <priority>MINOR</priority>
+    <description>The EJB Specification states that any MessageDrivenBean or SessionBean should be suffixed by ‘Bean’.</description>
+    <configKey>category/java/codestyle.xml/MDBAndSessionBeanNamingConvention</configKey>
+  </rule>
+  <rule key='MethodArgumentCouldBeFinal'>
+    <since>PMD 2.2</since>
+    <priority>MAJOR</priority>
+    <description>A method argument that is never re-assigned within the method can be declared final.</description>
+    <configKey>category/java/codestyle.xml/MethodArgumentCouldBeFinal</configKey>
+  </rule>
+  <rule key='MethodNamingConventions'>
+    <since>PMD 1.2</since>
+    <priority>CRITICAL</priority>
+    <description>Configurable naming conventions for method declarations. This rule reports
+method declarations which do not match the regex that applies to their
+specific kind (e.g. JUnit test or native method). Each regex can be
+configured through properties.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='MIsLeadingVariableName'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Detects when a non-field has a name starting with ‘m_’.  This usually denotes a field and could be confusing.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='NoPackage'>
+    <since>PMD 3.3</since>
+    <priority>MAJOR</priority>
+    <description>Detects when a class, interface, enum or annotation does not have a package definition.</description>
+    <configKey>category/java/codestyle.xml/NoPackage</configKey>
+  </rule>
+  <rule key='OnlyOneReturn'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>A method should have only one exit point, and that should be the last statement in the method.</description>
+    <configKey>category/java/codestyle.xml/OnlyOneReturn</configKey>
+  </rule>
+  <rule key='PackageCase'>
+    <since>PMD 3.3</since>
+    <priority>MAJOR</priority>
+    <description>Detects when a package definition contains uppercase characters.</description>
+    <configKey>category/java/codestyle.xml/PackageCase</configKey>
+  </rule>
+  <rule key='PrematureDeclaration'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Checks for variables that are defined before they might be used. A reference is deemed to be premature if it is created right before a block of code that doesn’t use it that also has the ability to return or throw an exception.</description>
+    <configKey>category/java/codestyle.xml/PrematureDeclaration</configKey>
+  </rule>
+  <rule key='RemoteInterfaceNamingConvention'>
+    <since>PMD 4.0</since>
+    <priority>MINOR</priority>
+    <description>Remote Interface of a Session EJB should not have a suffix.</description>
+    <configKey>category/java/codestyle.xml/RemoteInterfaceNamingConvention</configKey>
+  </rule>
+  <rule key='RemoteSessionInterfaceNamingConvention'>
+    <since>PMD 4.0</since>
+    <priority>MINOR</priority>
+    <description>A Remote Home interface type of a Session EJB should be suffixed by ‘Home’.</description>
+    <configKey>category/java/codestyle.xml/RemoteSessionInterfaceNamingConvention</configKey>
+  </rule>
+  <rule key='ShortClassName'>
+    <since>PMD 5.0</since>
+    <priority>MINOR</priority>
+    <description>Short Classnames with fewer than e.g. five characters are not recommended.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ShortMethodName'>
+    <since>PMD 0.3</since>
+    <priority>MAJOR</priority>
+    <description>Method names that are very short are not helpful to the reader.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ShortVariable'>
+    <since>PMD 0.3</since>
+    <priority>MAJOR</priority>
+    <description>Fields, local variables, or parameter names that are very short are not helpful to the reader.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='SuspiciousConstantFieldName'>
+    <since>PMD 2.0</since>
+    <priority>MAJOR</priority>
+    <description>Field names using all uppercase characters - Sun’s Java naming conventions indicating constants - should
+be declared as final.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='TooManyStaticImports'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>If you overuse the static import feature, it can make your program unreadable and
+unmaintainable, polluting its namespace with all the static members you import.
+Readers of your code (including you, a few months after you wrote it) will not know
+which class a static member comes from (Sun 1.5 Language Guide).</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnnecessaryAnnotationValueElement'>
+    <since>PMD 6.2.0</since>
+    <priority>MAJOR</priority>
+    <description>Avoid the use of value in annotations when it’s the only element.</description>
+    <configKey>category/java/codestyle.xml/UnnecessaryAnnotationValueElement</configKey>
+  </rule>
+  <rule key='UnnecessaryConstructor'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>This rule detects when a constructor is not necessary; i.e., when there is only one constructor and the
+constructor is identical to the default constructor. The default constructor should has same access
+modifier as the declaring class. In an enum type, the default constructor is implicitly private.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnnecessaryFullyQualifiedName'>
+    <since>PMD 5.0</since>
+    <priority>MINOR</priority>
+    <description>Import statements allow the use of non-fully qualified names.  The use of a fully qualified name
+which is covered by an import statement is redundant.  Consider using the non-fully qualified name.</description>
+    <configKey>category/java/codestyle.xml/UnnecessaryFullyQualifiedName</configKey>
+  </rule>
+  <rule key='UnnecessaryLocalBeforeReturn'>
+    <since>PMD 3.3</since>
+    <priority>MAJOR</priority>
+    <description>Avoid the creation of unnecessary local variables</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnnecessaryModifier'>
+    <since>PMD 1.02</since>
+    <priority>MAJOR</priority>
+    <description>Fields in interfaces and annotations are automatically public static final, and methods are public abstract.
+Classes, interfaces or annotations nested in an interface or annotation are automatically public static
+(all nested interfaces and annotations are automatically static).
+Nested enums are automatically static.
+For historical reasons, modifiers which are implied by the context are accepted by the compiler, but are superfluous.</description>
+    <configKey>category/java/codestyle.xml/UnnecessaryModifier</configKey>
+  </rule>
+  <rule key='UnnecessaryReturn'>
+    <since>PMD 1.3</since>
+    <priority>MAJOR</priority>
+    <description>Avoid the use of unnecessary return statements.</description>
+    <configKey>category/java/codestyle.xml/UnnecessaryReturn</configKey>
+  </rule>
+  <rule key='UseDiamondOperator'>
+    <since>PMD 6.11.0</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.7</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UselessParentheses'>
+    <since>PMD 5.0</since>
+    <priority>MINOR</priority>
+    <description>Useless parentheses should be removed.</description>
+    <configKey>category/java/codestyle.xml/UselessParentheses</configKey>
+  </rule>
+  <rule key='UselessQualifiedThis'>
+    <since>PMD 5.4.0</since>
+    <priority>MAJOR</priority>
+    <description>Reports qualified this usages in the same class.</description>
+    <configKey>category/java/codestyle.xml/UselessQualifiedThis</configKey>
+  </rule>
+  <rule key='UseShortArrayInitializer'>
+    <since>PMD 6.15.0</since>
+    <priority>MAJOR</priority>
+    <description>When declaring and initializing array fields or variables, it is not necessary to explicitly create a new array
+using new. Instead one can simply define the initial content of the array as a expression in curly braces.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseUnderscoresInNumericLiterals'>
+    <since>PMD 6.10.0</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.7</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='VariableNamingConventions'>
+    <since>PMD 1.2</since>
+    <priority>CRITICAL</priority>
+    <description>A variable naming conventions rule - customize this to your liking.  Currently, it
+checks for final variables that should be fully capitalized and non-final variables
+that should not include underscores.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='WhileLoopsMustUseBraces'>
+    <since>PMD 0.7</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using ‘while’ statements without using braces to surround the code block. If the code
+formatting or indentation is lost then it becomes difficult to separate the code being
+controlled from the rest.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AbstractClassWithoutAnyMethod'>
+    <since>PMD 4.2</since>
+    <priority>CRITICAL</priority>
+    <description>If an abstract class does not provides any methods, it may be acting as a simple data container
+that is not meant to be instantiated. In this case, it is probably better to use a private or
+protected constructor in order to prevent instantiation than make the class misleadingly abstract.</description>
+    <configKey>category/java/design.xml/AbstractClassWithoutAnyMethod</configKey>
+  </rule>
+  <rule key='AvoidCatchingGenericException'>
+    <since>PMD 4.2.6</since>
+    <priority>MAJOR</priority>
+    <description>Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block</description>
+    <configKey>category/java/design.xml/AvoidCatchingGenericException</configKey>
+  </rule>
+  <rule key='AvoidDeeplyNestedIfStmts'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>Avoid creating deeply nested if-then statements since they are harder to read and error-prone to maintain.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidRethrowingException'>
+    <since>PMD 3.8</since>
+    <priority>MAJOR</priority>
+    <description>Catch blocks that merely rethrow a caught exception only add to code size and runtime complexity.</description>
+    <configKey>category/java/design.xml/AvoidRethrowingException</configKey>
+  </rule>
+  <rule key='AvoidThrowingNewInstanceOfSameException'>
+    <since>PMD 4.2.5</since>
+    <priority>MAJOR</priority>
+    <description>Catch blocks that merely rethrow a caught exception wrapped inside a new instance of the same type only add to
+code size and runtime complexity.</description>
+    <configKey>category/java/design.xml/AvoidThrowingNewInstanceOfSameException</configKey>
+  </rule>
+  <rule key='AvoidThrowingNullPointerException'>
+    <since>PMD 1.8</since>
+    <priority>CRITICAL</priority>
+    <description>Avoid throwing NullPointerExceptions manually. These are confusing because most people will assume that the
+virtual machine threw it.  To avoid a method being called with a null parameter, you may consider
+using an IllegalArgumentException instead, making it clearly seen as a programmer-initiated exception.
+However, there are better ways to handle this:</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidThrowingRawExceptionTypes'>
+    <since>PMD 1.8</since>
+    <priority>CRITICAL</priority>
+    <description>Avoid throwing certain exception types. Rather than throw a raw RuntimeException, Throwable,
+Exception, or Error, use a subclassed exception or error instead.</description>
+    <configKey>category/java/design.xml/AvoidThrowingRawExceptionTypes</configKey>
+  </rule>
+  <rule key='AvoidUncheckedExceptionsInSignatures'>
+    <since>PMD 6.13.0</since>
+    <priority>MAJOR</priority>
+    <description>A method or constructor should not explicitly declare unchecked exceptions in its
+throws clause. Java doesn’t force the caller to handle an unchecked exception,
+so it’s unnecessary except for documentation. A better practice is to document the
+exceptional cases with a @throws Javadoc tag, which allows being more descriptive.</description>
+    <configKey>category/java/design.xml/AvoidUncheckedExceptionsInSignatures</configKey>
+  </rule>
+  <rule key='ClassWithOnlyPrivateConstructorsShouldBeFinal'>
+    <since>PMD 4.1</since>
+    <priority>CRITICAL</priority>
+    <description>A class with only private constructors should be final, unless the private constructor
+is invoked by a inner class.</description>
+    <configKey>category/java/design.xml/ClassWithOnlyPrivateConstructorsShouldBeFinal</configKey>
+  </rule>
+  <rule key='CollapsibleIfStatements'>
+    <since>PMD 3.1</since>
+    <priority>MAJOR</priority>
+    <description>Sometimes two consecutive ‘if’ statements can be consolidated by separating their conditions with a boolean short-circuit operator.</description>
+    <configKey>category/java/design.xml/CollapsibleIfStatements</configKey>
+  </rule>
+  <rule key='CouplingBetweenObjects'>
+    <since>PMD 1.04</since>
+    <priority>MAJOR</priority>
+    <description>This rule counts the number of unique attributes, local variables, and return types within an object.
+A number higher than the specified threshold can indicate a high degree of coupling.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CyclomaticComplexity'>
+    <since>PMD 1.03</since>
+    <priority>MAJOR</priority>
+    <description>The complexity of methods directly affects maintenance costs and readability. Concentrating too much decisional logic
+in a single method makes its behaviour hard to read and change.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='DataClass'>
+    <since>PMD 6.0.0</since>
+    <priority>MAJOR</priority>
+    <description>Data Classes are simple data holders, which reveal most of their state, and
+without complex functionality. The lack of functionality may indicate that
+their behaviour is defined elsewhere, which is a sign of poor data-behaviour
+proximity. By directly exposing their internals, Data Classes break encapsulation,
+and therefore reduce the system’s maintainability and understandability. Moreover,
+classes tend to strongly rely on their data representation, which makes for a brittle
+design.</description>
+    <configKey>category/java/design.xml/DataClass</configKey>
+  </rule>
+  <rule key='DoNotExtendJavaLangError'>
+    <since>PMD 4.0</since>
+    <priority>MAJOR</priority>
+    <description>Errors are system exceptions. Do not extend them.</description>
+    <configKey>category/java/design.xml/DoNotExtendJavaLangError</configKey>
+  </rule>
+  <rule key='ExceptionAsFlowControl'>
+    <since>PMD 1.8</since>
+    <priority>MAJOR</priority>
+    <description>Using Exceptions as form of flow control is not recommended as they obscure true exceptions when debugging.
+Either add the necessary validation or use an alternate control structure.</description>
+    <configKey>category/java/design.xml/ExceptionAsFlowControl</configKey>
+  </rule>
+  <rule key='ExcessiveClassLength'>
+    <since>PMD 0.6</since>
+    <priority>MAJOR</priority>
+    <description>Excessive class file lengths are usually indications that the class may be burdened with excessive
+responsibilities that could be provided by external classes or functions. In breaking these methods
+apart the code becomes more manageable and ripe for reuse.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ExcessiveImports'>
+    <since>PMD 1.04</since>
+    <priority>MAJOR</priority>
+    <description>A high number of imports can indicate a high degree of coupling within an object. This rule
+counts the number of unique imports and reports a violation if the count is above the
+user-specified threshold.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ExcessiveMethodLength'>
+    <since>PMD 0.6</since>
+    <priority>MAJOR</priority>
+    <description>When methods are excessively long this usually indicates that the method is doing more than its
+name/signature might suggest. They also become challenging for others to digest since excessive
+scrolling causes readers to lose focus.
+Try to reduce the method length by creating helper methods and removing any copy/pasted code.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ExcessiveParameterList'>
+    <since>PMD 0.9</since>
+    <priority>MAJOR</priority>
+    <description>Methods with numerous parameters are a challenge to maintain, especially if most of them share the
+same datatype. These situations usually denote the need for new objects to wrap the numerous parameters.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ExcessivePublicCount'>
+    <since>PMD 1.04</since>
+    <priority>MAJOR</priority>
+    <description>Classes with large numbers of public methods and attributes require disproportionate testing efforts
+since combinational side effects grow rapidly and increase risk. Refactoring these classes into
+smaller ones not only increases testability and reliability but also allows new variations to be
+developed easily.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='FinalFieldCouldBeStatic'>
+    <since>PMD 1.1</since>
+    <priority>MAJOR</priority>
+    <description>If a final field is assigned to a compile-time constant, it could be made static, thus saving overhead
+in each object at runtime.</description>
+    <configKey>category/java/design.xml/FinalFieldCouldBeStatic</configKey>
+  </rule>
+  <rule key='GodClass'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>The God Class rule detects the God Class design flaw using metrics. God classes do too many things,
+are very big and overly complex. They should be split apart to be more object-oriented.
+The rule uses the detection strategy described in "Object-Oriented Metrics in Practice".
+The violations are reported against the entire class.</description>
+    <configKey>category/java/design.xml/GodClass</configKey>
+  </rule>
+  <rule key='ImmutableField'>
+    <since>PMD 2.0</since>
+    <priority>MAJOR</priority>
+    <description>Identifies private fields whose values never change once object initialization ends either in the declaration
+of the field or by a constructor.  This helps in converting existing classes to becoming immutable ones.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='LawOfDemeter'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>The Law of Demeter is a simple rule, that says "only talk to friends". It helps to reduce coupling between classes
+or objects.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='LogicInversion'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Use opposite operator instead of negating the whole expression with a logic complement operator.</description>
+    <configKey>category/java/design.xml/LogicInversion</configKey>
+  </rule>
+  <rule key='LoosePackageCoupling'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using classes from the configured package hierarchy outside of the package hierarchy,
+except when using one of the configured allowed classes.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ModifiedCyclomaticComplexity'>
+    <since>PMD 5.1.2</since>
+    <priority>MAJOR</priority>
+    <description>Complexity directly affects maintenance costs is determined by the number of decision points in a method
+plus one for the method entry.  The decision points include ‘if’, ‘while’, ‘for’, and ‘case labels’ calls.
+Generally, numbers ranging from 1-4 denote low complexity, 5-7 denote moderate complexity, 8-10 denote
+high complexity, and 11+ is very high complexity. Modified complexity treats switch statements as a single
+decision point.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='NcssConstructorCount'>
+    <since>PMD 3.9</since>
+    <priority>MAJOR</priority>
+    <description>This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of lines
+of code for a given constructor. NCSS ignores comments, and counts actual statements. Using this algorithm,
+lines of code that are split are counted as one.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='NcssCount'>
+    <since>PMD 6.0.0</since>
+    <priority>MAJOR</priority>
+    <description>This rule uses the NCSS (Non-Commenting Source Statements) metric to determine the number of lines
+of code in a class, method or constructor. NCSS ignores comments, blank lines, and only counts actual
+statements. For more details on the calculation, see the documentation of
+the NCSS metric.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='NcssMethodCount'>
+    <since>PMD 3.9</since>
+    <priority>MAJOR</priority>
+    <description>This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of lines
+of code for a given method. NCSS ignores comments, and counts actual statements. Using this algorithm,
+lines of code that are split are counted as one.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='NcssTypeCount'>
+    <since>PMD 3.9</since>
+    <priority>MAJOR</priority>
+    <description>This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of lines
+of code for a given type. NCSS ignores comments, and counts actual statements. Using this algorithm,
+lines of code that are split are counted as one.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='NPathComplexity'>
+    <since>PMD 3.9</since>
+    <priority>MAJOR</priority>
+    <description>The NPath complexity of a method is the number of acyclic execution paths through that method.
+While cyclomatic complexity counts the number of decision points in a method, NPath counts the number of
+full paths from the beginning to the end of the block of the method. That metric grows exponentially, as
+it multiplies the complexity of statements in the same block. For more details on the calculation, see the
+documentation of the NPath metric.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='SignatureDeclareThrowsException'>
+    <since>PMD 1.2</since>
+    <priority>MAJOR</priority>
+    <description>A method/constructor shouldn’t explicitly throw the generic java.lang.Exception, since it
+is unclear which exceptions that can be thrown from the methods. It might be
+difficult to document and understand such vague interfaces. Use either a class
+derived from RuntimeException or a checked exception.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='SimplifiedTernary'>
+    <since>PMD 5.4.0</since>
+    <priority>MAJOR</priority>
+    <description>Look for ternary operators with the form condition ? literalBoolean : foo
+or condition ? foo : literalBoolean.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='SimplifyBooleanAssertion'>
+    <since>PMD 3.6</since>
+    <priority>MAJOR</priority>
+    <description>Avoid negation in an assertTrue or assertFalse test.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='SimplifyBooleanExpressions'>
+    <since>PMD 1.05</since>
+    <priority>MAJOR</priority>
+    <description>Avoid unnecessary comparisons in boolean expressions, they serve no purpose and impacts readability.</description>
+    <configKey>category/java/design.xml/SimplifyBooleanExpressions</configKey>
+  </rule>
+  <rule key='SimplifyBooleanReturns'>
+    <since>PMD 0.9</since>
+    <priority>MAJOR</priority>
+    <description>Avoid unnecessary if-then-else statements when returning a boolean. The result of
+the conditional test can be returned instead.</description>
+    <configKey>category/java/design.xml/SimplifyBooleanReturns</configKey>
+  </rule>
+  <rule key='SimplifyConditional'>
+    <since>PMD 3.1</since>
+    <priority>MAJOR</priority>
+    <description>No need to check for null before an instanceof; the instanceof keyword returns false when given a null argument.</description>
+    <configKey>category/java/design.xml/SimplifyConditional</configKey>
+  </rule>
+  <rule key='SingularField'>
+    <since>PMD 3.1</since>
+    <priority>MAJOR</priority>
+    <description>Fields whose scopes are limited to just single methods do not rely on the containing
+object to provide them to other methods. They may be better implemented as local variables
+within those methods.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='StdCyclomaticComplexity'>
+    <since>PMD 5.1.2</since>
+    <priority>MAJOR</priority>
+    <description>Complexity directly affects maintenance costs is determined by the number of decision points in a method
+plus one for the method entry.  The decision points include ‘if’, ‘while’, ‘for’, and ‘case labels’ calls.
+Generally, numbers ranging from 1-4 denote low complexity, 5-7 denote moderate complexity, 8-10 denote
+high complexity, and 11+ is very high complexity.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='SwitchDensity'>
+    <since>PMD 1.02</since>
+    <priority>MAJOR</priority>
+    <description>A high ratio of statements to labels in a switch statement implies that the switch statement
+is overloaded.  Consider moving the statements into new methods or creating subclasses based
+on the switch variable.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='TooManyFields'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>Classes that have too many fields can become unwieldy and could be redesigned to have fewer fields,
+possibly through grouping related fields in new objects.  For example, a class with individual
+city/state/zip fields could park them within a single Address field.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='TooManyMethods'>
+    <since>PMD 4.2</since>
+    <priority>MAJOR</priority>
+    <description>A class with too many methods is probably a good suspect for refactoring, in order to reduce its
+complexity and find a way to have more fine grained objects.</description>
+    <configKey>category/java/design.xml/TooManyMethods</configKey>
+  </rule>
+  <rule key='UselessOverridingMethod'>
+    <since>PMD 3.3</since>
+    <priority>MAJOR</priority>
+    <description>The overriding method merely calls the same method defined in a superclass.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseObjectForClearerAPI'>
+    <since>PMD 4.2.6</since>
+    <priority>MAJOR</priority>
+    <description>When you write a public method, you should be thinking in terms of an API. If your method is public, it means other class
+will use it, therefore, you want (or need) to offer a comprehensive and evolutive API. If you pass a lot of information
+as a simple series of Strings, you may think of using an Object to represent all those information. You’ll get a simpler
+API (such as doWork(Workload workload), rather than a tedious series of Strings) and more importantly, if you need at some
+point to pass extra data, you’ll be able to do so by simply modifying or extending Workload without any modification to
+your API.</description>
+    <configKey>category/java/design.xml/UseObjectForClearerAPI</configKey>
+  </rule>
+  <rule key='UseUtilityClass'>
+    <since>PMD 0.3</since>
+    <priority>MAJOR</priority>
+    <description>For classes that only have static methods, consider making them utility classes.
+Note that this doesn’t apply to abstract classes, since their subclasses may
+well include non-static methods.  Also, if you want this class to be a utility class,
+remember to add a private constructor to prevent instantiation.
+(Note, that this use was known before PMD 5.1.0 as UseSingleton).</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CommentContent'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>A rule for the politically correct… we don’t want to offend anyone.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CommentRequired'>
+    <since>PMD 5.1</since>
+    <priority>MAJOR</priority>
+    <description>Denotes whether javadoc (formal) comments are required (or unwanted) for specific language elements.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CommentSize'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Determines whether the dimensions of non-header comments found are within the specified limits.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UncommentedEmptyConstructor'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Uncommented Empty Constructor finds instances where a constructor does not
+contain statements, but there is no comment. By explicitly commenting empty
+constructors it is easier to distinguish between intentional (commented)
+and unintentional empty constructors.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UncommentedEmptyMethodBody'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Uncommented Empty Method Body finds instances where a method body does not contain
+statements, but there is no comment. By explicitly commenting empty method bodies
+it is easier to distinguish between intentional (commented) and unintentional
+empty methods.</description>
+    <configKey>category/java/documentation.xml/UncommentedEmptyMethodBody</configKey>
+  </rule>
+  <rule key='AssignmentInOperand'>
+    <since>PMD 1.03</since>
+    <priority>MAJOR</priority>
+    <description>Avoid assignments in operands; this can make code more complicated and harder to read.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AssignmentToNonFinalStatic'>
+    <since>PMD 2.2</since>
+    <priority>MAJOR</priority>
+    <description>Identifies a possible unsafe usage of a static field.</description>
+    <configKey>category/java/errorprone.xml/AssignmentToNonFinalStatic</configKey>
+  </rule>
+  <rule key='AvoidAccessibilityAlteration'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>Methods such as getDeclaredConstructors(), getDeclaredConstructor(Class[]) and setAccessible(),
+as the interface PrivilegedAction, allow for the runtime alteration of variable, class, or
+method visibility, even if they are private. This violates the principle of encapsulation.</description>
+    <configKey>category/java/errorprone.xml/AvoidAccessibilityAlteration</configKey>
+  </rule>
+  <rule key='AvoidAssertAsIdentifier'>
+    <since>PMD 3.4</since>
+    <priority>BLOCKER</priority>
+    <description>Use of the term ‘assert’ will conflict with newer versions of Java since it is a reserved word.</description>
+    <configKey>category/java/errorprone.xml/AvoidAssertAsIdentifier</configKey>
+  </rule>
+  <rule key='AvoidBranchingStatementAsLastInLoop'>
+    <since>PMD 5.0</since>
+    <priority>BLOCKER</priority>
+    <description>Using a branching statement as the last part of a loop may be a bug, and/or is confusing.
+Ensure that the usage is not a bug, or consider using another approach.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidCallingFinalize'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>The method Object.finalize() is called by the garbage collector on an object when garbage collection determines
+that there are no more references to the object. It should not be invoked by application logic.</description>
+    <configKey>category/java/errorprone.xml/AvoidCallingFinalize</configKey>
+  </rule>
+  <rule key='AvoidCatchingNPE'>
+    <since>PMD 1.8</since>
+    <priority>MAJOR</priority>
+    <description>Code should never throw NullPointerExceptions under normal circumstances.  A catch block may hide the
+original error, causing other, more subtle problems later on.</description>
+    <configKey>category/java/errorprone.xml/AvoidCatchingNPE</configKey>
+  </rule>
+  <rule key='AvoidCatchingThrowable'>
+    <since>PMD 1.2</since>
+    <priority>MAJOR</priority>
+    <description>Catching Throwable errors is not recommended since its scope is very broad. It includes runtime issues such as
+OutOfMemoryError that should be exposed and managed separately.</description>
+    <configKey>category/java/errorprone.xml/AvoidCatchingThrowable</configKey>
+  </rule>
+  <rule key='AvoidDecimalLiteralsInBigDecimalConstructor'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>One might assume that the result of "new BigDecimal(0.1)" is exactly equal to 0.1, but it is actually
+equal to .1000000000000000055511151231257827021181583404541015625.
+This is because 0.1 cannot be represented exactly as a double (or as a binary fraction of any finite
+length). Thus, the long value that is being passed in to the constructor is not exactly equal to 0.1,
+appearances notwithstanding.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidDuplicateLiterals'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>Code containing duplicate String literals can usually be improved by declaring the String as a constant field.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidEnumAsIdentifier'>
+    <since>PMD 3.4</since>
+    <priority>BLOCKER</priority>
+    <description>Use of the term ‘enum’ will conflict with newer versions of Java since it is a reserved word.</description>
+    <configKey>category/java/errorprone.xml/AvoidEnumAsIdentifier</configKey>
+  </rule>
+  <rule key='AvoidFieldNameMatchingMethodName'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>It can be confusing to have a field name with the same name as a method. While this is permitted,
+having information (field) and actions (method) is not clear naming. Developers versed in
+Smalltalk often prefer this approach as the methods denote accessor methods.</description>
+    <configKey>category/java/errorprone.xml/AvoidFieldNameMatchingMethodName</configKey>
+  </rule>
+  <rule key='AvoidFieldNameMatchingTypeName'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>It is somewhat confusing to have a field name matching the declaring class name.
+This probably means that type and/or field names should be chosen more carefully.</description>
+    <configKey>category/java/errorprone.xml/AvoidFieldNameMatchingTypeName</configKey>
+  </rule>
+  <rule key='AvoidInstanceofChecksInCatchClause'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>Each caught exception type should be handled in its own catch clause.</description>
+    <configKey>category/java/errorprone.xml/AvoidInstanceofChecksInCatchClause</configKey>
+  </rule>
+  <rule key='AvoidLiteralsInIfCondition'>
+    <since>PMD 4.2.6</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using hard-coded literals in conditional statements. By declaring them as static variables
+or private members with descriptive names maintainability is enhanced. By default, the literals "-1" and "0" are ignored.
+More exceptions can be defined with the property "ignoreMagicNumbers".</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidLosingExceptionInformation'>
+    <since>PMD 4.2.6</since>
+    <priority>BLOCKER</priority>
+    <description>Statements in a catch block that invoke accessors on the exception without using the information
+only add to code size.  Either remove the invocation, or use the return result.</description>
+    <configKey>category/java/errorprone.xml/AvoidLosingExceptionInformation</configKey>
+  </rule>
+  <rule key='AvoidMultipleUnaryOperators'>
+    <since>PMD 4.2</since>
+    <priority>BLOCKER</priority>
+    <description>The use of multiple unary operators may be problematic, and/or confusing.
+Ensure that the intended usage is not a bug, or consider simplifying the expression.</description>
+    <configKey>category/java/errorprone.xml/AvoidMultipleUnaryOperators</configKey>
+  </rule>
+  <rule key='AvoidUsingOctalValues'>
+    <since>PMD 3.9</since>
+    <priority>MAJOR</priority>
+    <description>Integer literals should not start with zero since this denotes that the rest of literal will be
+interpreted as an octal value.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='BadComparison'>
+    <since>PMD 1.8</since>
+    <priority>MAJOR</priority>
+    <description>Avoid equality comparisons with Double.NaN. Due to the implicit lack of representation
+precision when comparing floating point numbers these are likely to cause logic errors.</description>
+    <configKey>category/java/errorprone.xml/BadComparison</configKey>
+  </rule>
+  <rule key='BeanMembersShouldSerialize'>
+    <since>PMD 1.1</since>
+    <priority>MAJOR</priority>
+    <description>If a class is a bean, or is referenced by a bean directly or indirectly it needs to be serializable.
+Member variables need to be marked as transient, static, or have accessor methods in the class. Marking
+variables as transient is the safest and easiest modification. Accessor methods should follow the Java
+naming conventions, i.e. for a variable named foo, getFoo() and setFoo() accessor methods should be provided.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='BrokenNullCheck'>
+    <since>PMD 3.8</since>
+    <priority>BLOCKER</priority>
+    <description>The null check is broken since it will throw a NullPointerException itself.
+It is likely that you used || instead of &amp;&amp; or vice versa.</description>
+    <configKey>category/java/errorprone.xml/BrokenNullCheck</configKey>
+  </rule>
+  <rule key='CallSuperFirst'>
+    <since>PMD 4.2.5</since>
+    <priority>MAJOR</priority>
+    <description>Super should be called at the start of the method</description>
+    <configKey>category/java/errorprone.xml/CallSuperFirst</configKey>
+  </rule>
+  <rule key='CallSuperLast'>
+    <since>PMD 4.2.5</since>
+    <priority>MAJOR</priority>
+    <description>Super should be called at the end of the method</description>
+    <configKey>category/java/errorprone.xml/CallSuperLast</configKey>
+  </rule>
+  <rule key='CheckSkipResult'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>The skip() method may skip a smaller number of bytes than requested. Check the returned value to find out if it was the case or not.</description>
+    <configKey>category/java/errorprone.xml/CheckSkipResult</configKey>
+  </rule>
+  <rule key='ClassCastExceptionWithToArray'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>When deriving an array of a specific class from your Collection, one should provide an array of
+the same class as the parameter of the toArray() method. Doing otherwise you will will result
+in a ClassCastException.</description>
+    <configKey>category/java/errorprone.xml/ClassCastExceptionWithToArray</configKey>
+  </rule>
+  <rule key='CloneMethodMustBePublic'>
+    <since>PMD 5.4.0</since>
+    <priority>MAJOR</priority>
+    <description>The java Manual says "By convention, classes that implement this interface should override
+Object.clone (which is protected) with a public method."</description>
+    <configKey>category/java/errorprone.xml/CloneMethodMustBePublic</configKey>
+  </rule>
+  <rule key='CloneMethodMustImplementCloneable'>
+    <since>PMD 1.9</since>
+    <priority>MAJOR</priority>
+    <description>The method clone() should only be implemented if the class implements the Cloneable interface with the exception of
+a final method that only throws CloneNotSupportedException.</description>
+    <configKey>category/java/errorprone.xml/CloneMethodMustImplementCloneable</configKey>
+  </rule>
+  <rule key='CloneMethodReturnTypeMustMatchClassName'>
+    <since>PMD 5.4.0</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.5</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CloneThrowsCloneNotSupportedException'>
+    <since>PMD 1.9</since>
+    <priority>MAJOR</priority>
+    <description>The method clone() should throw a CloneNotSupportedException.</description>
+    <configKey>category/java/errorprone.xml/CloneThrowsCloneNotSupportedException</configKey>
+  </rule>
+  <rule key='CloseResource'>
+    <since>PMD 1.2.2</since>
+    <priority>MAJOR</priority>
+    <description>Ensure that resources (like java.sql.Connection, java.sql.Statement, and java.sql.ResultSet objects
+and any subtype of java.lang.AutoCloseable) are always closed after use.
+Failing to do so might result in resource leaks.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='CompareObjectsWithEquals'>
+    <since>PMD 3.2</since>
+    <priority>MAJOR</priority>
+    <description>Use equals() to compare object references; avoid comparing them with ==.</description>
+    <configKey>category/java/errorprone.xml/CompareObjectsWithEquals</configKey>
+  </rule>
+  <rule key='ConstructorCallsOverridableMethod'>
+    <since>PMD 1.04</since>
+    <priority>CRITICAL</priority>
+    <description>Calling overridable methods during construction poses a risk of invoking methods on an incompletely
+constructed object and can be difficult to debug.
+It may leave the sub-class unable to construct its superclass or forced to replicate the construction
+process completely within itself, losing the ability to call super().  If the default constructor
+contains a call to an overridable method, the subclass may be completely uninstantiable.   Note that
+this includes method calls throughout the control flow graph - i.e., if a constructor Foo() calls a
+private method bar() that calls a public method buz(), this denotes a problem.</description>
+    <configKey>category/java/errorprone.xml/ConstructorCallsOverridableMethod</configKey>
+  </rule>
+  <rule key='DataflowAnomalyAnalysis'>
+    <since>PMD 3.9</since>
+    <priority>INFO</priority>
+    <description>The dataflow analysis tracks local definitions, undefinitions and references to variables on different paths on the data flow.
+From those informations there can be found various problems.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='DetachedTestCase'>
+    <since>PMD 6.13.0</since>
+    <priority>MAJOR</priority>
+    <description>The method appears to be a test case since it has public or default visibility,
+non-static access, no arguments, no return value, has no annotations, but is a
+member of a class that has one or more JUnit test cases. If it is a utility
+method, it should likely have private visibility. If it is an ignored test, it
+should be annotated with @Test and @Ignore.</description>
+    <configKey>category/java/errorprone.xml/DetachedTestCase</configKey>
+  </rule>
+  <rule key='DoNotCallGarbageCollectionExplicitly'>
+    <since>PMD 4.2</since>
+    <priority>BLOCKER</priority>
+    <description>Calls to System.gc(), Runtime.getRuntime().gc(), and System.runFinalization() are not advised. Code should have the
+same behavior whether the garbage collection is disabled using the option -Xdisableexplicitgc or not.
+Moreover, "modern" jvms do a very good job handling garbage collections. If memory usage issues unrelated to memory
+leaks develop within an application, it should be dealt with JVM options rather than within the code itself.</description>
+    <configKey>category/java/errorprone.xml/DoNotCallGarbageCollectionExplicitly</configKey>
+  </rule>
+  <rule key='DoNotCallSystemExit'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>Web applications should not call System.exit(), since only the web container or the
+application server should stop the JVM. This rule also checks for the equivalent call Runtime.getRuntime().exit().</description>
+    <configKey>category/java/errorprone.xml/DoNotCallSystemExit</configKey>
+  </rule>
+  <rule key='DoNotExtendJavaLangThrowable'>
+    <since>PMD 6.0.0</since>
+    <priority>MAJOR</priority>
+    <description>Extend Exception or RuntimeException instead of Throwable.</description>
+    <configKey>category/java/errorprone.xml/DoNotExtendJavaLangThrowable</configKey>
+  </rule>
+  <rule key='DoNotHardCodeSDCard'>
+    <since>PMD 4.2.6</since>
+    <priority>MAJOR</priority>
+    <description>Use Environment.getExternalStorageDirectory() instead of "/sdcard"</description>
+    <configKey>category/java/errorprone.xml/DoNotHardCodeSDCard</configKey>
+  </rule>
+  <rule key='DoNotThrowExceptionInFinally'>
+    <since>PMD 4.2</since>
+    <priority>MINOR</priority>
+    <description>Throwing exceptions within a ‘finally’ block is confusing since they may mask other exceptions
+or code defects.
+Note: This is a PMD implementation of the Lint4j rule "A throw in a finally block"</description>
+    <configKey>category/java/errorprone.xml/DoNotThrowExceptionInFinally</configKey>
+  </rule>
+  <rule key='DontImportSun'>
+    <since>PMD 1.5</since>
+    <priority>MINOR</priority>
+    <description>Avoid importing anything from the ‘sun.*’ packages.  These packages are not portable and are likely to change.</description>
+    <configKey>category/java/errorprone.xml/DontImportSun</configKey>
+  </rule>
+  <rule key='DontUseFloatTypeForLoopIndices'>
+    <since>PMD 4.3</since>
+    <priority>MAJOR</priority>
+    <description>Don’t use floating point for loop indices. If you must use floating point, use double
+unless you’re certain that float provides enough precision and you have a compelling
+performance need (space or time).</description>
+    <configKey>category/java/errorprone.xml/DontUseFloatTypeForLoopIndices</configKey>
+  </rule>
+  <rule key='EmptyCatchBlock'>
+    <since>PMD 0.1</since>
+    <priority>MAJOR</priority>
+    <description>Empty Catch Block finds instances where an exception is caught, but nothing is done.
+In most circumstances, this swallows an exception which should either be acted on
+or reported.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='EmptyFinalizer'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>Empty finalize methods serve no purpose and should be removed. Note that Oracle has declared Object.finalize() as deprecated since JDK 9.</description>
+    <configKey>category/java/errorprone.xml/EmptyFinalizer</configKey>
+  </rule>
+  <rule key='EmptyFinallyBlock'>
+    <since>PMD 0.4</since>
+    <priority>MAJOR</priority>
+    <description>Empty finally blocks serve no purpose and should be removed.</description>
+    <configKey>category/java/errorprone.xml/EmptyFinallyBlock</configKey>
+  </rule>
+  <rule key='EmptyIfStmt'>
+    <since>PMD 0.1</since>
+    <priority>MAJOR</priority>
+    <description>Empty If Statement finds instances where a condition is checked but nothing is done about it.</description>
+    <configKey>category/java/errorprone.xml/EmptyIfStmt</configKey>
+  </rule>
+  <rule key='EmptyInitializer'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Empty initializers serve no purpose and should be removed.</description>
+    <configKey>category/java/errorprone.xml/EmptyInitializer</configKey>
+  </rule>
+  <rule key='EmptyStatementBlock'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Empty block statements serve no purpose and should be removed.</description>
+    <configKey>category/java/errorprone.xml/EmptyStatementBlock</configKey>
+  </rule>
+  <rule key='EmptyStatementNotInLoop'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>An empty statement (or a semicolon by itself) that is not used as the sole body of a ‘for’
+or ‘while’ loop is probably a bug.  It could also be a double semicolon, which has no purpose
+and should be removed.</description>
+    <configKey>category/java/errorprone.xml/EmptyStatementNotInLoop</configKey>
+  </rule>
+  <rule key='EmptySwitchStatements'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>Empty switch statements serve no purpose and should be removed.</description>
+    <configKey>category/java/errorprone.xml/EmptySwitchStatements</configKey>
+  </rule>
+  <rule key='EmptySynchronizedBlock'>
+    <since>PMD 1.3</since>
+    <priority>MAJOR</priority>
+    <description>Empty synchronized blocks serve no purpose and should be removed.</description>
+    <configKey>category/java/errorprone.xml/EmptySynchronizedBlock</configKey>
+  </rule>
+  <rule key='EmptyTryBlock'>
+    <since>PMD 0.4</since>
+    <priority>MAJOR</priority>
+    <description>Avoid empty try blocks - what’s the point?</description>
+    <configKey>category/java/errorprone.xml/EmptyTryBlock</configKey>
+  </rule>
+  <rule key='EmptyWhileStmt'>
+    <since>PMD 0.2</since>
+    <priority>MAJOR</priority>
+    <description>Empty While Statement finds all instances where a while statement does nothing.
+If it is a timing loop, then you should use Thread.sleep() for it; if it is
+a while loop that does a lot in the exit expression, rewrite it to make it clearer.</description>
+    <configKey>category/java/errorprone.xml/EmptyWhileStmt</configKey>
+  </rule>
+  <rule key='EqualsNull'>
+    <since>PMD 1.9</since>
+    <priority>CRITICAL</priority>
+    <description>Tests for null should not use the equals() method. The ‘==’ operator should be used instead.</description>
+    <configKey>category/java/errorprone.xml/EqualsNull</configKey>
+  </rule>
+  <rule key='FinalizeDoesNotCallSuperFinalize'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>If the finalize() is implemented, its last action should be to call super.finalize. Note that Oracle has declared Object.finalize() as deprecated since JDK 9.</description>
+    <configKey>category/java/errorprone.xml/FinalizeDoesNotCallSuperFinalize</configKey>
+  </rule>
+  <rule key='FinalizeOnlyCallsSuperFinalize'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>If the finalize() is implemented, it should do something besides just calling super.finalize(). Note that Oracle has declared Object.finalize() as deprecated since JDK 9.</description>
+    <configKey>category/java/errorprone.xml/FinalizeOnlyCallsSuperFinalize</configKey>
+  </rule>
+  <rule key='FinalizeOverloaded'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>Methods named finalize() should not have parameters.  It is confusing and most likely an attempt to
+overload Object.finalize(). It will not be called by the VM.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='FinalizeShouldBeProtected'>
+    <since>PMD 1.1</since>
+    <priority>MAJOR</priority>
+    <description>When overriding the finalize(), the new method should be set as protected.  If made public,
+other classes may invoke it at inappropriate times.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='IdempotentOperations'>
+    <since>PMD 2.0</since>
+    <priority>MAJOR</priority>
+    <description>Avoid idempotent operations - they have no effect.</description>
+    <configKey>category/java/errorprone.xml/IdempotentOperations</configKey>
+  </rule>
+  <rule key='ImportFromSamePackage'>
+    <since>PMD 1.02</since>
+    <priority>MAJOR</priority>
+    <description>There is no need to import a type that lives in the same package.</description>
+    <configKey>category/java/errorprone.xml/ImportFromSamePackage</configKey>
+  </rule>
+  <rule key='InstantiationToGetClass'>
+    <since>PMD 2.0</since>
+    <priority>MINOR</priority>
+    <description>Avoid instantiating an object just to call getClass() on it; use the .class public member instead.</description>
+    <configKey>category/java/errorprone.xml/InstantiationToGetClass</configKey>
+  </rule>
+  <rule key='InvalidLogMessageFormat'>
+    <since>PMD 5.5.0</since>
+    <priority>INFO</priority>
+    <description>Check for messages in slf4j and log4j2 (since 6.19.0) loggers with non matching number of arguments and placeholders.</description>
+    <configKey>category/java/errorprone.xml/InvalidLogMessageFormat</configKey>
+  </rule>
+  <rule key='JumbledIncrementer'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>Avoid jumbled loop incrementers - its usually a mistake, and is confusing even if intentional.</description>
+    <configKey>category/java/errorprone.xml/JumbledIncrementer</configKey>
+  </rule>
+  <rule key='JUnitSpelling'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>In JUnit 3, the setUp method is used to set up all data entities required in running tests.
+The tearDown method is used to clean up all data entities required in running tests.
+You should not misspell method name if you want your test to set up and clean up everything correctly.</description>
+    <configKey>category/java/errorprone.xml/JUnitSpelling</configKey>
+  </rule>
+  <rule key='JUnitStaticSuite'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>The suite() method in a JUnit test needs to be both public and static.</description>
+    <configKey>category/java/errorprone.xml/JUnitStaticSuite</configKey>
+  </rule>
+  <rule key='LoggerIsNotStaticFinal'>
+    <since>PMD 2.0</since>
+    <priority>BLOCKER</priority>
+    <description>In most cases, the Logger reference can be declared as static and final.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='MethodWithSameNameAsEnclosingClass'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>Non-constructor methods should not have the same name as the enclosing class.</description>
+    <configKey>category/java/errorprone.xml/MethodWithSameNameAsEnclosingClass</configKey>
+  </rule>
+  <rule key='MisplacedNullCheck'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>The null check here is misplaced. If the variable is null a NullPointerException will be thrown.
+Either the check is useless (the variable will never be "null") or it is incorrect.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='MissingBreakInSwitch'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>Switch statements without break or return statements for each case option
+may indicate problematic behaviour. Empty cases are ignored as these indicate an intentional fall-through.</description>
+    <configKey>category/java/errorprone.xml/MissingBreakInSwitch</configKey>
+  </rule>
+  <rule key='MissingSerialVersionUID'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>Serializable classes should provide a serialVersionUID field.
+The serialVersionUID field is also needed for abstract base classes. Each individual class in the inheritance
+chain needs an own serialVersionUID field. See also Should an abstract class have a serialVersionUID.</description>
+    <configKey>category/java/errorprone.xml/MissingSerialVersionUID</configKey>
+  </rule>
+  <rule key='MissingStaticMethodInNonInstantiatableClass'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>A class that has private constructors and does not have any static methods or fields cannot be used.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='MoreThanOneLogger'>
+    <since>PMD 2.0</since>
+    <priority>BLOCKER</priority>
+    <description>Normally only one logger is used in each class. This rule supports slf4j, log4j, Java Util Logging and
+log4j2 (since 6.19.0).</description>
+    <configKey>category/java/errorprone.xml/MoreThanOneLogger</configKey>
+  </rule>
+  <rule key='NonCaseLabelInSwitchStatement'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>A non-case label (e.g. a named break/continue label) was present in a switch statement.
+This legal, but confusing. It is easy to mix up the case labels and the non-case labels.</description>
+    <configKey>category/java/errorprone.xml/NonCaseLabelInSwitchStatement</configKey>
+  </rule>
+  <rule key='NonStaticInitializer'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>A non-static initializer block will be called any time a constructor is invoked (just prior to
+invoking the constructor).  While this is a valid language construct, it is rarely used and is
+confusing.</description>
+    <configKey>category/java/errorprone.xml/NonStaticInitializer</configKey>
+  </rule>
+  <rule key='NullAssignment'>
+    <since>PMD 1.02</since>
+    <priority>MAJOR</priority>
+    <description>Assigning a "null" to a variable (outside of its declaration) is usually bad form.  Sometimes, this type
+of assignment is an indication that the programmer doesn’t completely understand what is going on in the code.</description>
+    <configKey>category/java/errorprone.xml/NullAssignment</configKey>
+  </rule>
+  <rule key='OverrideBothEqualsAndHashcode'>
+    <since>PMD 0.4</since>
+    <priority>MAJOR</priority>
+    <description>Override both public boolean Object.equals(Object other), and public int Object.hashCode(), or override neither.  Even if you are inheriting a hashCode() from a parent class, consider implementing hashCode and explicitly delegating to your superclass.</description>
+    <configKey>category/java/errorprone.xml/OverrideBothEqualsAndHashcode</configKey>
+  </rule>
+  <rule key='ProperCloneImplementation'>
+    <since>PMD 1.4</since>
+    <priority>BLOCKER</priority>
+    <description>Object clone() should be implemented with super.clone().</description>
+    <configKey>category/java/errorprone.xml/ProperCloneImplementation</configKey>
+  </rule>
+  <rule key='ProperLogger'>
+    <since>PMD 3.3</since>
+    <priority>MAJOR</priority>
+    <description>A logger should normally be defined private static final and be associated with the correct class.
+private final Log log; is also allowed for rare cases where loggers need to be passed around,
+with the restriction that the logger needs to be passed into the constructor.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='ReturnEmptyArrayRatherThanNull'>
+    <since>PMD 4.2</since>
+    <priority>CRITICAL</priority>
+    <description>For any method that returns an array, it is a better to return an empty array rather than a
+null reference. This removes the need for null checking all results and avoids inadvertent
+NullPointerExceptions.</description>
+    <configKey>category/java/errorprone.xml/ReturnEmptyArrayRatherThanNull</configKey>
+  </rule>
+  <rule key='ReturnFromFinallyBlock'>
+    <since>PMD 1.05</since>
+    <priority>MAJOR</priority>
+    <description>Avoid returning from a finally block, this can discard exceptions.</description>
+    <configKey>category/java/errorprone.xml/ReturnFromFinallyBlock</configKey>
+  </rule>
+  <rule key='SimpleDateFormatNeedsLocale'>
+    <since>PMD 2.0</since>
+    <priority>MAJOR</priority>
+    <description>Be sure to specify a Locale when creating SimpleDateFormat instances to ensure that locale-appropriate
+formatting is used.</description>
+    <configKey>category/java/errorprone.xml/SimpleDateFormatNeedsLocale</configKey>
+  </rule>
+  <rule key='SingleMethodSingleton'>
+    <since>PMD 5.4</since>
+    <priority>BLOCKER</priority>
+    <description>Some classes contain overloaded getInstance. The problem with overloaded getInstance methods
+is that the instance created using the overloaded method is not cached and so,
+for each call and new objects will be created for every invocation.</description>
+    <configKey>category/java/errorprone.xml/SingleMethodSingleton</configKey>
+  </rule>
+  <rule key='SingletonClassReturningNewInstance'>
+    <since>PMD 5.4</since>
+    <priority>BLOCKER</priority>
+    <description>Some classes contain overloaded getInstance. The problem with overloaded getInstance methods
+is that the instance created using the overloaded method is not cached and so,
+for each call and new objects will be created for every invocation.</description>
+    <configKey>category/java/errorprone.xml/SingletonClassReturningNewInstance</configKey>
+  </rule>
+  <rule key='StaticEJBFieldShouldBeFinal'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>According to the J2EE specification, an EJB should not have any static fields
+with write access. However, static read-only fields are allowed. This ensures proper
+behavior especially when instances are distributed by the container on several JREs.</description>
+    <configKey>category/java/errorprone.xml/StaticEJBFieldShouldBeFinal</configKey>
+  </rule>
+  <rule key='StringBufferInstantiationWithChar'>
+    <since>PMD 3.9</since>
+    <priority>MINOR</priority>
+    <description>Individual character values provided as initialization arguments will be converted into integers.
+This can lead to internal buffer sizes that are larger than expected. Some examples:</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='SuspiciousEqualsMethodName'>
+    <since>PMD 2.0</since>
+    <priority>BLOCKER</priority>
+    <description>The method name and parameter number are suspiciously close to equals(Object), which can denote an
+intention to override the equals(Object) method.</description>
+    <configKey>category/java/errorprone.xml/SuspiciousEqualsMethodName</configKey>
+  </rule>
+  <rule key='SuspiciousHashcodeMethodName'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>The method name and return type are suspiciously close to hashCode(), which may denote an intention
+to override the hashCode() method.</description>
+    <configKey>category/java/errorprone.xml/SuspiciousHashcodeMethodName</configKey>
+  </rule>
+  <rule key='SuspiciousOctalEscape'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>A suspicious octal escape sequence was found inside a String literal.
+The Java language specification (section 3.10.6) says an octal
+escape sequence inside a literal String shall consist of a backslash
+followed by:</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='TestClassWithoutTestCases'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>Test classes end with the suffix Test. Having a non-test class with that name is not a good practice,
+since most people will assume it is a test case. Test classes have test methods named testXXX.</description>
+    <configKey>category/java/errorprone.xml/TestClassWithoutTestCases</configKey>
+  </rule>
+  <rule key='UnconditionalIfStatement'>
+    <since>PMD 1.5</since>
+    <priority>MAJOR</priority>
+    <description>Do not use "if" statements whose conditionals are always true or always false.</description>
+    <configKey>category/java/errorprone.xml/UnconditionalIfStatement</configKey>
+  </rule>
+  <rule key='UnnecessaryBooleanAssertion'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>A JUnit test assertion with a boolean literal is unnecessary since it always will evaluate to the same thing.
+Consider using flow control (in case of assertTrue(false) or similar) or simply removing
+statements like assertTrue(true) and assertFalse(false).  If you just want a test to halt after finding
+an error, use the fail() method and provide an indication message of why it did.</description>
+    <configKey>category/java/errorprone.xml/UnnecessaryBooleanAssertion</configKey>
+  </rule>
+  <rule key='UnnecessaryCaseChange'>
+    <since>PMD 3.3</since>
+    <priority>MAJOR</priority>
+    <description>Using equalsIgnoreCase() is faster than using toUpperCase/toLowerCase().equals()</description>
+    <configKey>category/java/errorprone.xml/UnnecessaryCaseChange</configKey>
+  </rule>
+  <rule key='UnnecessaryConversionTemporary'>
+    <since>PMD 0.1</since>
+    <priority>MAJOR</priority>
+    <description>Avoid the use temporary objects when converting primitives to Strings. Use the static conversion methods
+on the wrapper classes instead.</description>
+    <configKey>category/java/errorprone.xml/UnnecessaryConversionTemporary</configKey>
+  </rule>
+  <rule key='UnusedNullCheckInEquals'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>After checking an object reference for null, you should invoke equals() on that object rather than passing it to another object’s equals() method.</description>
+    <configKey>category/java/errorprone.xml/UnusedNullCheckInEquals</configKey>
+  </rule>
+  <rule key='UseCorrectExceptionLogging'>
+    <since>PMD 3.2</since>
+    <priority>MAJOR</priority>
+    <description>To make sure the full stacktrace is printed out, use the logging statement with two arguments: a String and a Throwable.</description>
+    <configKey>category/java/errorprone.xml/UseCorrectExceptionLogging</configKey>
+  </rule>
+  <rule key='UseEqualsToCompareStrings'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>Using ‘==’ or ‘!=’ to compare strings only works if intern version is used on both sides.
+Use the equals() method instead.</description>
+    <configKey>category/java/errorprone.xml/UseEqualsToCompareStrings</configKey>
+  </rule>
+  <rule key='UselessOperationOnImmutable'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>An operation on an Immutable object (String, BigDecimal or BigInteger) won’t change the object itself
+since the result of the operation is a new object. Therefore, ignoring the operation result is an error.</description>
+    <configKey>category/java/errorprone.xml/UselessOperationOnImmutable</configKey>
+  </rule>
+  <rule key='UseLocaleWithCaseConversions'>
+    <since>PMD 2.0</since>
+    <priority>MAJOR</priority>
+    <description>When doing String::toLowerCase()/toUpperCase() conversions, use an explicit locale argument to specify the case transformation rules.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseProperClassLoader'>
+    <since>PMD 3.7</since>
+    <priority>MAJOR</priority>
+    <description>In J2EE, the getClassLoader() method might not work as expected. Use
+Thread.currentThread().getContextClassLoader() instead.</description>
+    <configKey>category/java/errorprone.xml/UseProperClassLoader</configKey>
+  </rule>
+  <rule key='AvoidSynchronizedAtMethodLevel'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>Method-level synchronization can cause problems when new code is added to the method.
+Block-level synchronization helps to ensure that only the code that needs synchronization
+gets it.</description>
+    <configKey>category/java/multithreading.xml/AvoidSynchronizedAtMethodLevel</configKey>
+  </rule>
+  <rule key='AvoidThreadGroup'>
+    <since>PMD 3.6</since>
+    <priority>MAJOR</priority>
+    <description>Avoid using java.lang.ThreadGroup; although it is intended to be used in a threaded environment
+it contains methods that are not thread-safe.</description>
+    <configKey>category/java/multithreading.xml/AvoidThreadGroup</configKey>
+  </rule>
+  <rule key='AvoidUsingVolatile'>
+    <since>PMD 4.1</since>
+    <priority>BLOCKER</priority>
+    <description>Use of the keyword ‘volatile’ is generally used to fine tune a Java application, and therefore, requires
+a good expertise of the Java Memory Model. Moreover, its range of action is somewhat misknown. Therefore,
+the volatile keyword should not be used for maintenance purpose and portability.</description>
+    <configKey>category/java/multithreading.xml/AvoidUsingVolatile</configKey>
+  </rule>
+  <rule key='DoNotUseThreads'>
+    <since>PMD 4.1</since>
+    <priority>MAJOR</priority>
+    <description>The J2EE specification explicitly forbids the use of threads. Threads are resources, that should be managed and monitored by the J2EE server.
+If the application creates threads on its own or uses own custom thread pools, then these threads are not managed, which could lead to resource exhaustion.
+Also EJB’s might be moved between machines in a cluster and only managed resources can be moved along.</description>
+    <configKey>category/java/multithreading.xml/DoNotUseThreads</configKey>
+  </rule>
+  <rule key='DontCallThreadRun'>
+    <since>PMD 4.3</since>
+    <priority>MINOR</priority>
+    <description>Explicitly calling Thread.run() method will execute in the caller’s thread of control.  Instead, call Thread.start() for the intended behavior.</description>
+    <configKey>category/java/multithreading.xml/DontCallThreadRun</configKey>
+  </rule>
+  <rule key='DoubleCheckedLocking'>
+    <since>PMD 1.04</since>
+    <priority>CRITICAL</priority>
+    <description>Partially created objects can be returned by the Double Checked Locking pattern when used in Java.
+An optimizing JRE may assign a reference to the baz variable before it calls the constructor of the object the
+reference points to.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='NonThreadSafeSingleton'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Non-thread safe singletons can result in bad state changes. Eliminate
+static singletons if possible by instantiating the object directly. Static
+singletons are usually not needed as only a single instance exists anyway.
+Other possible fixes are to synchronize the entire method or to use an
+initialize-on-demand holder class.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnsynchronizedStaticDateFormatter'>
+    <since>PMD 3.6</since>
+    <priority>MAJOR</priority>
+    <description>SimpleDateFormat instances are not synchronized. Sun recommends using separate format instances
+for each thread. If multiple threads must access a static formatter, the formatter must be
+synchronized on block level.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnsynchronizedStaticFormatter'>
+    <since>PMD 6.11.0</since>
+    <priority>MAJOR</priority>
+    <description>Instances of java.text.Format are generally not synchronized.
+Sun recommends using separate format instances for each thread.
+If multiple threads must access a static formatter, the formatter must be
+synchronized on block level.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseConcurrentHashMap'>
+    <since>PMD 4.2.6</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.5</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseNotifyAllInsteadOfNotify'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>Thread.notify() awakens a thread monitoring the object. If more than one thread is monitoring, then only
+one is chosen.  The thread chosen is arbitrary; thus its usually safer to call notifyAll() instead.</description>
+    <configKey>category/java/multithreading.xml/UseNotifyAllInsteadOfNotify</configKey>
+  </rule>
+  <rule key='AddEmptyString'>
+    <since>PMD 4.0</since>
+    <priority>MAJOR</priority>
+    <description>The conversion of literals to strings by concatenating them with empty strings is inefficient.
+It is much better to use one of the type-specific toString() methods instead.</description>
+    <configKey>category/java/performance.xml/AddEmptyString</configKey>
+  </rule>
+  <rule key='AppendCharacterWithChar'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>Avoid concatenating characters as strings in StringBuffer/StringBuilder.append methods.</description>
+    <configKey>category/java/performance.xml/AppendCharacterWithChar</configKey>
+  </rule>
+  <rule key='AvoidArrayLoops'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>Instead of manually copying data between two arrays, use the efficient Arrays.copyOf or System.arraycopy method instead.</description>
+    <configKey>category/java/performance.xml/AvoidArrayLoops</configKey>
+  </rule>
+  <rule key='AvoidFileStream'>
+    <since>PMD 6.0.0</since>
+    <priority>CRITICAL</priority>
+    <description>Minimum Language Version: Java 1.7</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='AvoidInstantiatingObjectsInLoops'>
+    <since>PMD 2.2</since>
+    <priority>MAJOR</priority>
+    <description>New objects created within loops should be checked to see if they can created outside them and reused.</description>
+    <configKey>category/java/performance.xml/AvoidInstantiatingObjectsInLoops</configKey>
+  </rule>
+  <rule key='AvoidUsingShortType'>
+    <since>PMD 4.1</since>
+    <priority>CRITICAL</priority>
+    <description>Java uses the ‘short’ type to reduce memory usage, not to optimize calculation. In fact, the JVM does not have any
+arithmetic capabilities for the short type: the JVM must convert the short into an int, do the proper calculation
+and convert the int back to a short. Thus any storage gains found through use of the ‘short’ type may be offset by
+adverse impacts on performance.</description>
+    <configKey>category/java/performance.xml/AvoidUsingShortType</configKey>
+  </rule>
+  <rule key='BigIntegerInstantiation'>
+    <since>PMD 3.9</since>
+    <priority>MAJOR</priority>
+    <description>Don’t create instances of already existing BigInteger (BigInteger.ZERO, BigInteger.ONE) and
+for Java 1.5 onwards, BigInteger.TEN and BigDecimal (BigDecimal.ZERO, BigDecimal.ONE, BigDecimal.TEN)</description>
+    <configKey>category/java/performance.xml/BigIntegerInstantiation</configKey>
+  </rule>
+  <rule key='BooleanInstantiation'>
+    <since>PMD 1.2</since>
+    <priority>BLOCKER</priority>
+    <description>Avoid instantiating Boolean objects; you can reference Boolean.TRUE, Boolean.FALSE, or call Boolean.valueOf() instead.
+Note that new Boolean() is deprecated since JDK 9 for that reason.</description>
+    <configKey>category/java/performance.xml/BooleanInstantiation</configKey>
+  </rule>
+  <rule key='ByteInstantiation'>
+    <since>PMD 4.0</since>
+    <priority>BLOCKER</priority>
+    <description>Calling new Byte() causes memory allocation that can be avoided by the static Byte.valueOf().
+It makes use of an internal cache that recycles earlier instances making it more memory efficient.
+Note that new Byte() is deprecated since JDK 9 for that reason.</description>
+    <configKey>category/java/performance.xml/ByteInstantiation</configKey>
+  </rule>
+  <rule key='ConsecutiveAppendsShouldReuse'>
+    <since>PMD 5.1</since>
+    <priority>MAJOR</priority>
+    <description>Consecutive calls to StringBuffer/StringBuilder .append should be chained, reusing the target object. This can improve the performance
+by producing a smaller bytecode, reducing overhead and improving inlining. A complete analysis can be found here</description>
+    <configKey>category/java/performance.xml/ConsecutiveAppendsShouldReuse</configKey>
+  </rule>
+  <rule key='ConsecutiveLiteralAppends'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>Consecutively calling StringBuffer/StringBuilder.append(…) with literals should be avoided.
+Since the literals are constants, they can already be combined into a single String literal and this String
+can be appended in a single method call.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='InefficientEmptyStringCheck'>
+    <since>PMD 3.6</since>
+    <priority>MAJOR</priority>
+    <description>String.trim().length() == 0 (or String.trim().isEmpty() for the same reason) is an inefficient
+way to check if a String is really blank, as it creates a new String object just to check its size.
+Consider creating a static function that loops through a string, checking Character.isWhitespace()
+on each character and returning false if a non-whitespace character is found. A Smarter code to
+check for an empty string would be:</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='InefficientStringBuffering'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Avoid concatenating non-literals in a StringBuffer constructor or append() since intermediate buffers will
+need to be be created and destroyed by the JVM.</description>
+    <configKey>category/java/performance.xml/InefficientStringBuffering</configKey>
+  </rule>
+  <rule key='InsufficientStringBufferDeclaration'>
+    <since>PMD 3.6</since>
+    <priority>MAJOR</priority>
+    <description>Failing to pre-size a StringBuffer or StringBuilder properly could cause it to re-size many times
+during runtime. This rule attempts to determine the total number the characters that are actually
+passed into StringBuffer.append(), but represents a best guess "worst case" scenario. An empty
+StringBuffer/StringBuilder constructor initializes the object to 16 characters. This default
+is assumed if the length of the constructor can not be determined.</description>
+    <configKey>category/java/performance.xml/InsufficientStringBufferDeclaration</configKey>
+  </rule>
+  <rule key='IntegerInstantiation'>
+    <since>PMD 3.5</since>
+    <priority>BLOCKER</priority>
+    <description>Calling new Integer() causes memory allocation that can be avoided by the static Integer.valueOf().
+It makes use of an internal cache that recycles earlier instances making it more memory efficient.
+Note that new Integer() is deprecated since JDK 9 for that reason.</description>
+    <configKey>category/java/performance.xml/IntegerInstantiation</configKey>
+  </rule>
+  <rule key='LongInstantiation'>
+    <since>PMD 4.0</since>
+    <priority>BLOCKER</priority>
+    <description>Calling new Long() causes memory allocation that can be avoided by the static Long.valueOf().
+It makes use of an internal cache that recycles earlier instances making it more memory efficient.
+Note that new Long() is deprecated since JDK 9 for that reason.</description>
+    <configKey>category/java/performance.xml/LongInstantiation</configKey>
+  </rule>
+  <rule key='OptimizableToArrayCall'>
+    <since>PMD 1.8</since>
+    <priority>MAJOR</priority>
+    <description>Minimum Language Version: Java 1.6</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='RedundantFieldInitializer'>
+    <since>PMD 5.0</since>
+    <priority>MAJOR</priority>
+    <description>Java will initialize fields with known default values so any explicit initialization of those same defaults
+is redundant and results in a larger class file (approximately three additional bytecode instructions per field).</description>
+    <configKey>category/java/performance.xml/RedundantFieldInitializer</configKey>
+  </rule>
+  <rule key='ShortInstantiation'>
+    <since>PMD 4.0</since>
+    <priority>BLOCKER</priority>
+    <description>Calling new Short() causes memory allocation that can be avoided by the static Short.valueOf().
+It makes use of an internal cache that recycles earlier instances making it more memory efficient.
+Note that new Short() is deprecated since JDK 9 for that reason.</description>
+    <configKey>category/java/performance.xml/ShortInstantiation</configKey>
+  </rule>
+  <rule key='SimplifyStartsWith'>
+    <since>PMD 3.1</since>
+    <priority>MAJOR</priority>
+    <description>Since it passes in a literal of length 1, calls to (string).startsWith can be rewritten using (string).charAt(0)
+at the expense of some readability.</description>
+    <configKey>category/java/performance.xml/SimplifyStartsWith</configKey>
+  </rule>
+  <rule key='StringInstantiation'>
+    <since>PMD 1.0</since>
+    <priority>BLOCKER</priority>
+    <description>Avoid instantiating String objects; this is usually unnecessary since they are immutable and can be safely shared.</description>
+    <configKey>category/java/performance.xml/StringInstantiation</configKey>
+  </rule>
+  <rule key='StringToString'>
+    <since>PMD 1.0</since>
+    <priority>MAJOR</priority>
+    <description>Avoid calling toString() on objects already known to be string instances; this is unnecessary.</description>
+    <configKey>category/java/performance.xml/StringToString</configKey>
+  </rule>
+  <rule key='TooFewBranchesForASwitchStatement'>
+    <since>PMD 4.2</since>
+    <priority>MAJOR</priority>
+    <description>Switch statements are intended to be used to support complex branching behaviour. Using a switch for only a few
+cases is ill-advised, since switches are not as easy to understand as if-then statements. In these cases use the
+if-then statement to increase code readability.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UnnecessaryWrapperObjectCreation'>
+    <since>PMD 3.8</since>
+    <priority>MAJOR</priority>
+    <description>Most wrapper classes provide static conversion methods that avoid the need to create intermediate objects
+just to create the primitive forms. Using these avoids the cost of creating objects that also need to be
+garbage-collected later.</description>
+    <configKey>category/java/performance.xml/UnnecessaryWrapperObjectCreation</configKey>
+  </rule>
+  <rule key='UseArrayListInsteadOfVector'>
+    <since>PMD 3.0</since>
+    <priority>MAJOR</priority>
+    <description>ArrayList is a much better Collection implementation than Vector if thread-safe operation is not required.</description>
+    <configKey>category/java/performance.xml/UseArrayListInsteadOfVector</configKey>
+  </rule>
+  <rule key='UseArraysAsList'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>The java.util.Arrays class has a "asList" method that should be used when you want to create a new List from
+an array of objects. It is faster than executing a loop to copy all the elements of the array one by one.</description>
+    <configKey></configKey>
+  </rule>
+  <rule key='UseIndexOfChar'>
+    <since>PMD 3.5</since>
+    <priority>MAJOR</priority>
+    <description>Use String.indexOf(char) when checking for the index of a single character; it executes faster.</description>
+    <configKey>category/java/performance.xml/UseIndexOfChar</configKey>
+  </rule>
+  <rule key='UselessStringValueOf'>
+    <since>PMD 3.8</since>
+    <priority>MAJOR</priority>
+    <description>No need to call String.valueOf to append to a string; just use the valueOf() argument directly.</description>
+    <configKey>category/java/performance.xml/UselessStringValueOf</configKey>
+  </rule>
+  <rule key='UseStringBufferForStringAppends'>
+    <since>PMD 3.1</since>
+    <priority>MAJOR</priority>
+    <description>The use of the ‘+=’ operator for appending strings causes the JVM to create and use an internal StringBuffer.
+If a non-trivial number of these concatenations are being used then the explicit use of a StringBuilder or
+threadsafe StringBuffer is recommended to avoid this.</description>
+    <configKey>category/java/performance.xml/UseStringBufferForStringAppends</configKey>
+  </rule>
+  <rule key='UseStringBufferLength'>
+    <since>PMD 3.4</since>
+    <priority>MAJOR</priority>
+    <description>Use StringBuffer.length() to determine StringBuffer length rather than using StringBuffer.toString().equals("")
+or StringBuffer.toString().length() == …</description>
+    <configKey>category/java/performance.xml/UseStringBufferLength</configKey>
+  </rule>
+  <rule key='HardCodedCryptoKey'>
+    <since>PMD 6.4.0</since>
+    <priority>MAJOR</priority>
+    <description>Do not use hard coded values for cryptographic operations. Please store keys outside of source code.</description>
+    <configKey>category/java/security.xml/HardCodedCryptoKey</configKey>
+  </rule>
+  <rule key='InsecureCryptoIv'>
+    <since>PMD 6.3.0</since>
+    <priority>MAJOR</priority>
+    <description>Do not use hard coded initialization vector in cryptographic operations. Please use a randomly generated IV.</description>
+    <configKey>category/java/security.xml/InsecureCryptoIv</configKey>
+  </rule>
+</rules>

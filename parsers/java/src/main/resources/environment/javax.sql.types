@@ -1,0 +1,19 @@
+package javax.sql
+
+interface CommonDataSource
+interface ConnectionEventListener
+interface ConnectionPoolDataSource
+interface DataSource
+interface PooledConnection
+interface RowSet
+interface RowSetInternal
+interface RowSetListener
+interface RowSetMetaData
+interface RowSetReader
+interface RowSetWriter
+interface StatementEventListener
+interface XAConnection
+interface XADataSource
+class ConnectionEvent
+class RowSetEvent
+class StatementEvent

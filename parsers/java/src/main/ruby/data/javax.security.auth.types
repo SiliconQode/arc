@@ -1,0 +1,11 @@
+package javax.security.auth
+
+interface Destroyable
+interface Refreshable
+class AuthPermission
+class Policy
+class PrivateCredentialPermission
+class Subject
+class SubjectDomainCombiner
+class DestroyFailedException
+class RefreshFailedException

@@ -1,0 +1,6 @@
+package javax.xml.ws.spi
+
+class Invoker
+class Provider
+class ServiceDelegate
+annotation WebServiceFeatureAnnotation

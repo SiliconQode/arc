@@ -1,0 +1,6 @@
+package org.omg.DynamicAny.DynAnyPackage
+
+class InvalidValueHelper
+class TypeMismatchHelper
+class InvalidValue
+class TypeMismatch

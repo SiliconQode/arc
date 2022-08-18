@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    The MIT License (MIT)
+
+    MSUSEL Arc Framework
+    Copyright (c) 2015-2019 Montana State University, Gianforte School of Computing,
+    Software Engineering Laboratory and Idaho State University, Informatics and
+    Computer Science, Empirical Software Engineering Laboratory
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+-->
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.24.0" timestamp="2021-04-27T10:04:19.555">
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/BasicConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="BasicConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="BasicConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="47" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="47" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="BasicConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="BasicConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="BasicConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="BasicConcreteState" method="BasicConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="32" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="BasicConcreteState" method="BasicConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="47" endcolumn="65" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="BasicConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="BasicConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="BasicConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/ButtonConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="ButtonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="ButtonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="48" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="48" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="ButtonConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="ButtonConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="ButtonConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="ButtonConcreteState" method="ButtonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="33" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ButtonConcreteState" method="ButtonConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="48" endcolumn="66" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ButtonConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="ButtonConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ButtonConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/CheckedAbstractState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="CheckedAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="CheckedAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="CheckedAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="CheckedAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="patterngen.state" class="CheckedAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="patterngen.state" class="CheckedAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractClassWithoutAnyMethod" ruleset="Design" package="patterngen.state" class="CheckedAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#abstractclasswithoutanymethod" priority="1">
+No abstract method which means that the keyword is most likely used to prevent instantiation. Use a private or protected constructor instead.
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/DynamicState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="DynamicState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="DynamicState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="DynamicState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="DynamicState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="53" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="patterngen.state" class="DynamicState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="37" endline="53" begincolumn="17" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="patterngen.state" class="DynamicState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/EncoderConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="EncoderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="EncoderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="49" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="49" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="EncoderConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="EncoderConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="EncoderConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="EncoderConcreteState" method="EncoderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="34" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="EncoderConcreteState" method="EncoderConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="49" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="EncoderConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="EncoderConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="EncoderConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/ExtractorConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="ExtractorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="ExtractorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="ExtractorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="ExtractorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="ExtractorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="ExtractorConcreteState" method="ExtractorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="36" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ExtractorConcreteState" method="ExtractorConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="51" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ExtractorConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="ExtractorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ExtractorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/GeneratorConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="GeneratorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="GeneratorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="GeneratorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="GeneratorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="GeneratorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="GeneratorConcreteState" method="GeneratorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="36" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="GeneratorConcreteState" method="GeneratorConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="51" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="GeneratorConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="GeneratorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="GeneratorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/ListConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="ListConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="ListConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="46" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="46" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="ListConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="ListConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="ListConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="ListConcreteState" method="ListConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="31" endcolumn="49" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ListConcreteState" method="ListConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="46" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ListConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="ListConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ListConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/OptimizedConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="OptimizedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="OptimizedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="OptimizedConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="OptimizedConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="OptimizedConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="OptimizedConcreteState" method="OptimizedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="36" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="OptimizedConcreteState" method="OptimizedConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="51" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="OptimizedConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="OptimizedConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="OptimizedConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/PanelAbstractState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="PanelAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="PanelAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="PanelAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="PanelAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="patterngen.state" class="PanelAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="patterngen.state" class="PanelAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractClassWithoutAnyMethod" ruleset="Design" package="patterngen.state" class="PanelAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#abstractclasswithoutanymethod" priority="1">
+No abstract method which means that the keyword is most likely used to prevent instantiation. Use a private or protected constructor instead.
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/ProcessorConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="ProcessorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="ProcessorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="ProcessorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="ProcessorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="ProcessorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="ProcessorConcreteState" method="ProcessorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="36" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ProcessorConcreteState" method="ProcessorConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="51" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ProcessorConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="ProcessorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ProcessorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/RasterConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="RasterConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="RasterConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="48" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="48" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="RasterConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="RasterConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="RasterConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="RasterConcreteState" method="RasterConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="33" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="RasterConcreteState" method="RasterConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="48" endcolumn="66" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="RasterConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="RasterConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="RasterConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/ReaderConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="ReaderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="ReaderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="48" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="48" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="ReaderConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="ReaderConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="ReaderConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="ReaderConcreteState" method="ReaderConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="33" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ReaderConcreteState" method="ReaderConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="48" endcolumn="66" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ReaderConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="ReaderConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ReaderConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/ScriptableConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="ScriptableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="ScriptableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="52" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="52" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="ScriptableConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="ScriptableConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="ScriptableConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="ScriptableConcreteState" method="ScriptableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="37" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ScriptableConcreteState" method="ScriptableConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="52" endcolumn="70" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ScriptableConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="ScriptableConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ScriptableConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/SelectorContext.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="SelectorContext" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="SelectorContext" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="SelectorContext" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="30" endline="30" begincolumn="1" endcolumn="37" rule="ImportFromSamePackage" ruleset="Error Prone" package="patterngen.state" class="SelectorContext" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#importfromsamepackage" priority="3">
+No need to import a type that lives in the same package
+</violation>
+<violation beginline="31" endline="31" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="SelectorContext" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="41" endline="41" begincolumn="13" endcolumn="38" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SelectorContext" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="41" endline="41" begincolumn="26" endcolumn="37" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="SelectorContext" variable="currentState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="46" endline="48" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SelectorContext" method="SelectorContext" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="50" endline="50" begincolumn="36" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="SelectorContext" method="changeCurrentState" variable="state" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'state' is not assigned and could be declared final
+</violation>
+<violation beginline="50" endline="53" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SelectorContext" method="changeCurrentState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="55" endline="57" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SelectorContext" method="parse" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/SingletonConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="SingletonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="SingletonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="SingletonConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="SingletonConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="SingletonConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="SingletonConcreteState" method="SingletonConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="36" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="SingletonConcreteState" method="SingletonConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="51" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="SingletonConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="SingletonConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="SingletonConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/StatelessConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="StatelessConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="StatelessConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="51" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="StatelessConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="StatelessConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="StatelessConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="StatelessConcreteState" method="StatelessConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="36" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="StatelessConcreteState" method="StatelessConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="51" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="StatelessConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="StatelessConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="StatelessConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/ThreadedConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="ThreadedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="ThreadedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="50" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="50" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="ThreadedConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="ThreadedConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="ThreadedConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="ThreadedConcreteState" method="ThreadedConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="35" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ThreadedConcreteState" method="ThreadedConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="50" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="ThreadedConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="ThreadedConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="ThreadedConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/TimerAbstractState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="TimerAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="TimerAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="TimerAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="TimerAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="patterngen.state" class="TimerAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="patterngen.state" class="TimerAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractClassWithoutAnyMethod" ruleset="Design" package="patterngen.state" class="TimerAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#abstractclasswithoutanymethod" priority="1">
+No abstract method which means that the keyword is most likely used to prevent instantiation. Use a private or protected constructor instead.
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/UserAbstractState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="UserAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="UserAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="UserAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="UserAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="patterngen.state" class="UserAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="patterngen.state" class="UserAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="37" endline="38" begincolumn="17" endcolumn="1" rule="AbstractClassWithoutAnyMethod" ruleset="Design" package="patterngen.state" class="UserAbstractState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#abstractclasswithoutanymethod" priority="1">
+No abstract method which means that the keyword is most likely used to prevent instantiation. Use a private or protected constructor instead.
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/VisitorConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="VisitorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="VisitorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="49" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="49" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="VisitorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="VisitorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="VisitorConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="VisitorConcreteState" method="VisitorConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="34" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="VisitorConcreteState" method="VisitorConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="49" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="VisitorConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="VisitorConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="VisitorConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<file name="/home/git/msusel/msusel-patterns-experimenter/test_data/state/state-0_copy/src/main/java/patterngen/state/WritableConcreteState.java">
+<violation beginline="1" endline="26" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentsize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="29" endline="29" begincolumn="1" endcolumn="19" rule="UnusedImports" ruleset="Best Practices" package="patterngen.state" class="WritableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util'
+</violation>
+<violation beginline="37" endline="81" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="patterngen.state" class="WritableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#classwithonlyprivateconstructorsshouldbefinal" priority="1">
+A class which only has private constructors should be final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="50" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="50" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="patterngen.state" class="WritableConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field instance has the same name as a method
+</violation>
+<violation beginline="40" endline="40" begincolumn="13" endcolumn="36" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Field comments are required
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="patterngen.state" class="WritableConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="40" endline="40" begincolumn="29" endcolumn="35" rule="ImmutableField" ruleset="Design" package="patterngen.state" class="WritableConcreteState" variable="context" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'context' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="43" endline="45" begincolumn="13" endcolumn="5" rule="CallSuperInConstructor" ruleset="Code Style" package="patterngen.state" class="WritableConcreteState" method="WritableConcreteState" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#callsuperinconstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="43" endline="43" begincolumn="35" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="WritableConcreteState" method="WritableConcreteState" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="50" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="patterngen.state" class="WritableConcreteState" method="instance" variable="ctx" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ctx' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="52" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="48" endline="50" begincolumn="9" endcolumn="9" rule="NonThreadSafeSingleton" ruleset="Multithreading" package="patterngen.state" class="WritableConcreteState" method="instance" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_multithreading.html#nonthreadsafesingleton" priority="3">
+Singleton is not thread safe
+</violation>
+<violation beginline="54" endline="54" begincolumn="23" endcolumn="24" rule="UncommentedEmptyMethodBody" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#uncommentedemptymethodbody" priority="3">
+Document empty method body
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="24" rule="CommentRequired" ruleset="Documentation" package="patterngen.state" class="WritableConcreteState" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.24.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+</file>
+<configerror rule="LoosePackageCoupling" msg="No packages or classes specified"/>
+</pmd>

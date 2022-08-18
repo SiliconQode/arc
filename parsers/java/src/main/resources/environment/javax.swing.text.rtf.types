@@ -1,0 +1,3 @@
+package javax.swing.text.rtf
+
+class RTFEditorKit

@@ -1,0 +1,65 @@
+workflow verification
+  phase one
+    foreach row do
+      map key to row.SYS_KEY
+      map baseKey to row.BASE_KEY
+      map infKey to row.INF_KEY
+      create_sys sysKey
+      create_proj baseKey
+      create_proj infKey
+    end for
+  end phase
+  phase two
+    foreach row do
+      map baseKey to row.BASE_KEY
+      set_project baseKey
+      tool artifactIdent
+      tool parser
+      tool dirIdent
+      tool patternInstCreator
+      
+      map infKey to row.INF_KEY
+      set_project infKey
+      tool artifactIdent
+      tool parser
+      tool dirIdent
+      tool patternInstCreator
+    end for
+  end phase
+  phase three
+    foreach row do
+      map baseKey to row.BASE_KEY
+      tool controlledSourceInject baseKey
+      
+      map injKey to row.INJ_KEY
+      set_project injKey
+      tool artifactIdent
+      tool parser
+      tool dirIdent
+    end for      
+  end phase
+  phase four
+    foreach row do
+      map baseKey to row.BASE_KEY
+      map infKey to row.INF_KEY
+      map injKey to row.INJ_KEY
+      
+      set_project baseKey
+      tool metrics
+      tool sigMain
+      tool sigRating
+      tool sigTD
+      
+      set_project infKey
+      tool metrics
+      tool sigMain
+      tool sigRating
+      tool sigTD
+      
+      set_project injKey
+      tool metrics
+      tool sigMain
+      tool sigRating
+      tool sigTD
+  end phase
+end workflow

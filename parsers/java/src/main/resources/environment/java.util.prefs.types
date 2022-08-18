@@ -1,0 +1,11 @@
+package java.util.prefs
+
+interface NodeChangeListener
+interface PreferenceChangeListener
+interface PreferencesFactory
+class AbstractPreferences
+class NodeChangeEvent
+class PreferenceChangeEvent
+class Preferences
+class BackingStoreException
+class InvalidPreferencesFormatException

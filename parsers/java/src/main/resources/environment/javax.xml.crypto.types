@@ -1,0 +1,17 @@
+package javax.xml.crypto
+
+interface AlgorithmMethod
+interface Data
+interface KeySelectorResult
+interface NodeSetData
+interface URIDereferencer
+interface URIReference
+interface XMLCryptoContext
+interface XMLStructure
+class KeySelector
+class KeySelector.Purpose
+class OctetStreamData
+class KeySelectorException
+class MarshalException
+class NoSuchMechanismException
+class URIReferenceException

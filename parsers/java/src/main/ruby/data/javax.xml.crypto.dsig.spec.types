@@ -1,0 +1,13 @@
+package javax.xml.crypto.dsig.spec
+
+interface C14NMethodParameterSpec
+interface DigestMethodParameterSpec
+interface SignatureMethodParameterSpec
+interface TransformParameterSpec
+class ExcC14NParameterSpec
+class HMACParameterSpec
+class XPathFilter2ParameterSpec
+class XPathFilterParameterSpec
+class XPathType
+class XPathType.Filter
+class XSLTTransformParameterSpec

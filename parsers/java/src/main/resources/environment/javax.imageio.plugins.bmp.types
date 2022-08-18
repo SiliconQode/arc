@@ -1,0 +1,3 @@
+package javax.imageio.plugins.bmp
+
+class BMPImageWriteParam

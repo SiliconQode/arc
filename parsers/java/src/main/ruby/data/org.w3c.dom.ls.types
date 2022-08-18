@@ -1,0 +1,13 @@
+package org.w3c.dom.ls
+
+interface DOMImplementationLS
+interface LSInput
+interface LSLoadEvent
+interface LSOutput
+interface LSParser
+interface LSParserFilter
+interface LSProgressEvent
+interface LSResourceResolver
+interface LSSerializer
+interface LSSerializerFilter
+class LSException

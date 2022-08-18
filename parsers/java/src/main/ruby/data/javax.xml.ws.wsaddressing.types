@@ -1,0 +1,4 @@
+package javax.xml.ws.wsaddressing
+
+class W3CEndpointReference
+class W3CEndpointReferenceBuilder

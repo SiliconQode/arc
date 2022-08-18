@@ -1,0 +1,6 @@
+package java.util.regex
+
+interface MatchResult
+class Matcher
+class Pattern
+class PatternSyntaxException

@@ -1,0 +1,7 @@
+package org.omg.PortableInterceptor.ORBInitInfoPackage
+
+class DuplicateNameHelper
+class InvalidNameHelper
+class ObjectIdHelper
+class DuplicateName
+class InvalidName

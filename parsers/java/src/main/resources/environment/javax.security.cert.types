@@ -1,0 +1,9 @@
+package javax.security.cert
+
+class Certificate
+class X509Certificate
+class CertificateEncodingException
+class CertificateException
+class CertificateExpiredException
+class CertificateNotYetValidException
+class CertificateParsingException

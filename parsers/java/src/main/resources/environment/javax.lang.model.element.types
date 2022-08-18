@@ -1,0 +1,20 @@
+package javax.lang.model.element
+
+interface AnnotationMirror
+interface AnnotationValue
+interface AnnotationValueVisitor
+interface Element
+interface ElementVisitor
+interface ExecutableElement
+interface Name
+interface PackageElement
+interface Parameterizable
+interface QualifiedNameable
+interface TypeElement
+interface TypeParameterElement
+interface VariableElement
+enum ElementKind
+enum Modifier
+enum NestingKind
+class UnknownAnnotationValueException
+class UnknownElementException

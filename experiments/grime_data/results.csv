@@ -1,0 +1,3 @@
+ID,PatternType,InjectionType,InjectionSeverity,Key1,Key2,Path1,Path2,QMEFFECT,QMEXTEND,QMFLEX,QMFUNC,QMREUSE,QMUNDER,Functional Correctness,Performance Efficiency,Compatibility,Usability,Reliability,Security,Maintainability,Portability,cast_td
+1,strategy,dipg,1,strategy:strategy-1:1.0.0,strategy:strategy-1_copy:1.0.0,grime_data/strategy/strategy-1/,grime_data/strategy/strategy-1_copy/,,,,,,,,,,,,,,,
+2,strategy,disg,1,strategy:strategy-2:1.0.0,strategy:strategy-2_copy:1.0.0,grime_data/strategy/strategy-2/,grime_data/strategy/strategy-2_copy/,,,,,,,,,,,,,,,

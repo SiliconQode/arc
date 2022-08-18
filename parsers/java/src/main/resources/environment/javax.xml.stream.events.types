@@ -1,0 +1,16 @@
+package javax.xml.stream.events
+
+interface Attribute
+interface Characters
+interface Comment
+interface DTD
+interface EndDocument
+interface EndElement
+interface EntityDeclaration
+interface EntityReference
+interface Namespace
+interface NotationDeclaration
+interface ProcessingInstruction
+interface StartDocument
+interface StartElement
+interface XMLEvent

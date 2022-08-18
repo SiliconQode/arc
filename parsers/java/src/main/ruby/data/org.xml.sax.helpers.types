@@ -1,0 +1,12 @@
+package org.xml.sax.helpers
+
+class AttributeListImpl
+class AttributesImpl
+class DefaultHandler
+class LocatorImpl
+class NamespaceSupport
+class ParserAdapter
+class ParserFactory
+class XMLFilterImpl
+class XMLReaderAdapter
+class XMLReaderFactory

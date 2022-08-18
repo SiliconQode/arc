@@ -1,0 +1,4 @@
+package javax.xml.bind.attachment
+
+class AttachmentMarshaller
+class AttachmentUnmarshaller

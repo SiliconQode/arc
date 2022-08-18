@@ -1,0 +1,9 @@
+package javax.swing.plaf.nimbus
+
+class AbstractRegionPainter
+class AbstractRegionPainter.PaintContext
+class NimbusLookAndFeel
+class NimbusStyle
+class State
+class JComponent
+enum AbstractRegionPainter.PaintContext.CacheMode

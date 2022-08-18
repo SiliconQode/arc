@@ -1,0 +1,10 @@
+package javax.sql.rowset.spi
+
+interface SyncResolver
+interface TransactionalWriter
+interface XmlReader
+interface XmlWriter
+class SyncFactory
+class SyncProvider
+class SyncFactoryException
+class SyncProviderException

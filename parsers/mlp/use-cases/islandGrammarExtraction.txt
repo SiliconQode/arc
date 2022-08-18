@@ -1,0 +1,73 @@
+The next important step is to extract the island grammars from the input grammars.
+This is the step I'm most interested in.
+
+Test cases:
+
+Identical grammars should have the islands extracted be identical to
+each other.
+input 1:
+<grammar> ::= "hello"
+
+input 2:
+<another grammar> ::= "hello"
+
+output:
+<island1> ::= "hello"
+
+Grammars with a simple identical part should have that identical part detected
+input 1:
+<eh> ::= <a> "b" | "cd"
+<a> ::= "hello"
+
+input 2:
+<all> ::= <hello> <world>
+<world> ::= "world" | "World"
+<hello> ::= "hello" | "Hello"
+
+output:
+<island1> ::= "hello"
+
+
+Parts with identical trees should be detected:
+input 1:
+<a> ::= "Hi" | <hello world>
+<hello world> ::= "Hello World" | "hello world"
+
+input 2:
+<a> ::= "" | <hw> <a>
+<hw> ::= "Hello World" | "hello world"
+
+output:
+<island1> ::= "Hello World" | "hello world"
+
+
+If the branches of an or are rearranged, this should not affect detections.
+input1:
+<a> ::= "hello" | "world"
+
+input2:
+<a> ::= "world" | "hello"
+
+output:
+<island1> ::= "hello" | "world"
+
+If the grammars produce tree structures that are too different, then
+the rules should not be detected as islands:
+input 1:
+<a> ::= "hello " "world"
+
+input 2:
+<a> ::= "hello" " world"
+
+output:
+
+
+
+input 1:
+<prog> ::= "" | <line> <prog>
+<line> ::= <expr> "\n"
+<expr> ::= <number> | <expr> "*" <number>
+<number> ::= <startDigit> <otherDigits>
+<startDigit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<otherDigits> ::= "" | <digit> <otherDigits>
+<digit> ::= "0" | <startDigit>

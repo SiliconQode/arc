@@ -1,0 +1,6 @@
+package javax.sound.midi.spi
+
+class MidiDeviceProvider
+class MidiFileReader
+class MidiFileWriter
+class SoundbankReader

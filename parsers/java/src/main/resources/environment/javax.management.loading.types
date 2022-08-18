@@ -1,0 +1,9 @@
+package javax.management.loading
+
+interface ClassLoaderRepository
+interface MLetMBean
+interface PrivateClassLoader
+class DefaultLoaderRepository
+class MLet
+class MLetContent
+class PrivateMLet

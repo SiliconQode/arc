@@ -1,0 +1,20 @@
+package javax.naming.directory
+
+interface Attribute
+interface Attributes
+interface DirContext
+class BasicAttribute
+class BasicAttributes
+class InitialDirContext
+class ModificationItem
+class SearchControls
+class SearchResult
+class AttributeInUseException
+class AttributeModificationException
+class InvalidAttributeIdentifierException
+class InvalidAttributesException
+class InvalidAttributeValueException
+class InvalidSearchControlsException
+class InvalidSearchFilterException
+class NoSuchAttributeException
+class SchemaViolationException

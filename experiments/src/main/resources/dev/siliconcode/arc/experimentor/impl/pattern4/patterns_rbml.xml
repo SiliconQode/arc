@@ -1,0 +1,271 @@
+<!--
+
+    The MIT License (MIT)
+
+    Empirilytics Arc Framework
+    Copyright (c) 2015-2021 Empirilytics
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+-->
+<patterns repo="gof" tool="pattern4">
+    <pattern gofName="Abstract Factory" family="Creational">
+        <role rbmlName="AbstractFactory" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteFactory" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="CreateProduct()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractProduct" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ConcreteProduct" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Adapter" pattern4Name="(Object)Adapter" family="Structural">
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Target" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="TargetRequest()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="ConcreteAdapter" pattern4Name="Adapter" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Request()" pattern4Name="Request()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractAdapter" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Adaptee" pattern4Name="Adaptee" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="SpecificRequest()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="clnt" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="targ" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="adapter" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="adaptee" pattern4Name="adaptee" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Bridge" pattern4Name="Bridge" family="Structural">
+        <role rbmlName="ConcreteImplementor" pattern4Name="Implementor" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractImplementor" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ConcreteAbstraction" pattern4Name="Abstraction" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractAbstraction" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="imp" pattern4Name="implementor" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="Operation()" pattern4Name="Operation()" elementType="METHOD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Builder" family="Creational">
+        <role rbmlName="ConcreteBuilder" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractBuilder" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="BuildPart()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="GetResult()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="ConcreteProduct" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractProduct" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Director" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Construct()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="build" elementType="FIELD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Chain of Responsibility" pattern4Name="Chain of Responsibility" family="Behavioral">
+        <role rbmlName="ConcreteHandler" pattern4Name="Handler" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractHandler" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="succ" pattern4Name="successor" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="hand" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Command" pattern4Name="Command" family="Behavioral">
+        <role rbmlName="ConcreteCommand" pattern4Name="Adapter" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteCommand" pattern4Name="ConcreteCommand" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Receiver" pattern4Name="Adaptee" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Receiver" pattern4Name="Receiver" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Execute()" pattern4Name="Request()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="Execute()" pattern4Name="Execute()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="Action()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="AbstractCommand" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Invoker" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="rcvr" pattern4Name="receiver" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="cond" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="c" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <!-- Review RBML -->
+    <pattern gofName="Composite" pattern4Name="Composite" family="Structural">
+        <role rbmlName="Leaf" pattern4Name="Component" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteComposite" pattern4Name="Composite" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteOperation()" pattern4Name="Operation()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="Operation()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="Add()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="Remove()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="GetChild()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="children" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="clnt" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="cmpt" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="parent" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="Leaf" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="LeafOperation()" elementType="METHOD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Decorator" pattern4Name="Decorator" family="Structural">
+        <role rbmlName="ConcreteComponent" pattern4Name="Component" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteDecorator" pattern4Name="Decorator" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="absComp" pattern4Name="component" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="Operation()" pattern4Name="Operation()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="OperationImpl()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="addedState" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="AddedBehavior()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="AbstractComponent" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="AbstractDecorator" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Component" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Decorator" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="absDec" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Facade" family="Structural">
+        <role rbmlName="Facade" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="SystemClass" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="sys" elementType="FIELD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Factory Method" pattern4Name="Factory Method" family="Creational">
+        <role rbmlName="ConcreteCreator" pattern4Name="Creator" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="FactoryMethod()" pattern4Name="FactoryMethod()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractCreator" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="AbstractProduct" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ConcreteProduct" elementType="CLASS" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Flyweight" family="Structural">
+        <role rbmlName="ConcreteFlyweight" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Operation()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractFlyweight" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ConcreteUnsharedFlyweight" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="AbstractUnsharedFlyweight" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="FlyweightFactory" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="GetFlyweight()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="cfw" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="ufw" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Interpreter" family="Behavioral">
+        <role rbmlName="ConcreteTerminalExpr" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Interpret()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractTerminalExpr" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ConcreteNonTerminalExpr" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractNonTerminalExpr" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Context" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ex" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="con" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Iterator" family="Behavioral">
+        <role rbmlName="Item" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteAggregate" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractAggregate" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ConcreteIterator" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractIterator" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="CreateIterator()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="index" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="First()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="Next()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="IsDone()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="CurrentItem()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="iter" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="itm" elementType="FIELD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Mediator" family="Behavioral">
+        <role rbmlName="ConcreteMediator" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractMediator" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ConcreteColleague" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="AbstractColleague" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="col" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="cm" elementType="FIELD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Memento" family="Behavioral">
+        <role rbmlName="Originator" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="SetMemento()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="CreateMemento()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="Memento" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="st" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="GetState()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="SetState()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="CareTaker" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="memento" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Observer" pattern4Name="Observer" family="Behavioral">
+        <role rbmlName="ConcreteSubject" pattern4Name="Subject" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteObserver" pattern4Name="Observer" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Notify()" pattern4Name="Notify()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractSubject" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="AbstractObserver" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="subjectState" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="Attach()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="Detach()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="GetState()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="SetState()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="AttachSubject()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="observerState" elementType="FIELD" mandatory="false"/>
+        <role rbmlName="obs" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Prototype" pattern4Name="Prototype" family="Creational">
+        <role rbmlName="ConcretePrototype" pattern4Name="Prototype" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Client" pattern4Name="Client" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Operation()" pattern4Name="Operation()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractPrototype" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Clone()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="proto" pattern4Name="prototype" elementType="FIELD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Proxy" pattern4Name="Proxy" family="Structural">
+        <role rbmlName="RealSubject" pattern4Name="RealSubject" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Proxy" pattern4Name="Proxy" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Request()" pattern4Name="Request()" elementType="METHOD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Proxy2" pattern4Name="Proxy2" family="Structural">
+        <role rbmlName="Proxy" pattern4Name="Proxy" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="RealSubject" pattern4Name="RealSubject" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Subject" pattern4Name="Subject" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="subject" pattern4Name="subject" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="Request()" pattern4Name="Request()" elementType="METHOD" mandatory="true"/>
+    </pattern>
+    <pattern gofName="Singleton" pattern4Name="Singleton" family="Creational">
+        <role rbmlName="ConcreteSingleton" pattern4Name="Singleton" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="uniqueInstance" pattern4Name="uniqueInstance" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="AbstractSingleton" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="FactoryMethod()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="Operation()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="GetData()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="singletonData" elementType="FIELD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="State" pattern4Name="State" family="Behavioral">
+        <role rbmlName="Context" pattern4Name="Context" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteState" pattern4Name="State" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="currentState" pattern4Name="state" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="Request()" pattern4Name="Request()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractState" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Handle()" elementType="METHOD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Strategy" pattern4Name="Strategy" family="Behavioral">
+        <role rbmlName="ConcreteStrategy" pattern4Name="Strategy" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Context" pattern4Name="Context" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="currentStrategy" pattern4Name="strategy" elementType="FIELD" mandatory="true"/>
+        <role rbmlName="ContextOperation()" pattern4Name="ContextInterface()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="AbstractStrategy" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="GetState()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="Operation()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="StrategyOp()" elementType="METHOD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Template Method" pattern4Name="Template Method" family="Behavioral">
+        <role rbmlName="AbstractTemplate" pattern4Name="AbstractClass" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Operation()" pattern4Name="TemplateMethod()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="ConcreteTemplate" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="PrimitiveOp()" elementType="METHOD" mandatory="false"/>
+    </pattern>
+    <pattern gofName="Visitor" pattern4Name="Visitor" family="Behavioral">
+        <role rbmlName="ConcreteVisitor" pattern4Name="Visitor" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="ConcreteElement" pattern4Name="ConcreteElement" elementType="CLASS" mandatory="true"/>
+        <role rbmlName="Accept()" pattern4Name="Accept()" elementType="METHOD" mandatory="true"/>
+        <role rbmlName="Visit()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="AbstractVisitor" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="AbstractElement" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="Operation()" elementType="METHOD" mandatory="false"/>
+        <role rbmlName="Client" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="ObjectStructure" elementType="CLASS" mandatory="false"/>
+        <role rbmlName="elem" elementType="FIELD" mandatory="false"/>
+    </pattern>
+</patterns>

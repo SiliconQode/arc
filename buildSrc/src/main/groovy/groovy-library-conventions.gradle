@@ -1,0 +1,11 @@
+plugins {
+    // other conventions
+    id 'java-library-conventions'
+    id 'groovy-conventions'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {}

@@ -1,0 +1,6 @@
+package org.omg.CORBA_2_3.portable
+
+class Delegate
+class InputStream
+class ObjectImpl
+class OutputStream

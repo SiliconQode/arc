@@ -1,0 +1,4 @@
+package javax.security.auth.x500
+
+class X500Principal
+class X500PrivateCredential

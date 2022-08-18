@@ -1,0 +1,9 @@
+package javax.xml.ws.soap
+
+interface SOAPBinding
+class AddressingFeature
+class MTOMFeature
+enum AddressingFeature.Responses
+class SOAPFaultException
+annotation Addressing
+annotation MTOM

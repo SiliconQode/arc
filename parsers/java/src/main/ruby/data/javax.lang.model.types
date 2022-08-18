@@ -1,0 +1,5 @@
+package javax.lang.model
+
+interface AnnotatedConstruct
+enum SourceVersion
+class UnknownEntityException

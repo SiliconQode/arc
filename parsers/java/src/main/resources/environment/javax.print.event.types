@@ -1,0 +1,10 @@
+package javax.print.event
+
+interface PrintJobAttributeListener
+interface PrintJobListener
+interface PrintServiceAttributeListener
+class PrintEvent
+class PrintJobAdapter
+class PrintJobAttributeEvent
+class PrintJobEvent
+class PrintServiceAttributeEvent

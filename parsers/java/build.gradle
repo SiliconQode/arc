@@ -1,0 +1,10 @@
+plugins {
+    id 'java-library'
+    id 'groovy-conventions'
+}
+
+dependencies {
+    implementation project(':quality:metrics:loc-metrics')
+    implementation project(':parsers')
+    implementation project(':datamodel')
+}

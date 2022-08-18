@@ -1,0 +1,18 @@
+@startuml
+
+interface Condition {
+  + check():boolean {abstract}
+}
+
+Condition <|.. AlreadyGeneralizes
+Condition <|.. AlreadyRealizes
+Condition <|.. FileExists
+Condition <|.u. FileHasImport
+Condition <|.u. NamespaceExists
+Condition <|.u. TypeExists
+Condition <|.l. TypeHasConstructor
+Condition <|.r. TypeHasField
+Condition <|.. TypeHasMethod
+
+hide members
+@enduml

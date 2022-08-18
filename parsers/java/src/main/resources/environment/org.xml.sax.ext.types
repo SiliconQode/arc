@@ -1,0 +1,10 @@
+package org.xml.sax.ext
+
+interface Attributes2
+interface DeclHandler
+interface EntityResolver2
+interface LexicalHandler
+interface Locator2
+class Attributes2Impl
+class DefaultHandler2
+class Locator2Impl

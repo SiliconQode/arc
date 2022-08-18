@@ -1,0 +1,37 @@
+plugins {
+    id 'groovy-conventions'
+    id 'application'
+}
+
+dependencies {
+    implementation project(":quality:quamoco")
+    implementation project(":quality:metrics")
+    implementation project(":parsers")
+    implementation project(":parsers:java")
+    implementation project(":disharmonies:detector")
+    implementation project(":disharmonies:injector")
+    implementation project(":patterns:generator")
+    implementation project(":patterns:rbml")
+    implementation project(":config")
+    implementation project(":datamodel")
+
+    // GitHub
+    implementation 'org.kohsuke:github-api:1.135'
+
+    // JGit
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:5.13.0.202109080827-r'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit.junit:5.13.0.202109080827-r'
+
+    // jax-b
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'javax.xml:jaxb-impl:2.1'
+    implementation 'com.sun.xml.bind:jaxb-impl:2.3.1'
+
+    // Tag Soup
+    implementation 'org.ccil.cowan.tagsoup:tagsoup:1.2.1'
+}
+
+application {
+    mainClass = 'dev.siliconcode.arc.experimenter.gitsearch.app.CLI'
+    applicationName = 'arc'
+}

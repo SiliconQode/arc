@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="Creator" />
+			<role name="FactoryMethod()" element="Creator::factoryMethod():Product" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype">
+		<instance>
+			<role name="Client" element="PrototypesModule" />
+			<role name="Prototype" element="Prototype" />
+			<role name="Operation()" element="PrototypesModule::findAndClone(java.lang.String):java.lang.Object" />
+		</instance>
+	</pattern>
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="ClassicSingleton" />
+			<role name="uniqueInstance" element="private static ClassicSingleton instance" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter-Command">
+		<instance>
+			<role name="Adaptee/Receiver" element="Fan" />
+			<role name="Adapter/ConcreteCommand" element="FanOffCommand" />
+			<role name="Request()/Execute()" element="FanOffCommand::execute():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee/Receiver" element="Fan" />
+			<role name="Adapter/ConcreteCommand" element="FanOnCommand" />
+			<role name="Request()/Execute()" element="FanOnCommand::execute():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee/Receiver" element="Light" />
+			<role name="Adapter/ConcreteCommand" element="LightOffCommand" />
+			<role name="Request()/Execute()" element="LightOffCommand::execute():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee/Receiver" element="Light" />
+			<role name="Adapter/ConcreteCommand" element="LightOnCommand" />
+			<role name="Request()/Execute()" element="LightOnCommand::execute():void" />
+		</instance>
+	</pattern>
+	<pattern name="Composite">
+		<instance>
+			<role name="Component" element="Entity" />
+			<role name="Composite" element="Box" />
+			<role name="Operation()" element="Box::traverse():void" />
+		</instance>
+		<instance>
+			<role name="Component" element="Component" />
+			<role name="Composite" element="Composite" />
+			<role name="Operation()" element="Composite::traverse():void" />
+			<role name="Operation()" element="Composite::accept(Visitor):void" />
+		</instance>
+	</pattern>
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="Widget" />
+			<role name="Decorator" element="Decorator" />
+			<role name="component" element="private Widget wid" />
+			<role name="Operation()" element="Decorator::draw():void" />
+		</instance>
+	</pattern>
+	<pattern name="Observer">
+		<instance>
+			<role name="Observer" element="Prototype" />
+			<role name="Subject" element="PrototypesModule" />
+			<role name="Notify()" element="PrototypesModule::findAndClone(java.lang.String):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Observer" element="AlarmListener" />
+			<role name="Subject" element="SensorSystem" />
+			<role name="Notify()" element="SensorSystem::soundTheAlarm():void" />
+		</instance>
+	</pattern>
+	<pattern name="State-Strategy">
+		<instance>
+			<role name="Context" element="Switch" />
+			<role name="State/Strategy" element="Command" />
+		</instance>
+		<instance>
+			<role name="Context" element="FSM" />
+			<role name="State/Strategy" element="State" />
+		</instance>
+		<instance>
+			<role name="Context" element="PrototypesModule" />
+			<role name="State/Strategy" element="Prototype" />
+		</instance>
+		<instance>
+			<role name="Context" element="StrategyDemo" />
+			<role name="State/Strategy" element="Strategy" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="Specialization" />
+			<role name="TemplateMethod()" element="Specialization::stepThr():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="Generalization" />
+			<role name="TemplateMethod()" element="Generalization::findSolution():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="Creator" />
+			<role name="TemplateMethod()" element="Creator::anOperation():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="TemplateMethod2" />
+			<role name="TemplateMethod()" element="TemplateMethod2::solve():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="TemplateMethod1" />
+			<role name="TemplateMethod()" element="TemplateMethod1::solve():void" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor">
+		<instance>
+			<role name="ConcreteElement" element="Composite" />
+			<role name="Visitor" element="Visitor" />
+			<role name="Accept()" element="Composite::accept(Visitor):void" />
+		</instance>
+		<instance>
+			<role name="ConcreteElement" element="Leaf" />
+			<role name="Visitor" element="Visitor" />
+			<role name="Accept()" element="Leaf::accept(Visitor):void" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy">
+		<instance>
+			<role name="Proxy" element="ProxyImage" />
+			<role name="RealSubject" element="RealImage" />
+			<role name="Request()" element="ProxyImage::displayImage():void" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy2" />
+</system>
+

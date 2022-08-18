@@ -1,0 +1,25 @@
+package java.awt.dnd
+
+interface Autoscroll
+interface DragGestureListener
+interface DragSourceListener
+interface DragSourceMotionListener
+interface DropTargetListener
+class DnDConstants
+class DragGestureEvent
+class DragGestureRecognizer
+class DragSource
+class DragSourceAdapter
+class DragSourceContext
+class DragSourceDragEvent
+class DragSourceDropEvent
+class DragSourceEvent
+class DropTarget
+class DropTarget.DropTargetAutoScroller
+class DropTargetAdapter
+class DropTargetContext
+class DropTargetDragEvent
+class DropTargetDropEvent
+class DropTargetEvent
+class MouseDragGestureRecognizer
+class InvalidDnDOperationException

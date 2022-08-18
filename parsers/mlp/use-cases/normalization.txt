@@ -1,0 +1,23 @@
+The first process will be normalization. This process will take a grammar file in the specified format and then convert it to the format
+we use internally. This will probably be BNF.
+
+Example:
+
+input of:
+<Hello.g4 (antlr format)>
+grammar Hello;
+r : 'hello' ID ;
+ID : [a-z]+ ;
+WS : [ \t\r\n]+ -> skip ;
+
+
+output:
+<r> ::= "hello" <ID>
+<ID> ::= <[a-z]+>
+<[a-z]+> ::= <[a-z]> <[a-z]*>
+<[a-z]*> ::= "" | <[a-z]> <[a-z]*>
+<[a-z]> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "x" | "y" | "z"
+
+
+
+We'd probably want to replace large ranges of possible characters (more than a few dozen) with a special terminal node.

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<qualityModel name="name">
+  <tqi>
+    <weights/>
+  </tqi>
+  <characteristics>
+    <characteristic name="name" standard="standard" description="description">
+      <weights/>
+    </characteristic>
+  </characteristics>
+  <properties/>
+</qualityModel>

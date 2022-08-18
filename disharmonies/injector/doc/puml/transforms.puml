@@ -1,0 +1,56 @@
+@startuml
+
+interface SourceTransform
+abstract class AbstractSourceTransform
+abstract class BasicSourceTransform
+abstract class CompositeSourceTransform
+class AddAssociation
+class AddConstructor
+class AddField
+class AddFieldGetter
+class AddFieldSetter
+class AddFieldUse
+class AddImport
+class AddInheritance
+class AddMethod
+class AddMethodCall
+class AddRealization
+class AddType
+class AddUseDep
+class CreateFile
+class CreateEncapsulatedField
+class CreateNamespace
+abstract class FieldMutatorTransform
+abstract class TypeHeaderTransform
+abstract class AddMember
+abstract class CreateStructure
+abstract class AddRelation
+
+SourceTransform <|.. AbstractSourceTransform
+AbstractSourceTransform <|-- BasicSourceTransform
+AbstractSourceTransform <|-- CompositeSourceTransform
+CompositeSourceTransform o--> SourceTransform
+BasicSourceTransform <|-- AddImport
+BasicSourceTransform <|-- TypeHeaderTransform
+BasicSourceTransform <|-- AddMember
+BasicSourceTransform <|-- AddRelation
+BasicSourceTransform <|-- CreateStructure
+TypeHeaderTransform <|-- AddInheritance
+TypeHeaderTransform <|-- AddRealization
+AddMember <|-- AddField
+AddMember <|-- FieldMutatorTransform
+AddMember <|-- AddConstructor
+AddMember <|-- AddMethod
+FieldMutatorTransform <|-- AddFieldSetter
+FieldMutatorTransform <|-- AddFieldGetter
+CreateStructure <|-- CreateFile
+CreateStructure <|-- AddType
+CreateStructure <|-- CreateNamespace
+CompositeSourceTransform <|-- AddAssociation
+AddRelation <|-- AddFieldUse
+AddRelation <|-- AddUseDep
+AddRelation <|-- AddMethodCall
+CompositeSourceTransform <|-- CreateEncapsulatedField
+
+hide members
+@enduml

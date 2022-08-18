@@ -1,0 +1,13 @@
+package javax.imageio
+
+interface IIOParamController
+interface ImageTranscoder
+class IIOImage
+class IIOParam
+class ImageIO
+class ImageReader
+class ImageReadParam
+class ImageTypeSpecifier
+class ImageWriteParam
+class ImageWriter
+class IIOException

@@ -1,0 +1,49 @@
+start_pattern: basic
+start_type: Context
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    start_field: currentStrategy
+    private [[Strategy.root]] [[name]];
+    end_field: currentStrategy
+    [[fields]]
+
+    start_method: ContextOperation
+    public void [[name]]() {
+        System.out.println("Operation");
+    }
+    end_method: ContextOperation
+    [[methods]]
+}
+end_type: Context
+
+start_type: ConcreteStrategy
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    [[fields]]
+
+    start_method: Operation
+    /**
+     *
+     */
+    @Override
+    public void [[name]]() {
+    }
+    end_method: Operation
+
+    start_method: StrategyOp
+    public void [[name]]() {
+        System.out.println("StrategyOp");
+    }
+    end_method: StrategyOp
+
+    [[methods]]
+}
+end_type: ConcreteStrategy
+
+end_pattern: basic

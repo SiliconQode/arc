@@ -1,0 +1,15 @@
+package java.security.interfaces
+
+interface DSAKey
+interface DSAKeyPairGenerator
+interface DSAParams
+interface DSAPrivateKey
+interface DSAPublicKey
+interface ECKey
+interface ECPrivateKey
+interface ECPublicKey
+interface RSAKey
+interface RSAMultiPrimePrivateCrtKey
+interface RSAPrivateCrtKey
+interface RSAPrivateKey
+interface RSAPublicKey

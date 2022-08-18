@@ -1,0 +1,13 @@
+package java.util.jar
+
+interface Pack200.Packer
+interface Pack200.Unpacker
+class Attributes
+class Attributes.Name
+class JarEntry
+class JarFile
+class JarInputStream
+class JarOutputStream
+class Manifest
+class Pack200
+class JarException

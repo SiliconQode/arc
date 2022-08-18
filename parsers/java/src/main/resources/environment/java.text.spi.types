@@ -1,0 +1,8 @@
+package java.text.spi
+
+class BreakIteratorProvider
+class CollatorProvider
+class DateFormatProvider
+class DateFormatSymbolsProvider
+class DecimalFormatSymbolsProvider
+class NumberFormatProvider

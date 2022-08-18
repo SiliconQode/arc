@@ -1,0 +1,13 @@
+plugins {
+    id('groovy-conventions')
+}
+
+group = 'dev.siliconcode.arc'
+version = '1.0'
+
+dependencies {
+  // Javalin
+  implementation 'io.javalin:javalin:3.3.0'
+
+  implementation project(":datamodel")
+}

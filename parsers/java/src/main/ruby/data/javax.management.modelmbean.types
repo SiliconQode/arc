@@ -1,0 +1,14 @@
+package javax.management.modelmbean
+
+interface ModelMBean
+interface ModelMBeanInfo
+interface ModelMBeanNotificationBroadcaster
+class DescriptorSupport
+class ModelMBeanAttributeInfo
+class ModelMBeanConstructorInfo
+class ModelMBeanInfoSupport
+class ModelMBeanNotificationInfo
+class ModelMBeanOperationInfo
+class RequiredModelMBean
+class InvalidTargetObjectTypeException
+class XMLParseException

@@ -1,0 +1,101 @@
+#
+# The MIT License (MIT)
+#
+# Empirilytics RBML DSL
+# Copyright (c) 2015-2021 Empirilytics
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+
+SPS:
+  name: Builder
+  roles:
+    - GenHierarchy:
+        name: Builder
+        Classifier:
+          name: Builder
+          mult: 1..*
+          features:
+            b1:
+              name: BuildPart
+              params: [ ]
+              mult: 1..*
+              abstract: "true"
+            b2:
+              name: GetResult
+              params: [ ]
+              type: Product@Product
+              mult: 1..1
+              abstract: "true"
+        children:
+          - Class:
+              name: ConcreteBuilder
+              mult: 1..*
+              features:
+                b1:
+                  name: BuildPart
+                  params: [ ]
+                  mult: 1..*
+                  abstract: "false"
+                b2:
+                  name: GetResult
+                  params: [ ]
+                  type: Product@Product
+                  mult: 1..1
+                  abstract: "false"
+          - Classifier:
+              name: AbstractBuidler
+              mult: "*"
+    - GenHierarchy:
+        name: Product
+        Classifier:
+          name: Product
+          mult: 1..*
+        children:
+          - Class:
+              name: ConcreteProduct
+              mult: 1..*
+          - Classifier:
+              name: AbstractProduct
+              mult: "*"
+    - Class:
+        name: Director
+        mult: 1..*
+        features:
+          b1:
+            name: Construct
+            params: [ ]
+            mult: 1..1
+  relations:
+    - Create:
+        name: CreateProduct
+        mult: 1..1
+        source: Builder@ConcreteBuilder
+        dest: Product@ConcreteBuilder
+    - Association:
+        name: Directs
+        mult: 1..1
+        source:
+          name: director
+          type: Director
+          mult: 1..1
+        dest:
+          name: build
+          type: Builder@Builder
+          mult: 1..*

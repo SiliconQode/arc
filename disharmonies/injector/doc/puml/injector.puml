@@ -1,0 +1,44 @@
+@startuml
+
+interface SourceInjector
+abstract class GrimeInjector
+'abstract class RotInjector
+class NullInjector
+
+'Grime
+class ModularGrimeInjector
+class ClassGrimeInjector
+abstract class OrgGrimeInjector
+class PackageOrgGrimeInjector
+class ModularOrgGrimeInjector
+enum RelationType
+class GrimeInjectorFactory << (S,#FF7700) Singleton >>
+interface OrgGrimeTypes
+interface ModularGrimeTypes
+interface ClassGrimeTypes
+
+'Rot
+
+'Relations
+SourceInjector <|.. GrimeInjector
+'SourceInjector <|.. RotInjector
+SourceInjector <|.. NullInjector
+
+GrimeInjector <|-- ModularGrimeInjector
+GrimeInjector <|-- ClassGrimeInjector
+GrimeInjector <|-- OrgGrimeInjector
+OrgGrimeInjector <|-- PackageOrgGrimeInjector
+OrgGrimeInjector <|-- ModularOrgGrimeInjector
+RelationType <.. ModularGrimeInjector
+RelationType <.. ModularOrgGrimeInjector
+GrimeInjectorFactory .u.> ModularGrimeInjector
+GrimeInjectorFactory .u.> ClassGrimeInjector
+GrimeInjectorFactory .u.> ModularOrgGrimeInjector
+GrimeInjectorFactory .u.> PackageOrgGrimeInjector
+GrimeInjectorFactory ..> NullInjector
+ClassGrimeTypes <.d. GrimeInjectorFactory
+ModularGrimeTypes <.d. GrimeInjectorFactory
+OrgGrimeTypes <.d. GrimeInjectorFactory
+
+hide members
+@enduml

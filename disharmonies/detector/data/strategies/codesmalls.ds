@@ -1,0 +1,202 @@
+strategy @Class DataClass {
+  intersection of {
+    WOC < 1/3 and
+    union of {
+      intersection of { (NOAP + NOAM) > Few and WMC < High } and
+      intersection of { (NOAP + NOAM) > Many and WMC < VeryHigh) }
+    }
+  }
+}
+
+strategy @Method LongParamList {
+  union of {
+    NMP >= VeryHigh and
+    NRP > 1 and
+    OVP > 1
+  }
+}
+
+strategy @Class PrimitiveObsession {
+  intersection of {
+    NOV > Average(NOV) and
+    (NOV - NOpV) > Average(NOV)
+  }
+}
+
+strategy @Method LongMethod {
+  intersection of {
+    isMethod and
+    union of {
+      NOS >= VeryHigh and
+      NTV >= High
+    }
+  }
+}
+
+strategy @Class GodClass {
+  intersection of {
+    ATFD > FEW and
+    WMC >= VeryHigh and
+    TCC < 1/3
+  }
+}
+
+strategy @Class RefusedBequest {
+  intersection of {
+    union of {
+      intersection of {
+        NProtM > FEW and
+        BUR < 1/3
+      } and
+      BOvR < 1/3
+    } and
+    intersection of {
+      union of {
+        AMW > Average(AMW) and
+        WMC > Average(WMC)
+      } and
+      NOM > Average(NOM)
+    }
+  }
+}
+
+strategy @Class FeatureEnvy {
+  intersection of {
+    ATFD > FEW and
+    LAA < 1/3 and
+    FDP <= FEW
+  }
+}
+
+strategy @Class MiddleMan {
+  (NFM / NOM) > 1/2
+}
+
+strategy ShotgunSurgery {
+  intersection of {
+    CM > ShortTermMemCap and
+    CC > Many
+  }
+}
+
+strategy @Class LazyClass {
+  union of {
+    NOM == 0 and
+    intersection of {
+      LOC < Median(LOC) and
+      (WMC / NOM) <= 2
+    } and
+    intersection of {
+      CBO < Median(CBO) and
+      DIT > 1
+    }
+  }
+}
+
+strategy @Method SwitchStatements {
+  intersection of {
+    MAXNESTING(switch) > 3 and
+    MAXNESTING(if) > 3
+  }
+}
+
+strategy @Class BrainClass {
+  intersection of {
+    union of {
+      intersection of {
+        contains more than 1 BrainMethod and
+        LOC >= VeryHigh
+      } and
+      intersection of {
+        contains exactly 1 BrainMethod and
+        LOC >= 2 * VeryHigh and
+        WMC >= 2 * VeryHigh
+      }
+    } and
+    intersection of {
+      WMC >= Very High and
+      TCC < 1/2
+    }
+  }
+}
+
+strategy @Method BrainMethod {
+  intersection of {
+    LOC > High / 2 and
+    CYCLO >= High and
+    MAXNESTING >= Several and
+    NOAV > Many
+  }
+}
+
+strategy SignificantDuplication {
+  union of {
+    sec > Average(LOC / Operations) and
+    intersection of {
+      SDC >= 2 * Few + 1 and
+      SEC >= Few and
+      LB <= Few
+    }
+  }
+}
+
+strategy @Class IntensiveCoupling {
+  intersection of {
+    union of {
+      intersection of {
+        union of {
+          CWT > ShortTermMemCap and
+          CDISP < 1/2
+        } and
+        union of {
+          CINT > Few and
+          CDISP < 1/4
+        }
+      }
+    } and
+    MAXNESTING > Shallow
+  }
+}
+
+strategy @Class DispersedCoupling {
+  intersection of {
+    MAXNESTING > Shallow and
+    intersection of {
+      CINT > ShortTermMemCap and
+      CDISP >= 1/2
+    }
+  }
+}
+
+strategy @Class TraditionBreaker {
+  intersection of {
+    intersection of {
+      NAS >= Average(NOM) and
+      PNAS >= 2/3
+    } and
+    intersection of {
+      union of {
+        AMW > Average(AMW) and
+        WMC >= VeryHigh
+      } and
+      NOM >= High
+    } and
+    intersection of {
+      AMW > Average(AMW) and
+      NOM > High / 2 and
+      WMC >= VeryHigh / 2
+    }
+  }
+}
+
+strategy @Class IcebergClass {
+  interesection of {
+    NOpM >= High and
+    WMC >= High and
+    NOpM >= NOM / 2
+  }
+}
+
+strategy @Field TemporaryField {
+  IVMC <= 1
+}

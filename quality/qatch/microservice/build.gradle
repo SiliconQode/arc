@@ -1,0 +1,102 @@
+plugins {
+    id 'groovy-app-conventions'
+    // ActiveJDBC Instrumentation plugin
+    // id "dev.siliconcode.activejdbc-gradle-plugin" version "3.0-j11"
+
+    id 'maven-publish'
+}
+
+//activejdbc.toolVersion = '3.0-j11'
+
+group = 'dev.siliconcode.qatch.service'
+version = '2.0.0'
+description = 'Microservice for execuitng Quality Analysis'
+sourceCompatibility = '17'
+
+dependencies {
+    //implementation 'io.javalin:javalin-bundle:4.6.4'
+    implementation 'io.javalin:javalin:4.6.4'
+    implementation 'io.javalin:javalin-openapi:4.6.4'
+    implementation 'io.javalin:javalin-graphql:4.6.4'
+
+    testImplementation 'com.konghq:unirest-java:3.13.0'
+
+    implementation "javax.json:javax.json-api:1.1"
+    implementation "org.glassfish:javax.json:1.1"
+
+    // SQLite
+    implementation 'org.xerial:sqlite-jdbc:3.25.2'
+
+    // MariaDb
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.6.0'
+
+    // MySQL
+    implementation 'mysql:mysql-connector-java:8.0.20'
+
+    // JavaLite
+    implementation "org.javalite:activejdbc:3.0-j11"
+    implementation "org.javalite:javalite-common:3.0-j11"
+
+    implementation 'org.hibernate:hibernate-validator:7.0.1.Final'
+
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+
+    implementation 'info.picocli:picocli-groovy:4.6.3'
+    annotationProcessor 'info.picocli:picocli-codegen:4.6.3'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'dev.siliconcode.qatch'
+            artifactId = 'service'
+            version = '2.0.0'
+            pom {
+                name = 'service'
+                description = 'Microservice for execuitng Quality Analysis'
+                url = 'http://www.empirilytics.com/qatch/service'
+                license {
+                    license {
+                        name = 'MIT'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+                developers {
+                    developer {
+                        name = "Diomidis Spinellis"
+                    }
+                    developer {
+                        name = 'Isaac Griffith'
+                        email = 'isaacgriffith@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git@github.com:empirilytics/qatch.git'
+                    developerConnection = 'scm:git:git@github.com:empirilytics/qatch.git'
+                    tag = 'HEAD'
+                }
+            }
+        }
+    }
+}
+
+//application {
+//    mainClass = 'dev.siliconcode.qatch.webapp.QatchService'
+//    applicationName = 'qservice'
+//}
+
+javadoc {
+    destinationDir = new File(project.rootDir.toString() + "/docs/quality/qatch/microservice/javadoc")
+}
+
+groovydoc {
+    destinationDir = new File(project.rootDir.toString() + "/docs/quality/qatch/microservice/javadoc")
+}
+
+application {
+//    mainClass = 'dev.siliconcode.qatch.service.data.Content'
+    mainClass = 'dev.siliconcode.qatch.service.QatchService'
+//    mainClass = 'dev.siliconcode.qatch.service.io.FileBuilder'
+//    mainClass = 'dev.siliconcode.qatch.service.handlers.EvaluationHandler'
+    applicationName = 'qservice'
+}

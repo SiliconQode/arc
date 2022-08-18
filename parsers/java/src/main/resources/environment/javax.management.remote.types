@@ -1,0 +1,20 @@
+package javax.management.remote
+
+interface JMXAddressable
+interface JMXAuthenticator
+interface JMXConnector
+interface JMXConnectorProvider
+interface JMXConnectorServerMBean
+interface JMXConnectorServerProvider
+interface MBeanServerForwarder
+class JMXConnectionNotification
+class JMXConnectorFactory
+class JMXConnectorServer
+class JMXConnectorServerFactory
+class JMXPrincipal
+class JMXServiceURL
+class NotificationResult
+class SubjectDelegationPermission
+class TargetedNotification
+class JMXProviderException
+class JMXServerErrorException

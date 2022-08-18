@@ -1,0 +1,22 @@
+package java.lang.management
+
+interface BufferPoolMXBean
+interface ClassLoadingMXBean
+interface CompilationMXBean
+interface GarbageCollectorMXBean
+interface MemoryManagerMXBean
+interface MemoryMXBean
+interface MemoryPoolMXBean
+interface OperatingSystemMXBean
+interface PlatformLoggingMXBean
+interface PlatformManagedObject
+interface RuntimeMXBean
+interface ThreadMXBean
+class LockInfo
+class ManagementFactory
+class ManagementPermission
+class MemoryNotificationInfo
+class MemoryUsage
+class MonitorInfo
+class ThreadInfo
+enum MemoryType

@@ -1,0 +1,22 @@
+package org.omg.PortableServer.POAPackage
+
+class AdapterAlreadyExistsHelper
+class AdapterNonExistentHelper
+class InvalidPolicyHelper
+class NoServantHelper
+class ObjectAlreadyActiveHelper
+class ObjectNotActiveHelper
+class ServantAlreadyActiveHelper
+class ServantNotActiveHelper
+class WrongAdapterHelper
+class WrongPolicyHelper
+class AdapterAlreadyExists
+class AdapterNonExistent
+class InvalidPolicy
+class NoServant
+class ObjectAlreadyActive
+class ObjectNotActive
+class ServantAlreadyActive
+class ServantNotActive
+class WrongAdapter
+class WrongPolicy

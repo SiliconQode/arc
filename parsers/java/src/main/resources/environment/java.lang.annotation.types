@@ -1,0 +1,14 @@
+package java.lang.annotation
+
+interface Annotation
+enum ElementType
+enum RetentionPolicy
+class AnnotationTypeMismatchException
+class IncompleteAnnotationException
+class AnnotationFormatError
+annotation Documented
+annotation Inherited
+annotation Native
+annotation Repeatable
+annotation Retention
+annotation Target

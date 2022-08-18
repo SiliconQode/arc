@@ -1,0 +1,8 @@
+package javax.security.auth.kerberos
+
+class DelegationPermission
+class KerberosKey
+class KerberosPrincipal
+class KerberosTicket
+class KeyTab
+class ServicePermission

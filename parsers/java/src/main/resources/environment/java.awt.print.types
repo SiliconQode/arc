@@ -1,0 +1,12 @@
+package java.awt.print
+
+interface Pageable
+interface Printable
+interface PrinterGraphics
+class Book
+class PageFormat
+class Paper
+class PrinterJob
+class PrinterAbortException
+class PrinterException
+class PrinterIOException

@@ -1,0 +1,14 @@
+package javax.annotation.processing
+
+interface Completion
+interface Filer
+interface Messager
+interface ProcessingEnvironment
+interface Processor
+interface RoundEnvironment
+class AbstractProcessor
+class Completions
+class FilerException
+annotation SupportedAnnotationTypes
+annotation SupportedOptions
+annotation SupportedSourceVersion

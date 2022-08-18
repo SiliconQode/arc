@@ -1,0 +1,39 @@
+{
+	"multiProject": false,
+	"maxSubProjectDepth": 2,
+	"maxProjectsPerPly": 2,
+	"maxFilesPerProject": 10,
+	"maxTypesPerFile": 3,
+	"maxMethodsPerType": 7,
+	"maxFieldsPerType": 3,
+	"maxFindingsPerItem": 3,
+	"findingProbability": 0.5,
+	"numExecutions": 2,
+	"maxFindingsActivatedForAny": 50,
+	"qmFiles": [
+		"java.qm",
+		"object.qm",
+		"root.qm"
+	],
+	"qualityAspects": [
+		"Quality @Product",
+		"Analyzability",
+		"Compatibility",
+		"Functional Correctness",
+		"Functional Suitability",
+		"Maintainability",
+		"Modifiability",
+		"Performance Efficiency",
+		"Portability",
+		"Reliability",
+		"Resource Utilization",
+		"Reusability",
+		"Security",
+		"Testability",
+		"Time Behavior"
+	],
+	"findingsToVerify": [
+		"ALL"
+	],
+	"fileExtension": "java"
+}

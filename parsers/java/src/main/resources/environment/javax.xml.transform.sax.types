@@ -1,0 +1,7 @@
+package javax.xml.transform.sax
+
+interface TemplatesHandler
+interface TransformerHandler
+class SAXResult
+class SAXSource
+class SAXTransformerFactory

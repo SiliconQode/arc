@@ -1,0 +1,31 @@
+@startuml
+
+class TransformInvoker
+interface SourceTransform
+abstract class AbstractSourceTransform
+abstract class BasicSourceTransform
+abstract class CompositeSourceTransform
+interface Condition
+class FileNode
+class Project
+class InjectionController
+class InjectionContext
+class FileOperations
+
+TransformInvoker "1" o--> "*" SourceTransform
+SourceTransform <|.. AbstractSourceTransform
+AbstractSourceTransform <|-- BasicSourceTransform
+AbstractSourceTransform <|-- CompositeSourceTransform
+CompositeSourceTransform "1" o--> "*" AbstractSourceTransform
+AbstractSourceTransform "1" *-r-> "*" Condition
+AbstractSourceTransform "1" --> "1" FileNode
+AbstractSourceTransform -l-> InjectionContext
+InjectionController "1" o--> "*" FileNode
+InjectionController "1" o--> "*" FileOperations
+InjectionContext "1" -r-> "1" Project
+InjectionContext "1" -l-> "1" InjectionController
+InjectionContext "1" -d-> "1" TransformInvoker
+BasicSourceTransform ..> FileOperations
+
+hide members
+@enduml

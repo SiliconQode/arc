@@ -1,0 +1,4 @@
+package javax.xml.namespace
+
+interface NamespaceContext
+class QName

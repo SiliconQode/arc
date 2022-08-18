@@ -1,0 +1,4 @@
+package org.omg.Messaging
+
+interface SYNC_WITH_TRANSPORT
+class SyncScopeHelper

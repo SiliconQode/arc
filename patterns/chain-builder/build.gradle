@@ -1,0 +1,86 @@
+plugins {
+    id 'groovy-conventions'
+
+    id 'application'
+
+    id "org.panteleyev.jpackageplugin" version "1.3.1"
+}
+
+group = 'dev.siliconcode.arc.partterns'
+version = '1.0.0'
+
+dependencies {
+    implementation project(":cli")
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'edu.isu.isuese.patterns.chains.App'
+    applicationName = 'cbuilder'
+}
+
+task copyDependencies(type: Copy) {
+    from(configurations.runtimeClasspath).into("$buildDir/jars")
+}
+
+task copyJar(type: Copy) {
+    from(tasks.jar).into("$buildDir/jars")
+}
+
+// JPackage Specifications
+tasks.jpackage {
+    dependsOn("build", "copyDependencies", "copyJar")
+    appName = "resagg"
+    appVersion = project.version.toString()
+    copyright = "Copyright (C) 2022 SiliconCode, LLC"
+    appDescription = ""
+    vendor = "SiliconCode, LLC"
+    installDir = "/opt/arc/resagg"
+//    module = "edu.isu.isuese/edu.isu.isuese.experiment.results.App"
+    mainClass = "dev.siliconcode.arc.experiment.results.App"
+    mainJar = tasks.jar.getArchiveFileName().get()
+//    verbose = ""
+//    arguments = ""
+//    addModules = ""
+//    appImage = ""
+    destination = "$buildDir/dist"
+//    fileAssociations = ""
+    input = "$buildDir/jars"
+    licenseFile = "$projectDir/LICENSE"
+//    modulePaths = [File("#buildDir/jmods"]
+//    resourceDir = ""
+//    runtimeImage = System.getProperty("java.home")
+//    temp = ""
+//    launchers = ""
+    javaOptions = ["-Dfile.encoding=UTF-8"]
+
+    linux {
+        linuxPackageName = "resagg"
+        linuxDebMaintainer = "isaacgriffith@gmail.com"
+        linuxMenuGroup = "Arc"
+        linuxRpmLicenseType = "MIT"
+//        linuxAppRelease = ""
+        linuxAppCategory = "Engineering"
+        linuxShortcut = true
+        icon = "icons/icons.png"
+    }
+
+//    mac {
+//        macPackageIdentifier = ""
+//        macPackageName = ""
+//        macPackageSigningPrefi= ""
+//        macSign = ""
+//        macSigningKeychain = ""
+//        macSigningKeyUserName = ""
+//        icon = "icons/icons.icns"
+//    }
+
+    windows {
+        winMenu = true
+        winDirChooser = true
+        winMenuGroup = "Arc"
+        winShortcut = true
+        winConcolse = true
+        icon = "icons/icons.ico"
+    }
+}

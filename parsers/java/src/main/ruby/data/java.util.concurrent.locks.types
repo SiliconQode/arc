@@ -1,0 +1,14 @@
+package java.util.concurrent.locks
+
+interface Condition
+interface Lock
+interface ReadWriteLock
+class AbstractOwnableSynchronizer
+class AbstractQueuedLongSynchronizer
+class AbstractQueuedSynchronizer
+class LockSupport
+class ReentrantLock
+class ReentrantReadWriteLock
+class ReentrantReadWriteLock.ReadLock
+class ReentrantReadWriteLock.WriteLock
+class StampedLock

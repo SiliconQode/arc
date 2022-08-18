@@ -1,0 +1,20 @@
+package org.omg.CosNaming.NamingContextPackage
+
+class AlreadyBoundHelper
+class AlreadyBoundHolder
+class CannotProceedHelper
+class CannotProceedHolder
+class InvalidNameHelper
+class InvalidNameHolder
+class NotEmptyHelper
+class NotEmptyHolder
+class NotFoundHelper
+class NotFoundHolder
+class NotFoundReason
+class NotFoundReasonHelper
+class NotFoundReasonHolder
+class AlreadyBound
+class CannotProceed
+class InvalidName
+class NotEmpty
+class NotFound

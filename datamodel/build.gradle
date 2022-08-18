@@ -1,0 +1,20 @@
+plugins {
+   // Apply the groovy Plugin to add support for Groovy
+   id 'groovy-conventions'
+
+   // ActiveJDBC Instrumentation plugin
+   id "dev.siliconcode.activejdbc-gradle-plugin" version "3.0-j11"
+}
+
+activejdbc.toolVersion = '3.0-j11'
+
+dependencies {
+  activejdbc 'org.codehaus.groovy:groovy-all:3.0.9'
+}
+
+sourceSets {
+    main {
+        java { srcDirs = [] }
+        groovy { srcDirs = ['src/main/groovy', 'src/main/java'] }
+    }
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import jiconfont.javafx.IconNode?>
+
+<BorderPane minHeight="-Infinity" prefHeight="483.0" prefWidth="712.0" style="-fx-background-color: #999999;" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <ImageView pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@/sample/sms_mdc_full_invert.png" />
+         </image></ImageView>
+   </top>
+   <bottom>
+      <Label text="Copyright (C) 2019 Idaho State University Emprical Software Engineering Laboratory" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="SMS MetaData Collector - A Tool to Evaluate SMS GEN" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+         </top>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="254.0" prefWidth="255.0" spacing="10.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label graphicTextGap="5.0" text="Create New Database" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <IconNode fill="#ff9900" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-icon-code: FontAwesome:F0FE; -fx-icon-size: 18; -fx-fill: #ff9900;" text="Text" />
+                           </graphic>
+                        </Label>
+                        <Label graphicTextGap="5.0" layoutX="10.0" layoutY="123.0" text="Open Existing Database" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <IconNode strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-icon-code: FontAwesome:F07C; -fx-icon-size: 18; -fx-fill: #ff9900;" text="Text" />
+                           </graphic>
+                        </Label>
+                        <Label graphicTextGap="5.0" layoutX="10.0" layoutY="134.0" text="Configure" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <IconNode strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-icon-code: FontAwesome:F013; -fx-icon-size: 18; -fx-fill: #ff9900;" text="Text" />
+                           </graphic>
+                        </Label>
+                        <Label graphicTextGap="5.0" layoutX="10.0" layoutY="144.0" text="Get Help" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <IconNode strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-icon-code: FontAwesome:F128; -fx-icon-size: 18; -fx-fill: #ff9900;" text="Text" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

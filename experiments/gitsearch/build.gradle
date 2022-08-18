@@ -1,0 +1,25 @@
+plugins {
+    id 'java-conventions'
+
+    id 'application'
+}
+
+dependencies {
+    implementation project(':datamodel')
+
+    // JavaLite Config
+    implementation 'org.javalite:app-config:3.0-j11'
+
+    // GitHub
+    implementation 'org.kohsuke:github-api:1.135'
+
+    // JGit
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:5.13.0.202109080827-r'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit.junit:5.13.0.202109080827-r'
+
+}
+
+application {
+    mainClass = 'dev.siliconcode.arc.experiments.gitsearch.App'
+    applicationName = 'ghsearch'
+}

@@ -1,0 +1,11 @@
+package javax.swing.undo
+
+interface StateEditable
+interface UndoableEdit
+class AbstractUndoableEdit
+class CompoundEdit
+class StateEdit
+class UndoableEditSupport
+class UndoManager
+class CannotRedoException
+class CannotUndoException

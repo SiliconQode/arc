@@ -1,0 +1,22 @@
+package java.beans.beancontext
+
+interface BeanContext
+interface BeanContextChild
+interface BeanContextChildComponentProxy
+interface BeanContextContainerProxy
+interface BeanContextMembershipListener
+interface BeanContextProxy
+interface BeanContextServiceProvider
+interface BeanContextServiceProviderBeanInfo
+interface BeanContextServiceRevokedListener
+interface BeanContextServices
+interface BeanContextServicesListener
+class BeanContextChildSupport
+class BeanContextEvent
+class BeanContextMembershipEvent
+class BeanContextServiceAvailableEvent
+class BeanContextServiceRevokedEvent
+class BeanContextServicesSupport
+class BeanContextServicesSupport.BCSSServiceProvider
+class BeanContextSupport
+class BeanContextSupport.BCSIterator

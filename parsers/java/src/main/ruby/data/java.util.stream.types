@@ -1,0 +1,16 @@
+package java.util.stream
+
+interface BaseStream
+interface BaseStream
+interface Collector
+interface DoubleStream
+interface DoubleStream.Builder
+interface IntStream
+interface IntStream.Builder
+interface LongStream
+interface LongStream.Builder
+interface Stream
+interface Stream.Builder
+class Collectors
+class StreamSupport
+enum Collector.Characteristics

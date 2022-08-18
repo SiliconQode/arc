@@ -1,0 +1,13 @@
+package javax.imageio.stream
+
+interface ImageInputStream
+interface ImageOutputStream
+class FileCacheImageInputStream
+class FileCacheImageOutputStream
+class FileImageInputStream
+class FileImageOutputStream
+class IIOByteBuffer
+class ImageInputStreamImpl
+class ImageOutputStreamImpl
+class MemoryCacheImageInputStream
+class MemoryCacheImageOutputStream

@@ -1,0 +1,12 @@
+package javax.management.monitor
+
+interface CounterMonitorMBean
+interface GaugeMonitorMBean
+interface MonitorMBean
+interface StringMonitorMBean
+class CounterMonitor
+class GaugeMonitor
+class Monitor
+class MonitorNotification
+class StringMonitor
+class MonitorSettingException

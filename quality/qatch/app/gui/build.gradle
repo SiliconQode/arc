@@ -1,0 +1,29 @@
+plugins {
+  id 'java-app-conventions'
+  id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group = 'dev.siliconcode.qatch.gui'
+version = '1.0'
+
+dependencies {
+  implementation project(":quality:qatch:core")
+
+  implementation 'org.apache.ant:ant:1.10.7'
+
+  testImplementation 'org.testfx:testfx-junit5:4.0.16-alpha'
+
+}
+
+application {
+  mainClass = 'dev.siliconcode.gui.Main'
+}
+
+javafx {
+  version = '17'
+  modules = ['javafx.controls', 'javafx.fxml', ]
+}
+
+javadoc {
+  destinationDir = new File(project.rootDir.toString() + "/docs/app/gui/javadoc")
+}

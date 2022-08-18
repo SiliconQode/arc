@@ -1,0 +1,11 @@
+package javax.xml.ws.handler
+
+interface Handler
+interface MessageContext
+interface HandlerResolver
+interface LogicalHandler
+interface LogicalMessageContext
+interface LogicalMessageContext
+interface MessageContext
+interface PortInfo
+enum MessageContext.Scope

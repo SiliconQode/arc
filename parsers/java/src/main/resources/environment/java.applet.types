@@ -1,0 +1,6 @@
+package java.applet
+
+interface AppletContext
+interface AppletStub
+interface AudioClip
+class Applet

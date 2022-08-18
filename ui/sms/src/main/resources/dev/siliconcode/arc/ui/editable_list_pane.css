@@ -1,0 +1,97 @@
+.check_button {
+    -fx-background-color: #ff9900;
+    -fx-text-fill: #000000;
+}
+
+.cancel_button {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+
+.other_button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+}
+
+.check_icon {
+    -fx-icon-code: ;
+    -fx-icon-size: ;
+    -fx-fill: #000000;
+}
+
+.cancel_icon {
+    -fx-icon-code: ;
+    -fx-icon-size: ;
+    -fx-fill: #ffffff;
+}
+
+.other_icon {
+    -fx-icon-code: ;
+    -fx-icon-size: ;
+    -fx-fill: #000000;
+}
+
+.button_bar {
+    -fx-border-width: 3 0 0 0;
+    -fx-border-color: black;
+    -fx-background-color: ;
+}
+
+.splash_main {
+    -fx-background-color: #999999;
+}
+
+.newdb_label {
+    -fx-text-fill: white;
+    -fx-font: bold 14pt 'sans-serif';
+}
+
+.existingdb_label {
+    -fx-text-fill: white;
+    -fx-font: bold 14pt 'sans-serif';
+}
+
+.config_label {
+    -fx-text-fill: white;
+    -fx-font: bold 14pt 'sans-serif';
+}
+
+.help_label {
+    -fx-text-fill: white;
+    -fx-font: bold 14pt 'sans-serif';
+}
+
+.newdb_icon {
+    -fx-icon-code: 'FontAwesome:F0FE';
+    -fx-icon-size: 18;
+    -fx-fill: #ff9900;
+}
+
+.existingdb_icon {
+    -fx-icon-code: 'FontAwesome:F07C';
+    -fx-icon-size: 18;
+    -fx-fill: #ff9900;
+}
+
+.config_icon {
+    -fx-icon-code: 'FontAwesome:F013';
+    -fx-icon-size: 18;
+    -fx-fill: #ff9900;
+}
+
+.help_icon {
+    -fx-icon-code: 'FontAwesome:F128';
+    -fx-icon-size: 18;
+    -fx-fill: #ff9900;
+}
+
+.label {
+    -fx-alignment: center-left;
+    -fx-text-alignment: left;
+    -fx-text-fill: white;
+    -fx-font: normal 12pt 'sans-serif';
+}
+
+.progress-indicator {
+    -fx-progress-color: #ff9900;
+}

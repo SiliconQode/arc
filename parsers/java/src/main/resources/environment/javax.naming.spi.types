@@ -1,0 +1,14 @@
+package javax.naming.spi
+
+interface DirObjectFactory
+interface DirStateFactory
+interface InitialContextFactory
+interface InitialContextFactoryBuilder
+interface ObjectFactory
+interface ObjectFactoryBuilder
+interface Resolver
+interface StateFactory
+class DirectoryManager
+class DirStateFactory.Result
+class NamingManager
+class ResolveResult

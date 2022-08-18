@@ -1,0 +1,12 @@
+package javax.security.sasl
+
+interface SaslClient
+interface SaslClientFactory
+interface SaslServer
+interface SaslServerFactory
+class AuthorizeCallback
+class RealmCallback
+class RealmChoiceCallback
+class Sasl
+class AuthenticationException
+class SaslException

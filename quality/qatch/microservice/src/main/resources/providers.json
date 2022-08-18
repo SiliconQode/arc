@@ -1,0 +1,7 @@
+{
+  "java": "com.empirilytics.qatch.service.providers.JavaProvider",
+  "py": "com.empirilytics.qatch.service.providers.PythonProvider",
+  "py3": "com.empirilytics.qatch.service.providers.PythonProvider",
+  "cpp": "com.empirilytics.qatch.service.providers.CppProvider",
+  "cs": "com.empirilytics.qatch.service.providers.CSharpProvider"
+}

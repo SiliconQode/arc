@@ -1,0 +1,17 @@
+package javax.security.auth.login
+
+interface Configuration.Parameters
+class AppConfigurationEntry
+class AppConfigurationEntry.LoginModuleControlFlag
+class Configuration
+class ConfigurationSpi
+class LoginContext
+class AccountException
+class AccountExpiredException
+class AccountLockedException
+class AccountNotFoundException
+class CredentialException
+class CredentialExpiredException
+class CredentialNotFoundException
+class FailedLoginException
+class LoginException

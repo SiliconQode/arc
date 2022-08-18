@@ -1,0 +1,32 @@
+plugins {
+  id 'arc.java-common-conventions'
+
+  id 'application'
+}
+
+dependencies {
+  implementation project(':datamodel')
+  implementation project(':base-server')
+
+  implementation 'io.javalin:javalin:3.3.0'
+  implementation 'org.webjars.npm:vue:2.6.10'
+  implementation 'org.webjars.npm:bootstrap-vue:2.21.2'
+  implementation 'org.webjars.npm:vue-chartjs:3.5.1'
+  implementation 'org.webjars.npm:portal-vue:2.1.7'
+  implementation 'org.webjars.npm:vuex:3.6.0'
+  implementation 'org.webjars.npm:vue-good-table:2.21.2'
+  implementation 'org.webjars.npm:vue-grid-layout:2.3.8'
+  implementation 'org.webjars.npm:vue2-datepicker:3.8.2'
+  implementation 'org.webjars.npm:vue-pagination-2:2.0.3'
+  implementation 'org.webjars.npm:vue-bootstrap-toggle:1.1.4'
+  implementation 'org.webjars.npm:vuex-easy-access:3.1.8'
+  implementation 'org.webjars.npm:vue-autosuggest:2.0.4'
+  implementation 'org.webjars.npm:vue-smooth-dnd:0.8.1'
+  implementation 'org.webjars.npm:vue-side-catalog:2.0.0'
+  implementation 'org.webjars.npm:vue-carousel:0.18.0'
+  implementation 'org.webjars.npm:vue2-datatable-component:2.3.1'
+  implementation 'org.webjars.npm:bootstrap-cons:1.5.0'
+  implementation 'org.webjars.npm:bootstrap-fileinput:5.1.5'
+  implementation 'org.webjars.npm:vue-highlightjs:1.1.0'
+  implementation 'org.webjars.npm:highlightjs-line-numbers.js:2.8.0'
+}

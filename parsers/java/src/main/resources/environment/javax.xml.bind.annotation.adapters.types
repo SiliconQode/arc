@@ -1,0 +1,9 @@
+package javax.xml.bind.annotation.adapters
+
+class CollapsedStringAdapter
+class HexBinaryAdapter
+class NormalizedStringAdapter
+class XmlAdapter
+class XmlJavaTypeAdapter.DEFAULT
+annotation XmlJavaTypeAdapter
+annotation XmlJavaTypeAdapters

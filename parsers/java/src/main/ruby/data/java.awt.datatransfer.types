@@ -1,0 +1,14 @@
+package java.awt.datatransfer
+
+interface ClipboardOwner
+interface FlavorListener
+interface FlavorMap
+interface FlavorTable
+interface Transferable
+class Clipboard
+class DataFlavor
+class FlavorEvent
+class StringSelection
+class SystemFlavorMap
+class MimeTypeParseException
+class UnsupportedFlavorException

@@ -1,0 +1,17 @@
+package javax.xml.stream
+
+interface EventFilter
+interface Location
+interface StreamFilter
+interface XMLEventReader
+interface XMLEventWriter
+interface XMLReporter
+interface XMLResolver
+interface XMLStreamConstants
+interface XMLStreamReader
+interface XMLStreamWriter
+class XMLEventFactory
+class XMLInputFactory
+class XMLOutputFactory
+class XMLStreamException
+class FactoryConfigurationError

@@ -1,0 +1,22 @@
+package java.awt.font
+
+interface MultipleMaster
+interface OpenType
+class FontRenderContext
+class GlyphJustificationInfo
+class GlyphMetrics
+class GlyphVector
+class GraphicAttribute
+class ImageGraphicAttribute
+class LayoutPath
+class LineBreakMeasurer
+class LineMetrics
+class NumericShaper
+class ShapeGraphicAttribute
+class TextAttribute
+class TextHitInfo
+class TextLayout
+class TextLayout.CaretPolicy
+class TextMeasurer
+class TransformAttribute
+enum NumericShaper.Range

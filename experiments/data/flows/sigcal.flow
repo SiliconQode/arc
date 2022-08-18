@@ -1,0 +1,23 @@
+workflow sigcal
+  phase one
+    foreach row do
+      map key to row.Key
+      create_sys
+      create_proj
+    end for
+  end phase
+  phase two
+    foreach row do
+      map projKey to row.Key
+      tool artifactIdent
+      tool dirIdent
+    end for
+  end phase
+  phase three
+    foreach row do
+      map projKey to row.Key
+      tool metrics
+      tool sigMain
+    end for
+  end phase
+end workflow

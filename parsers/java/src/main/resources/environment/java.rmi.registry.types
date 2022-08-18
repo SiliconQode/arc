@@ -1,0 +1,5 @@
+package java.rmi.registry
+
+interface Registry
+interface RegistryHandler
+class LocateRegistry

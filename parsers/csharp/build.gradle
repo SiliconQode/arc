@@ -1,0 +1,9 @@
+plugins {
+    id 'arc.java-common-conventions'
+
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':metrics:loc-metrics')
+}

@@ -1,0 +1,7 @@
+package java.lang.ref
+
+class PhantomReference
+class Reference
+class ReferenceQueue
+class SoftReference
+class WeakReference

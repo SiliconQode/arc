@@ -1,0 +1,27 @@
+package javax.management.openmbean
+
+interface CompositeData
+interface CompositeDataView
+interface OpenMBeanAttributeInfo
+interface OpenMBeanConstructorInfo
+interface OpenMBeanInfo
+interface OpenMBeanOperationInfo
+interface OpenMBeanParameterInfo
+interface TabularData
+class ArrayType
+class CompositeDataInvocationHandler
+class CompositeDataSupport
+class CompositeType
+class OpenMBeanAttributeInfoSupport
+class OpenMBeanConstructorInfoSupport
+class OpenMBeanInfoSupport
+class OpenMBeanOperationInfoSupport
+class OpenMBeanParameterInfoSupport
+class OpenType
+class SimpleType
+class TabularDataSupport
+class TabularType
+class InvalidKeyException
+class InvalidOpenTypeException
+class KeyAlreadyExistsException
+class OpenDataException

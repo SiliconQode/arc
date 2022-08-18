@@ -1,0 +1,25 @@
+sps: Observer
+    roles: 
+    - Class: Z
+        features: 
+            s1: 
+              - subjectState: SubStateType
+              - mult: 1..*
+            b1:
+              - Attach : void
+              - [obsv: Observer]
+              - mult: 1..*
+    - genHier: X
+        - Classifier: X
+        - Class: Y
+    relations:
+    - Association: Observes
+        - from:
+            sub: Subject
+            mult: 1..*
+        - to:
+            obs: Observer
+            mult: 1..*
+    - Generalization:
+        - from:
+        - to:

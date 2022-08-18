@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.3" sequence="0" timestamp="1467673240000" analysisTimestamp="1614633417829" release="">
+  <Project projectName="huston">
+    <Jar>/home/git/msusel/msusel-patterns-experimenter/data/huston/bin/</Jar>
+  </Project>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="bridge.BridgeDemo">
+      <SourceLine classname="bridge.BridgeDemo" start="8" end="22" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    </Class>
+    <Method classname="bridge.BridgeDemo" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="bridge.BridgeDemo" start="10" end="22" startBytecode="0" endBytecode="339" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    </Method>
+    <SourceLine classname="bridge.BridgeDemo" start="12" end="12" startBytecode="41" endBytecode="41" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+  </BugInstance>
+  <BugInstance type="PREDICTABLE_RANDOM" priority="2" rank="12" abbrev="SECPR" category="SECURITY">
+    <Class classname="bridge.BridgeDemo">
+      <SourceLine classname="bridge.BridgeDemo" start="8" end="22" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    </Class>
+    <Method classname="bridge.BridgeDemo" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="bridge.BridgeDemo" start="10" end="22" startBytecode="0" endBytecode="339" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    </Method>
+    <SourceLine classname="bridge.BridgeDemo" start="12" end="12" startBytecode="34" endBytecode="34" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    <String value="java.lang.Math.random()"/>
+  </BugInstance>
+  <BugInstance type="RANGE_ARRAY_INDEX" priority="2" rank="7" abbrev="RANGE" category="CORRECTNESS">
+    <Class classname="bridge.BridgeDemo">
+      <SourceLine classname="bridge.BridgeDemo" start="8" end="22" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    </Class>
+    <Method classname="bridge.BridgeDemo" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="bridge.BridgeDemo" start="10" end="22" startBytecode="0" endBytecode="339" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    </Method>
+    <SourceLine classname="bridge.BridgeDemo" start="21" end="21" startBytecode="152" endBytecode="152" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+    <Int value="3" role="INT_VALUE"/>
+    <Int value="1" role="INT_MAX_VALUE"/>
+    <SourceLine classname="bridge.BridgeDemo" start="21" end="21" startBytecode="152" endBytecode="152" sourcefile="BridgeDemo.java" sourcepath="bridge/BridgeDemo.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="bridge.Stack">
+      <SourceLine classname="bridge.Stack" start="5" end="11" sourcefile="Stack.java" sourcepath="bridge/Stack.java"/>
+    </Class>
+    <Method classname="bridge.Stack" name="push" signature="(I)V" isStatic="false">
+      <SourceLine classname="bridge.Stack" start="9" end="9" startBytecode="0" endBytecode="70" sourcefile="Stack.java" sourcepath="bridge/Stack.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1088" end="1090" startBytecode="0" endBytecode="69" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)Ljava/lang/Integer;" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" start="1063" end="1065" startBytecode="0" endBytecode="90" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="bridge.Stack" start="9" end="9" startBytecode="9" endBytecode="9" sourcefile="Stack.java" sourcepath="bridge/Stack.java"/>
+  </BugInstance>
+  <BugInstance type="LSC_LITERAL_STRING_COMPARISON" priority="1" rank="17" abbrev="LSC" category="STYLE">
+    <Class classname="bridge.Stack">
+      <SourceLine classname="bridge.Stack" start="5" end="11" sourcefile="Stack.java" sourcepath="bridge/Stack.java"/>
+    </Class>
+    <Method classname="bridge.Stack" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="bridge.Stack" start="5" end="7" startBytecode="0" endBytecode="120" sourcefile="Stack.java" sourcepath="bridge/Stack.java"/>
+    </Method>
+    <SourceLine classname="bridge.Stack" start="6" end="6" startBytecode="7" endBytecode="7" sourcefile="Stack.java" sourcepath="bridge/Stack.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="bridge.StackHanoi">
+      <SourceLine classname="bridge.StackHanoi" start="4" end="12" sourcefile="StackHanoi.java" sourcepath="bridge/StackHanoi.java"/>
+    </Class>
+    <Method classname="bridge.StackHanoi" name="push" signature="(I)V" isStatic="false">
+      <SourceLine classname="bridge.StackHanoi" start="9" end="12" startBytecode="0" endBytecode="136" sourcefile="StackHanoi.java" sourcepath="bridge/StackHanoi.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1088" end="1090" startBytecode="0" endBytecode="69" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)Ljava/lang/Integer;" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" start="1063" end="1065" startBytecode="0" endBytecode="90" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="bridge.StackHanoi" start="11" end="11" startBytecode="53" endBytecode="53" sourcefile="StackHanoi.java" sourcepath="bridge/StackHanoi.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="chainOfResponsibility.Primitive">
+      <SourceLine classname="chainOfResponsibility.Primitive" start="4" end="12" sourcefile="Primitive.java" sourcepath="chainOfResponsibility/Primitive.java"/>
+    </Class>
+    <Method classname="chainOfResponsibility.Primitive" name="volunteer" signature="()V" isStatic="false">
+      <SourceLine classname="chainOfResponsibility.Primitive" start="7" end="12" startBytecode="0" endBytecode="85" sourcefile="Primitive.java" sourcepath="chainOfResponsibility/Primitive.java"/>
+    </Method>
+    <SourceLine classname="chainOfResponsibility.Primitive" start="9" end="9" startBytecode="11" endBytecode="11" sourcefile="Primitive.java" sourcepath="chainOfResponsibility/Primitive.java"/>
+  </BugInstance>
+  <BugInstance type="PREDICTABLE_RANDOM" priority="2" rank="12" abbrev="SECPR" category="SECURITY">
+    <Class classname="chainOfResponsibility.Primitive">
+      <SourceLine classname="chainOfResponsibility.Primitive" start="4" end="12" sourcefile="Primitive.java" sourcepath="chainOfResponsibility/Primitive.java"/>
+    </Class>
+    <Method classname="chainOfResponsibility.Primitive" name="volunteer" signature="()V" isStatic="false">
+      <SourceLine classname="chainOfResponsibility.Primitive" start="7" end="12" startBytecode="0" endBytecode="85" sourcefile="Primitive.java" sourcepath="chainOfResponsibility/Primitive.java"/>
+    </Method>
+    <SourceLine classname="chainOfResponsibility.Primitive" start="9" end="9" startBytecode="4" endBytecode="4" sourcefile="Primitive.java" sourcepath="chainOfResponsibility/Primitive.java"/>
+    <String value="java.lang.Math.random()"/>
+  </BugInstance>
+  <BugInstance type="CE_CLASS_ENVY" priority="2" rank="19" abbrev="CE" category="STYLE">
+    <Class classname="composite.CompositeLevels">
+      <SourceLine classname="composite.CompositeLevels" start="3" end="25" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+    </Class>
+    <Method classname="composite.CompositeLevels" name="initialize" signature="()Lcomposite/Box;" isStatic="true">
+      <SourceLine classname="composite.CompositeLevels" start="10" end="25" startBytecode="0" endBytecode="343" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+    </Method>
+    <SourceLine classname="composite.CompositeLevels" start="10" end="25" startBytecode="0" endBytecode="172" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+    <String value="composite.Box"/>
+  </BugInstance>
+  <BugInstance type="CLI_CONSTANT_LIST_INDEX" priority="2" rank="7" abbrev="CLI" category="CORRECTNESS">
+    <Class classname="composite.CompositeLevels">
+      <SourceLine classname="composite.CompositeLevels" start="3" end="25" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+    </Class>
+    <Method classname="composite.CompositeLevels" name="initialize" signature="()Lcomposite/Box;" isStatic="true">
+      <SourceLine classname="composite.CompositeLevels" start="10" end="25" startBytecode="0" endBytecode="343" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+    </Method>
+    <SourceLine classname="composite.CompositeLevels" start="15" end="15" startBytecode="55" endBytecode="55" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+  </BugInstance>
+  <BugInstance type="CLI_CONSTANT_LIST_INDEX" priority="2" rank="7" abbrev="CLI" category="CORRECTNESS">
+    <Class classname="composite.CompositeLevels">
+      <SourceLine classname="composite.CompositeLevels" start="3" end="25" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+    </Class>
+    <Method classname="composite.CompositeLevels" name="initialize" signature="()Lcomposite/Box;" isStatic="true">
+      <SourceLine classname="composite.CompositeLevels" start="10" end="25" startBytecode="0" endBytecode="343" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+    </Method>
+    <SourceLine classname="composite.CompositeLevels" start="25" end="25" startBytecode="171" endBytecode="171" sourcefile="CompositeLevels.java" sourcepath="composite/CompositeLevels.java"/>
+  </BugInstance>
+  <BugInstance type="NCMU_NON_COLLECTION_METHOD_USE" priority="2" rank="17" abbrev="NCMU" category="STYLE">
+    <Class classname="observer.SensorSystem">
+      <SourceLine classname="observer.SensorSystem" start="3" end="11" sourcefile="SensorSystem.java" sourcepath="observer/SensorSystem.java"/>
+    </Class>
+    <Method classname="observer.SensorSystem" name="register" signature="(Lobserver/AlarmListener;)V" isStatic="false">
+      <SourceLine classname="observer.SensorSystem" start="6" end="6" startBytecode="0" endBytecode="60" sourcefile="SensorSystem.java" sourcepath="observer/SensorSystem.java"/>
+    </Method>
+    <SourceLine classname="observer.SensorSystem" start="6" end="6" startBytecode="5" endBytecode="5" sourcefile="SensorSystem.java" sourcepath="observer/SensorSystem.java"/>
+  </BugInstance>
+  <BugInstance type="NCMU_NON_COLLECTION_METHOD_USE" priority="2" rank="17" abbrev="NCMU" category="STYLE">
+    <Class classname="observer.SensorSystem">
+      <SourceLine classname="observer.SensorSystem" start="3" end="11" sourcefile="SensorSystem.java" sourcepath="observer/SensorSystem.java"/>
+    </Class>
+    <Method classname="observer.SensorSystem" name="unregister" signature="(Lobserver/AlarmListener;)V" isStatic="false">
+      <SourceLine classname="observer.SensorSystem" start="7" end="7" startBytecode="0" endBytecode="61" sourcefile="SensorSystem.java" sourcepath="observer/SensorSystem.java"/>
+    </Method>
+    <SourceLine classname="observer.SensorSystem" start="7" end="7" startBytecode="5" endBytecode="5" sourcefile="SensorSystem.java" sourcepath="observer/SensorSystem.java"/>
+  </BugInstance>
+  <BugInstance type="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE" priority="2" rank="16" abbrev="CN" category="BAD_PRACTICE">
+    <Class classname="prototype.That">
+      <SourceLine classname="prototype.That" start="3" end="6" sourcefile="That.java" sourcepath="prototype/That.java"/>
+    </Class>
+    <Method classname="prototype.That" name="clone" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="prototype.That" start="4" end="4" startBytecode="0" endBytecode="49" sourcefile="That.java" sourcepath="prototype/That.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE" priority="2" rank="16" abbrev="CN" category="BAD_PRACTICE">
+    <Class classname="prototype.TheOther">
+      <SourceLine classname="prototype.TheOther" start="3" end="6" sourcefile="TheOther.java" sourcepath="prototype/TheOther.java"/>
+    </Class>
+    <Method classname="prototype.TheOther" name="clone" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="prototype.TheOther" start="4" end="4" startBytecode="0" endBytecode="49" sourcefile="TheOther.java" sourcepath="prototype/TheOther.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE" priority="2" rank="16" abbrev="CN" category="BAD_PRACTICE">
+    <Class classname="prototype.This">
+      <SourceLine classname="prototype.This" start="4" end="7" sourcefile="This.java" sourcepath="prototype/This.java"/>
+    </Class>
+    <Method classname="prototype.This" name="clone" signature="()Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="prototype.This" start="5" end="5" startBytecode="0" endBytecode="49" sourcefile="This.java" sourcepath="prototype/This.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE">
+    <Class classname="proxy.ProxyExample">
+      <SourceLine classname="proxy.ProxyExample" start="4" end="14" sourcefile="ProxyExample.java" sourcepath="proxy/ProxyExample.java"/>
+    </Class>
+    <Method classname="proxy.ProxyExample" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="proxy.ProxyExample" start="6" end="14" startBytecode="0" endBytecode="21" sourcefile="ProxyExample.java" sourcepath="proxy/ProxyExample.java"/>
+    </Method>
+    <LocalVariable name="image3" register="3" pc="30" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="proxy.ProxyExample" start="8" end="8" startBytecode="29" endBytecode="29" sourcefile="ProxyExample.java" sourcepath="proxy/ProxyExample.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="image3"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="FCCD_FIND_CLASS_CIRCULAR_DEPENDENCY" priority="2" rank="9" abbrev="FCCD" category="CORRECTNESS">
+    <Class classname="state.A">
+      <SourceLine classname="state.A" start="3" end="9" sourcefile="A.java" sourcepath="state/A.java"/>
+    </Class>
+    <Class classname="state.FSM">
+      <SourceLine classname="state.FSM" start="3" end="9" sourcefile="FSM.java" sourcepath="state/FSM.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="FCCD_FIND_CLASS_CIRCULAR_DEPENDENCY" priority="2" rank="9" abbrev="FCCD" category="CORRECTNESS">
+    <Class classname="state.B">
+      <SourceLine classname="state.B" start="3" end="8" sourcefile="B.java" sourcepath="state/B.java"/>
+    </Class>
+    <Class classname="state.FSM">
+      <SourceLine classname="state.FSM" start="3" end="9" sourcefile="FSM.java" sourcepath="state/FSM.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="FCCD_FIND_CLASS_CIRCULAR_DEPENDENCY" priority="2" rank="9" abbrev="FCCD" category="CORRECTNESS">
+    <Class classname="state.C">
+      <SourceLine classname="state.C" start="3" end="7" sourcefile="C.java" sourcepath="state/C.java"/>
+    </Class>
+    <Class classname="state.FSM">
+      <SourceLine classname="state.FSM" start="3" end="9" sourcefile="FSM.java" sourcepath="state/FSM.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE">
+    <Class classname="visitor.Composite">
+      <SourceLine classname="visitor.Composite" start="6" end="22" sourcefile="Composite.java" sourcepath="visitor/Composite.java"/>
+    </Class>
+    <Method classname="visitor.Composite" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="visitor.Composite" start="6" end="6" startBytecode="0" endBytecode="83" sourcefile="Composite.java" sourcepath="visitor/Composite.java"/>
+    </Method>
+    <Field classname="visitor.Composite" name="next" signature="C" isStatic="true">
+      <SourceLine classname="visitor.Composite" sourcefile="Composite.java" sourcepath="visitor/Composite.java"/>
+    </Field>
+    <SourceLine classname="visitor.Composite" start="9" end="9" startBytecode="23" endBytecode="23" sourcefile="Composite.java" sourcepath="visitor/Composite.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 4 Jul 2016 17:00:40 -0600" total_classes="77" referenced_classes="151" total_bugs="22" total_size="766" num_packages="14" java_version="15" vm_version="15+36-Ubuntu-1" cpu_seconds="20.40" clock_seconds="4.42" peak_mbytes="244.02" alloc_mbytes="3972.00" gc_seconds="0.07" priority_2="20" priority_1="2">
+    <PackageStats package="bridge" total_bugs="6" total_types="6" total_size="66" priority_2="5" priority_1="1">
+      <ClassStats class="bridge.BridgeDemo" sourceFile="BridgeDemo.java" interface="false" size="15" bugs="3" priority_2="3"/>
+      <ClassStats class="bridge.Stack" sourceFile="Stack.java" interface="false" size="14" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="bridge.StackHanoi" sourceFile="StackHanoi.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="bridge.StackImp" sourceFile="StackImp.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="bridge.StackJava" sourceFile="StackJava.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="bridge.StackMine" sourceFile="StackMine.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="chainOfResponsibility" total_bugs="2" total_types="4" total_size="63" priority_2="2">
+      <ClassStats class="chainOfResponsibility.ChainDemo" sourceFile="ChainDemo.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="chainOfResponsibility.Component" sourceFile="Component.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="chainOfResponsibility.Composite" sourceFile="Composite.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="chainOfResponsibility.Primitive" sourceFile="Primitive.java" interface="false" size="10" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="command" total_bugs="0" total_types="9" total_size="87">
+      <ClassStats class="command.Command" sourceFile="Command.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="command.Fan" sourceFile="Fan.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="command.FanOffCommand" sourceFile="FanOffCommand.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="command.FanOnCommand" sourceFile="FanOnCommand.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="command.Light" sourceFile="Light.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="command.LightOffCommand" sourceFile="LightOffCommand.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="command.LightOnCommand" sourceFile="LightOnCommand.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="command.Switch" sourceFile="Switch.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="command.TestCommand" sourceFile="TestCommand.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="composite" total_bugs="4" total_types="4" total_size="51" priority_2="4">
+      <ClassStats class="composite.Box" sourceFile="Box.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="composite.CompositeLevels" sourceFile="CompositeLevels.java" interface="false" size="22" bugs="4" priority_2="4"/>
+      <ClassStats class="composite.Entity" sourceFile="Entity.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="composite.Product" sourceFile="Product.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="decorator" total_bugs="0" total_types="6" total_size="45">
+      <ClassStats class="decorator.BorderDecorator" sourceFile="BorderDecorator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="decorator.Decorator" sourceFile="Decorator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="decorator.DecoratorDemo" sourceFile="DecoratorDemo.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="decorator.ScrollDecorator" sourceFile="ScrollDecorator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="decorator.TextField" sourceFile="TextField.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="decorator.Widget" sourceFile="Widget.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="factory" total_bugs="0" total_types="7" total_size="39">
+      <ClassStats class="factory.Client" sourceFile="Client.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="factory.ConcreteCreatorA" sourceFile="ConcreteCreatorA.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="factory.ConcreteCreatorB" sourceFile="ConcreteCreatorB.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="factory.ConcreteProductA" sourceFile="ConcreteProductA.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="factory.ConcreteProductB" sourceFile="ConcreteProductB.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="factory.Creator" sourceFile="Creator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="factory.Product" sourceFile="Product.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="observer" total_bugs="2" total_types="7" total_size="56" priority_2="2">
+      <ClassStats class="observer.AlarmListener" sourceFile="AlarmListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="observer.CheckList" sourceFile="CheckList.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="observer.ClassVersusInterface" sourceFile="ClassVersusInterface.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="observer.Gates" sourceFile="Gates.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="observer.Lighting" sourceFile="Lighting.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="observer.SensorSystem" sourceFile="SensorSystem.java" interface="false" size="13" bugs="2" priority_2="2"/>
+      <ClassStats class="observer.Surveillance" sourceFile="Surveillance.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="prototype" total_bugs="3" total_types="7" total_size="66" priority_2="3">
+      <ClassStats class="prototype.Command" sourceFile="Command.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="prototype.Prototype" sourceFile="Prototype.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="prototype.PrototypeDemo" sourceFile="PrototypeDemo.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="prototype.PrototypesModule" sourceFile="PrototypesModule.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="prototype.That" sourceFile="That.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="prototype.TheOther" sourceFile="TheOther.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="prototype.This" sourceFile="This.java" interface="false" size="9" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="proxy" total_bugs="1" total_types="4" total_size="35" priority_1="1">
+      <ClassStats class="proxy.Image" sourceFile="Image.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="proxy.ProxyExample" sourceFile="ProxyExample.java" interface="false" size="11" bugs="1" priority_1="1"/>
+      <ClassStats class="proxy.ProxyImage" sourceFile="ProxyImage.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="proxy.RealImage" sourceFile="RealImage.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="singleton" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="singleton.ClassicSingleton" sourceFile="ClassicSingleton.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="state" total_bugs="3" total_types="6" total_size="63" priority_2="3">
+      <ClassStats class="state.A" sourceFile="A.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="state.B" sourceFile="B.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="state.C" sourceFile="C.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="state.FSM" sourceFile="FSM.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="state.State" sourceFile="State.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="state.StateDemo2" sourceFile="StateDemo2.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="strategy" total_bugs="0" total_types="6" total_size="65">
+      <ClassStats class="strategy.Impl1" sourceFile="Impl1.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="strategy.Impl2" sourceFile="Impl2.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="strategy.Strategy" sourceFile="Strategy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="strategy.StrategyDemo" sourceFile="StrategyDemo.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="strategy.TemplateMethod1" sourceFile="TemplateMethod1.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="strategy.TemplateMethod2" sourceFile="TemplateMethod2.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="template" total_bugs="0" total_types="4" total_size="46">
+      <ClassStats class="template.Generalization" sourceFile="Generalization.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="template.Realization" sourceFile="Realization.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="template.Specialization" sourceFile="Specialization.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="template.TemplateMethodDemo" sourceFile="TemplateMethodDemo.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="visitor" total_bugs="1" total_types="6" total_size="73" priority_2="1">
+      <ClassStats class="visitor.CollectVisitor" sourceFile="CollectVisitor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="visitor.Component" sourceFile="Component.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="visitor.Composite" sourceFile="Composite.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="visitor.Leaf" sourceFile="Leaf.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="visitor.Visitor" sourceFile="Visitor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="visitor.VisitorComposite3" sourceFile="VisitorComposite3.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="564" invocations="731" avgMicrosecondsPerInvocation="771" maxMicrosecondsPerInvocation="20506" standardDeviationMicrosecondsPerInvocation="1852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="157" invocations="151" avgMicrosecondsPerInvocation="1044" maxMicrosecondsPerInvocation="19578" standardDeviationMicrosecondsPerInvocation="2677"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectStatistics" totalMilliseconds="146" invocations="151" avgMicrosecondsPerInvocation="971" maxMicrosecondsPerInvocation="25164" standardDeviationMicrosecondsPerInvocation="2788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="125" invocations="754" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="6381" standardDeviationMicrosecondsPerInvocation="304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="111" invocations="151" avgMicrosecondsPerInvocation="738" maxMicrosecondsPerInvocation="12275" standardDeviationMicrosecondsPerInvocation="1847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="99" invocations="449" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="3123" standardDeviationMicrosecondsPerInvocation="377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="92" invocations="300" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="14553" standardDeviationMicrosecondsPerInvocation="1110"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectNullableMethodStatus" totalMilliseconds="78" invocations="151" avgMicrosecondsPerInvocation="519" maxMicrosecondsPerInvocation="13540" standardDeviationMicrosecondsPerInvocation="1789"/>
+      <ClassProfile name="com.h3xstream.findsecbugs.taintanalysis.TaintDataflowEngine" totalMilliseconds="69" invocations="196" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="6237" standardDeviationMicrosecondsPerInvocation="634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="63" invocations="690" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="2170" standardDeviationMicrosecondsPerInvocation="179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="62" invocations="151" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="7879" standardDeviationMicrosecondsPerInvocation="1028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="60" invocations="196" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="6214" standardDeviationMicrosecondsPerInvocation="539"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="59" invocations="228" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="9344" standardDeviationMicrosecondsPerInvocation="630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="57" invocations="201" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="9070" standardDeviationMicrosecondsPerInvocation="702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="49" invocations="151" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="13839" standardDeviationMicrosecondsPerInvocation="1276"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="49" invocations="196" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="2801" standardDeviationMicrosecondsPerInvocation="377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="45" invocations="196" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="7555" standardDeviationMicrosecondsPerInvocation="580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="45" invocations="77" avgMicrosecondsPerInvocation="586" maxMicrosecondsPerInvocation="29088" standardDeviationMicrosecondsPerInvocation="3281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="44" invocations="196" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="1238" standardDeviationMicrosecondsPerInvocation="239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="43" invocations="228" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="24897" standardDeviationMicrosecondsPerInvocation="1641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="40" invocations="28943" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="58" standardDeviationMicrosecondsPerInvocation="1"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="151" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="5874" standardDeviationMicrosecondsPerInvocation="719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="35" invocations="151" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="3991" standardDeviationMicrosecondsPerInvocation="582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="31" invocations="151" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="4783" standardDeviationMicrosecondsPerInvocation="643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="31" invocations="177" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="2380" standardDeviationMicrosecondsPerInvocation="263"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectMethodsReturningImmutableCollections" totalMilliseconds="27" invocations="151" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="6447" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="26" invocations="151" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="7654" standardDeviationMicrosecondsPerInvocation="707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="24" invocations="151" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="3496" standardDeviationMicrosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="22" invocations="77" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="7040" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="21" invocations="196" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="13500" standardDeviationMicrosecondsPerInvocation="961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="19" invocations="196" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="1428" standardDeviationMicrosecondsPerInvocation="184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="19" invocations="151" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="2766" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="17" invocations="77" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="3618" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="77" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="2359" standardDeviationMicrosecondsPerInvocation="331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="77" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="2734" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="16" invocations="151" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="8596" standardDeviationMicrosecondsPerInvocation="803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine" totalMilliseconds="16" invocations="766" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="6217" standardDeviationMicrosecondsPerInvocation="224"/>
+      <ClassProfile name="com.h3xstream.findsecbugs.crypto.WeakMessageDigestDetector" totalMilliseconds="15" invocations="77" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="12271" standardDeviationMicrosecondsPerInvocation="1384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="14" invocations="77" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="5006" standardDeviationMicrosecondsPerInvocation="574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="14" invocations="228" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="5435" standardDeviationMicrosecondsPerInvocation="377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="12" invocations="58" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="898" standardDeviationMicrosecondsPerInvocation="235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="11" invocations="77" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="1321" standardDeviationMicrosecondsPerInvocation="185"/>
+      <ClassProfile name="edu.umd.cs.findbugs.StackMapAnalyzer$StackMapAnalysisFactory" totalMilliseconds="11" invocations="268" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="3883" standardDeviationMicrosecondsPerInvocation="235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="11" invocations="77" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="792" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="11" invocations="77" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="2395" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="11" invocations="196" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="1054" standardDeviationMicrosecondsPerInvocation="99"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="11" invocations="77" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="2241" standardDeviationMicrosecondsPerInvocation="252"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

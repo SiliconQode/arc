@@ -1,0 +1,147 @@
+#
+# The MIT License (MIT)
+#
+# MSUSEL Arc Framework
+# Copyright (c) 2015-2019 Montana State University, Gianforte School of Computing,
+# Software Engineering Laboratory and Idaho State University, Informatics and
+# Computer Science, Empirical Software Engineering Laboratory
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+
+---
+root: "Quality @Product"
+metrics:
+   - name: "Accessibility"
+     handle: "QACCESS"
+     description: "The degree of effectiveness, efficiency, safety and satisfaction when people with the wide range of capabilities use a product."
+   - name: "Accountability"
+     handle: "QACCOUNT"
+     description: "The degree to which the actions of an entity can be traced uniquely to the entity"
+   - name: "Adaptability"
+     handle: "QADAPT"
+     description: "The degree to which the product can effectively and efficiently adapted for different specified hardware, software or other operational or usage environments."
+   - name: "Analyzability"
+     handle: "QANLYZ"
+     description: "The ease with which the impact of an intended change on the rest of the product can be assessed, or the product can be diagnosed for deficiencies or causes of failures, or the parts to be modified can be identified."
+   - name: "Appropriateness Recognizability"
+     handle: "QAR"
+     description: "The degree to which the users can recognise whether the software is appropriate for their needs."
+   - name: "Authenticity"
+     handle: "QAUTH"
+     description: "The degree to which the identity of a subject or resource can be proved to be the one claimed."
+   - name: "Availability"
+     handle: "QAVAIL"
+     description: "The degree to which a system or component is operational and accessible when required for use."
+   - name: "Co-Existence"
+     handle: "QCE"
+     description: "The degree to which the product can co-exist with other independent products in a common environment sharing common resources without any detrimental impacts."
+   - name: "Compatibility"
+     handle: "QCOMP"
+     description: "The degree to which two or more systems or components can exchange information and/or perform their required functions while sharing the same hardware or software environment."
+   - name: "Confidentiality"
+     handle: "QCONF"
+     description: "The degree to which information and data are protected from unauthorized disclosure of data or information, whether accidental or deliberate."
+   - name: "Fault Tolerance"
+     handle: "QFT"
+     description: "The degree to which a system or component operates despite the&#xD;&#xA;presence of hardware or software faults."
+   - name: "Functional Appropriateness"
+     handle: "QFA"
+     description: "The degree to which the set of functions is suitable for specified tasks and user objectives."
+   - name: "Functional Completeness"
+     handle: "QFCOM"
+     description: "The degree to which the set of functions covers all the specified tasks and user objectives."
+   - name: "Functional Correctness"
+     handle: "QFCORR"
+     description: "The degree to which the product provides the correct results with the needed degree of precision."
+   - name: "Functional Stability"
+     handle: "QFS"
+     description: "The degree to which the product provides functions that meet stated and implied needs when the product is used under specified conditions."
+   - name: "Installability"
+     handle: "QINSTALL"
+     description: "The ease with which the product can be successfully installed and/or uninstalled in a specified environment."
+   - name: "Integrity"
+     handle: "QINTEG"
+     description: "The degree to which a system or component prevents unauthorized access to, or modification of, computer programs or data."
+   - name: "Interoperability"
+     handle: "QINTER"
+     description: "The degree to which two or more systems or components can exchange information and use the information that has been exchanged."
+   - name: "Learnability"
+     handle: "QL"
+     description: "The degree to which a product can be used by specific users to achieve specifed learning goals with effectiveness, efficiency, safety and satisfaction in a specifed context of use."
+   - name: "Maintainability"
+     handle: "QMAIN"
+     description: "The degree of effectiveness and efficiency with which the product can be modified."
+   - name: "Maturity"
+     handle: "QMAT"
+     description: "The degree to which a system meets needs for reliability under normal operation."
+   - name: "Modifiability"
+     handle: "QMOD"
+     description: "The degree to which a product can be effectively and efficiently modify without introducing defects or degrading performance."
+   - name: "Modularity"
+     handle: "QMDUL"
+     description: "The degree to which a system or computer program is composed of discrete components such that a change to one component has minimal impact on other components."
+   - name: "Non-Repudiation"
+     handle: "QNR"
+     description: "The degree to which actions or events can be proven to have taken place, so that the events or actions cannot be repudiated later."
+   - name: "Operability"
+     handle: "QO"
+     description: "The degree to which the product has attributes that make it easy to operate and control."
+   - name: "Performance Efficiency"
+     handle: "QPE"
+     description: "The performance relative to the amount of resources used under stated conditions."
+   - name: "Portability"
+     handle: "QP"
+     description: "The degree to which a system or component can be effectively and efficiently transferred from one hardware, software or other operational or usage environment to another."
+   - name: "Quality @Product"
+     handle: "Quality"
+     description: "The quality of the product can be described using the categories of ISO 25010."
+   - name: "Recoverability"
+     handle: "QREC"
+     description: "The degree to which the product can recover the data directly affected and re-establish the desired state of the system in the case of an interruption or a failure."
+   - name: "Reliability"
+     handle: "QREL"
+     description: "The degree to which a system or component performs specified functions under stated conditions for a specified period of time."
+   - name: "Replaceability"
+     handle: "QREP"
+     description: "The degree to which the product can be used in place of another specified software product for the same purpose in the same environment."
+   - name: "Resource Utilization"
+     handle: "QRU"
+     description: "The amounts and types of resources used when the product  performs its function under stated conditions in relation to an established benchmark."
+   - name: "Reusability"
+     handle: "QREU"
+     description: "The degree to which an asset can be used in more than one system, or in building other assets."
+   - name: "Security"
+     handle: "QS"
+     description: "The degree to which information and data are protected so that unauthorized persons or systems cannot read or modify them and authorized persons or systems are not denied access to them."
+   - name: "Testability"
+     handle: "QT"
+     description: "The ease with which test criteria can be established for a system or a component and tests can be performed to determine whether those criteria have been met."
+   - name: "Time Behavior"
+     handle: "QTB"
+     description: "The response and processing times and throughput rates when performing its function, under stated conditions in relation to an established benchmark."
+   - name: "Usability"
+     handle: "QU"
+     description: "The extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use."
+   - name: "User Error Protection"
+     handle: "QUEP"
+     description: "The degree to which the system protects users against making errors."
+   - name: "User Interface Aesthetics"
+     handle: "QUIA"
+     description: "The degree to which the user interface enables pleasing and satisfying interaction for the user."

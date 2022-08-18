@@ -1,0 +1,7 @@
+package java.lang.instrument
+
+interface ClassFileTransformer
+interface Instrumentation
+class ClassDefinition
+class IllegalClassFormatException
+class UnmodifiableClassException

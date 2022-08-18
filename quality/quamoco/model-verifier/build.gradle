@@ -1,0 +1,19 @@
+plugins {
+    id 'java-conventions'
+
+    id 'application'
+}
+
+dependencies {
+    implementation project(':quamoco')
+    implementation project(':datamodel')
+
+    // Args4J
+    implementation 'args4j:args4j:2.32'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'dev.siliconcode.arc.quality.quamoco.verifier.QMVerifyCLI'
+    applicationName = 'qmverify'
+}

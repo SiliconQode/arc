@@ -1,0 +1,36 @@
+plugins {
+    id 'java-conventions'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+dependencies {
+    // SyntaxPane for PlantUML Editor
+    implementation 'de.sciss:syntaxpane:1.1.8'
+
+    // Apache commons Exec
+    implementation 'org.apache.commons:commons-exec:1.3'
+
+    // Kordamp Icon Packs
+    implementation 'org.kordamp.ikonli:ikonli-swing:2.1.1'
+    implementation 'org.kordamp.ikonli:ikonli-foundation-pack:2.1.1'
+    implementation 'org.kordamp.ikonli:ikonli-material-pack:2.1.1'
+    implementation 'org.kordamp.ikonli:ikonli-fontawesome-pack:2.1.1'
+    implementation 'org.kordamp.ikonli:ikonli-devicons-pack:2.1.1'
+
+    // Markdown
+    implementation 'org.markdownj:markdownj-core:0.4'
+
+    // Darcula Theme
+    implementation files('libs/darcula.jar')
+}
+
+javafx {
+    version = "17"
+    modules = ['javafx.controls']
+}
+
+application {
+    mainClass = 'dev.siliconcode.arc.ui.plantuml.App'
+    applicationName = 'pumledit'
+}

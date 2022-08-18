@@ -1,0 +1,5 @@
+package javax.transaction
+
+class InvalidTransactionException
+class TransactionRequiredException
+class TransactionRolledbackException

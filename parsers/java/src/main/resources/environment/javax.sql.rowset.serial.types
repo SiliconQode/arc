@@ -1,0 +1,12 @@
+package javax.sql.rowset.serial
+
+class SerialArray
+class SerialBlob
+class SerialClob
+class SerialDatalink
+class SerialJavaObject
+class SerialRef
+class SerialStruct
+class SQLInputImpl
+class SQLOutputImpl
+class SerialException

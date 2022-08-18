@@ -1,0 +1,27 @@
+language: groovy
+install: skip
+
+os: linux
+dist: focal
+
+services:
+  - docker
+
+before_cache:
+  -rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+script:
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
+  - export JAVA_HOME=$HOME/openjdk17
+  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 17 --target $JAVA_HOME
+  - chmod +x gradlew
+  - ./gradlew assemble
+#  - cd webapp
+#  - sudo docker build -t empirilytics/webapp:1.0 .
+#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+#  - docker push empirilytics/webapp:1.0

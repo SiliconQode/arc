@@ -1,0 +1,11 @@
+package javax.rmi.CORBA
+
+interface PortableRemoteObjectDelegate
+interface StubDelegate
+interface Tie
+interface UtilDelegate
+interface ValueHandler
+interface ValueHandlerMultiFormat
+class ClassDesc
+class Stub
+class Util

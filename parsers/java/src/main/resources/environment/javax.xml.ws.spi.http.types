@@ -1,0 +1,5 @@
+package javax.xml.ws.spi.http
+
+class HttpContext
+class HttpExchange
+class HttpHandler

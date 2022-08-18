@@ -1,0 +1,22 @@
+package java.util.zip
+
+interface Checksum
+class Adler32
+class CheckedInputStream
+class CheckedOutputStream
+class CRC32
+class Deflater
+class DeflaterInputStream
+class DeflaterOutputStream
+class GZIPInputStream
+class GZIPOutputStream
+class Inflater
+class InflaterInputStream
+class InflaterOutputStream
+class ZipEntry
+class ZipFile
+class ZipInputStream
+class ZipOutputStream
+class DataFormatException
+class ZipException
+class ZipError

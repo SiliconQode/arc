@@ -1,0 +1,13 @@
+plugins {
+    id 'groovy-conventions'
+
+    id 'application'
+}
+
+dependencies {
+    implementation project(':datamodel')
+    implementation project(':quality:metrics')
+    implementation project(':patterns:rbml')
+
+    implementation "com.google.code.findbugs:jsr305:3.0.2"
+}

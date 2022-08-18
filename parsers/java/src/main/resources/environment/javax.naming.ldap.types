@@ -1,0 +1,24 @@
+package javax.naming.ldap
+
+interface Control
+interface ExtendedRequest
+interface ExtendedResponse
+interface HasControls
+interface LdapContext
+interface UnsolicitedNotification
+interface UnsolicitedNotificationListener
+class BasicControl
+class ControlFactory
+class InitialLdapContext
+class LdapName
+class ManageReferralControl
+class PagedResultsControl
+class PagedResultsResponseControl
+class Rdn
+class SortControl
+class SortKey
+class SortResponseControl
+class StartTlsRequest
+class StartTlsResponse
+class UnsolicitedNotificationEvent
+class LdapReferralException

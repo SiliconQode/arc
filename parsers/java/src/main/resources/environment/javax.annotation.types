@@ -1,0 +1,8 @@
+package javax.annotation
+
+enum Resource.AuthenticationType
+annotation Generated
+annotation PostConstruct
+annotation PreDestroy
+annotation Resource
+annotation Resources

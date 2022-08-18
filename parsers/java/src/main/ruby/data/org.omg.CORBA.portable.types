@@ -1,0 +1,22 @@
+package org.omg.CORBA.portable
+
+interface BoxedValueHelper
+interface CustomValue
+interface IDLEntity
+interface InvokeHandler
+interface ResponseHandler
+interface Streamable
+interface StreamableValue
+interface ValueBase
+interface ValueFactory
+interface ValueInputStream
+interface ValueOutputStream
+class Delegate
+class InputStream
+class ObjectImpl
+class OutputStream
+class ServantObject
+class ApplicationException
+class IndirectionException
+class RemarshalException
+class UnknownException

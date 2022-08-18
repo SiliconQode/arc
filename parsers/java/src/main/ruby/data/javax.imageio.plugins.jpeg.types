@@ -1,0 +1,6 @@
+package javax.imageio.plugins.jpeg
+
+class JPEGHuffmanTable
+class JPEGImageReadParam
+class JPEGImageWriteParam
+class JPEGQTable

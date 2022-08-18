@@ -1,0 +1,11 @@
+plugins {
+    id 'groovy-conventions'
+    id 'java-app-conventions'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}

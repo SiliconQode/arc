@@ -1,0 +1,14 @@
+package java.nio.charset
+
+class Charset
+class CharsetDecoder
+class CharsetEncoder
+class CoderResult
+class CodingErrorAction
+class StandardCharsets
+class CharacterCodingException
+class IllegalCharsetNameException
+class MalformedInputException
+class UnmappableCharacterException
+class UnsupportedCharsetException
+class CoderMalfunctionError

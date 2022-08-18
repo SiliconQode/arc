@@ -1,0 +1,20 @@
+package javax.lang.model.type
+
+interface ArrayType
+interface DeclaredType
+interface ErrorType
+interface ExecutableType
+interface IntersectionType
+interface NoType
+interface NullType
+interface PrimitiveType
+interface ReferenceType
+interface TypeMirror
+interface TypeVariable
+interface TypeVisitor
+interface UnionType
+interface WildcardType
+enum TypeKind
+class MirroredTypeException
+class MirroredTypesException
+class UnknownTypeException

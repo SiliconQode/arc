@@ -1,0 +1,18 @@
+package javax.crypto.spec
+
+class DESedeKeySpec
+class DESKeySpec
+class DHGenParameterSpec
+class DHParameterSpec
+class DHPrivateKeySpec
+class DHPublicKeySpec
+class GCMParameterSpec
+class IvParameterSpec
+class OAEPParameterSpec
+class PBEKeySpec
+class PBEParameterSpec
+class PSource
+class PSource.PSpecified
+class RC2ParameterSpec
+class RC5ParameterSpec
+class SecretKeySpec

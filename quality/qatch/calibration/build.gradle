@@ -1,0 +1,16 @@
+plugins {
+    id 'java-conventions'
+}
+
+group = 'dev.siliconcode.qatch.calibration'
+version = '2.0.0'
+
+dependencies {
+    implementation project(":quality:qatch:core")
+    implementation project(":quality:qatch:analyzers")
+    implementation 'org.moeaframework:moeaframework:2.13'
+}
+
+javadoc {
+    destinationDir = new File(project.rootDir.toString() + "/docs/quality/qatch/calibration/javadoc")
+}

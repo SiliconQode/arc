@@ -1,0 +1,8 @@
+package java.nio.channels.spi
+
+class AbstractInterruptibleChannel
+class AbstractSelectableChannel
+class AbstractSelectionKey
+class AbstractSelector
+class AsynchronousChannelProvider
+class SelectorProvider

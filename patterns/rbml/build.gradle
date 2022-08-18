@@ -1,0 +1,9 @@
+plugins {
+    id 'groovy-conventions'
+
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':datamodel')
+}

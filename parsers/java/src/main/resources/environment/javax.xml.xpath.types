@@ -1,0 +1,13 @@
+package javax.xml.xpath
+
+interface XPath
+interface XPathExpression
+interface XPathFunction
+interface XPathFunctionResolver
+interface XPathVariableResolver
+class XPathConstants
+class XPathFactory
+class XPathException
+class XPathExpressionException
+class XPathFactoryConfigurationException
+class XPathFunctionException

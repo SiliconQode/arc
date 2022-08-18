@@ -1,0 +1,5 @@
+package java.awt.im.spi
+
+interface InputMethod
+interface InputMethodContext
+interface InputMethodDescriptor

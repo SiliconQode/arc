@@ -1,0 +1,6 @@
+package java.awt.im
+
+interface InputMethodRequests
+class InputContext
+class InputMethodHighlight
+class InputSubset

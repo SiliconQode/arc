@@ -1,0 +1,39 @@
+workflow experiment
+  phase one
+    tool PATTERN_GEN
+    foreach row do
+      map projKey to row.Key1
+      set_project projKey
+      tool artifactIdent
+      tool parser
+      tool build
+      tool dirIdent
+    endfor
+    sourceInject
+    foreach row do
+      map projKey to row.Key2
+      set_project projKey
+      tool artifactIdent
+      tool parser
+      tool build
+      tool dirIdent
+    end for
+  end phase
+  phase two
+    foreach row do
+      map projKey to row.Key1
+      set_project projKey
+      tool metrics
+      tool sigMain
+      tool sigRating
+      tool sigTD
+      
+      map projKey to results.Key2
+      set_project projKey
+      tool metrics
+      tool sigMain
+      tool sigRating
+      tool sigTD
+    end for
+  end phase
+end workflow

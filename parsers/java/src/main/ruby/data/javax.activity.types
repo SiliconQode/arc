@@ -1,0 +1,5 @@
+package javax.activity
+
+class ActivityCompletedException
+class ActivityRequiredException
+class InvalidActivityException

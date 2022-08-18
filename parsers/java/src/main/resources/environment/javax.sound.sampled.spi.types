@@ -1,0 +1,6 @@
+package javax.sound.sampled.spi
+
+class AudioFileReader
+class AudioFileWriter
+class FormatConversionProvider
+class MixerProvider

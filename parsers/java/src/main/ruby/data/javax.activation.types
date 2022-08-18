@@ -1,0 +1,19 @@
+package javax.activation
+
+interface CommandObject
+interface DataContentHandler
+interface DataContentHandlerFactory
+interface DataSource
+class ActivationDataFlavor
+class CommandInfo
+class CommandMap
+class DataHandler
+class FileDataSource
+class FileTypeMap
+class MailcapCommandMap
+class MimeType
+class MimeTypeParameterList
+class MimetypesFileTypeMap
+class URLDataSource
+class MimeTypeParseException
+class UnsupportedDataTypeException

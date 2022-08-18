@@ -1,0 +1,13 @@
+package javax.imageio.spi
+
+interface RegisterableService
+interface ServiceRegistry.Filter
+class IIORegistry
+class IIOServiceProvider
+class ImageInputStreamSpi
+class ImageOutputStreamSpi
+class ImageReaderSpi
+class ImageReaderWriterSpi
+class ImageTranscoderSpi
+class ImageWriterSpi
+class ServiceRegistry

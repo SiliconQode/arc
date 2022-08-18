@@ -1,0 +1,133 @@
+start_pattern: adjacencyList
+start_type: Context
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    start_field: currentState
+    private [[State.root]] [[currentState.name]];
+    end_field: currentState
+
+    [[fields]]
+
+    public [[InstName]]() {
+    	[[currentState.name]] = [[ConcreteState.random]].instance(this);
+    }
+
+    public void changeCurrentState([[State.root]] state) {
+        this.[[currentState.name]] = state;
+    }
+
+    start_method: Request
+    public void [[name]]() {
+        [[currentState.name]].[[Handle.name]]();
+    }
+    end_method: Request
+    [[methods]]
+}
+end_type: Context
+
+start_type: ConcreteState
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    private static [[name]] instance;
+    private [[Context.name]] context;
+    [[fields]]
+
+    private [[name]]([[Context.name]] ctx) {
+        this.context = ctx;
+    }
+
+    public static [[InstName]] instance([[Context.name]] ctx) {
+        if (instance == null) {
+            instance = new [[InstName]](ctx);
+        }
+        return instance;
+    }
+
+    public void run() {}
+
+    start_method: Handle
+    /**
+     *
+     */
+    @Override
+    public void [[name]]() {
+        context.changeCurrentState([[ConcreteState.random]].instance(context));
+    }
+    end_method: Handle
+
+    [[methods]]
+}
+end_type: ConcreteState
+
+# start_type: State
+# /**
+# [[ClassComment]]
+#  */
+# [[typedef]] {
+#
+#     [[fields]]
+#
+#     public abstract void run();
+#
+#     [[methods]]
+# }
+# end_type: State
+end_pattern: adjacencyList
+
+# cue: adjacencyMatrix
+# [[begin: Context]]
+# [[copyright]]
+# 
+# [[package]]
+# 
+# [[imports]]
+# 
+# [[classComment]]
+# public class [InstName] {
+# 
+#     private int[][] transitions;
+#     [[begin: currentState]]private int currentState = 0;[[end: currentState]]
+#     [[fields]]
+# 
+#     public [[InstName]]() {
+#         transitions = new int[[[ConcreteState.count]]][[[ConcreteState.count]]];
+#     }
+# 
+#     public void changeCurrentState(int next) {
+#         currentState = transitions[currentState][next];
+#         state[currentState].run();
+#     }
+# 
+#     [[methods]]
+# }
+# [[end: Context]]a
+# 
+# [[begin: ConcreteState]]
+# [[copyright]]
+# 
+# [[package]]
+# 
+# [[imports]]
+# 
+# [[classComment]]
+# public class [InstName] {
+# 
+#     [[fields]]
+# 
+#     public run() {}
+# 
+#     [[begin: Handle()]]
+#     public void [[name]]() {
+# 
+#     }
+#     [[end: Handle()]]
+# 
+#     [[methods]]
+# }
+# [[end: ConcreteState]]

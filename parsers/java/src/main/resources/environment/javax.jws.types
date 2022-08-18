@@ -1,0 +1,9 @@
+package javax.jws
+
+enum WebParam.Mode
+annotation HandlerChain
+annotation Oneway
+annotation WebMethod
+annotation WebParam
+annotation WebResult
+annotation WebService

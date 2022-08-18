@@ -1,0 +1,17 @@
+package java.lang.invoke
+
+interface MethodHandleInfo
+class CallSite
+class ConstantCallSite
+class LambdaMetafactory
+class MethodHandle
+class MethodHandleProxies
+class MethodHandles
+class MethodHandles.Lookup
+class MethodType
+class MutableCallSite
+class SerializedLambda
+class SwitchPoint
+class VolatileCallSite
+class LambdaConversionException
+class WrongMethodTypeException

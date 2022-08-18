@@ -1,0 +1,4 @@
+package org.omg.CORBA.ORBPackage
+
+class InconsistentTypeCode
+class InvalidName

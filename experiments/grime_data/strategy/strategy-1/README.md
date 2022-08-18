@@ -1,0 +1,1 @@
+# Pattern strategy 1

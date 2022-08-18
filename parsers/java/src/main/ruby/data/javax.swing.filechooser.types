@@ -1,0 +1,6 @@
+package javax.swing.filechooser
+
+class FileFilter
+class FileNameExtensionFilter
+class FileSystemView
+class FileView

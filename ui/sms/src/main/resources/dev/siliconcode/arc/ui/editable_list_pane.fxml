@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import jiconfont.javafx.IconNode?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" text="Label" />
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <FlowPane columnHalignment="CENTER" hgap="5.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="50.0" rowValignment="TOP" vgap="5.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="2.0" right="2.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <IconNode strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <IconNode strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <IconNode strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <IconNode strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <IconNode strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </graphic>
+            </Button>
+         </children></FlowPane>
+   </right>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <ListView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="540.0" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

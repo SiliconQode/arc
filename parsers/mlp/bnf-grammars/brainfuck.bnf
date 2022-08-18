@@ -1,0 +1,4 @@
+<prog> ::= "" | <command> <prog>
+<command> ::= <loop> | <simpleCommand>
+<loop> ::= "[" <prog> "]"
+<simpleCommand> ::= ">" | "<" | "." | "," | "-" | "+"

@@ -1,0 +1,20 @@
+data {
+    driver = 'org.sqlite.JDBC'
+    url = 'jdbc:sqlite:data/test.db'
+    user = 'dev1'
+    pass = 'passwd'
+}
+
+where {
+    systemKey = "testsys"
+    projectKey = "testsys:testproj"
+    patternKey = "gof:visitor"
+    patternInst = "testsys:testproj:visitor-01"
+}
+
+what {
+    type = 'grime'
+    form = 'TIG'
+    max  = 5
+    min  = 3
+}

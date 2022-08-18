@@ -1,0 +1,5 @@
+package javax.xml.transform.dom
+
+interface DOMLocator
+class DOMResult
+class DOMSource

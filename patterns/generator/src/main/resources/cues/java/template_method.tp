@@ -1,0 +1,18 @@
+start_pattern: basic
+start_type: Template
+/**
+[[ClassComment]]
+ */
+[[typedef]] {
+
+    [[fields]]
+
+    [[methods]]
+    start_method: Operation
+    public void [[name]]() {
+        [[callsAll.PrimitiveOp]]
+    }
+    end_method: Operation
+}
+end_type: Template
+end_pattern: basic

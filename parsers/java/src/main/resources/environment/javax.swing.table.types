@@ -1,0 +1,16 @@
+package javax.swing.table
+
+interface TableCellEditor
+interface TableCellRenderer
+interface TableColumnModel
+interface TableModel
+class AbstractTableModel
+class DefaultTableCellRenderer
+class DefaultTableCellRenderer.UIResource
+class DefaultTableColumnModel
+class DefaultTableModel
+class JTableHeader
+class TableColumn
+class TableRowSorter
+interface TableModel
+class TableStringConverter

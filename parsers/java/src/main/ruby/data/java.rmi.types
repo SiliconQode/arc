@@ -1,0 +1,22 @@
+package java.rmi
+
+interface Remote
+class MarshalledObject
+class Naming
+class RMISecurityManager
+class AccessException
+class AlreadyBoundException
+class ConnectException
+class ConnectIOException
+class MarshalException
+class NoSuchObjectException
+class NotBoundException
+class RemoteException
+class RMISecurityException
+class ServerError
+class ServerException
+class ServerRuntimeException
+class StubNotFoundException
+class UnexpectedException
+class UnknownHostException
+class UnmarshalException

@@ -1,0 +1,12 @@
+package javax.security.auth.callback
+
+interface Callback
+interface CallbackHandler
+class ChoiceCallback
+class ConfirmationCallback
+class LanguageCallback
+class NameCallback
+class PasswordCallback
+class TextInputCallback
+class TextOutputCallback
+class UnsupportedCallbackException

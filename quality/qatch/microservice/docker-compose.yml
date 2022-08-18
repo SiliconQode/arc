@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  qserive:
+    image: empirilytics/qservice:latest
+    command: /qservice -p 8000
+    network_mode: host
+    privileged: True
+    restart: always
+
+  db:
+    image: mysql:latest
+    network_mode: host

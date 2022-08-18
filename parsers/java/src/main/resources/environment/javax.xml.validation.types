@@ -1,0 +1,9 @@
+package javax.xml.validation
+
+class Schema
+class SchemaFactory
+class SchemaFactoryLoader
+class TypeInfoProvider
+class Validator
+class ValidatorHandler
+class SchemaFactoryConfigurationError

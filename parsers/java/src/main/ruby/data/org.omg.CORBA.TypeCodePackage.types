@@ -1,0 +1,4 @@
+package org.omg.CORBA.TypeCodePackage
+
+class BadKind
+class Bounds

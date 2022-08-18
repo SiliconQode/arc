@@ -1,0 +1,20 @@
+package javax.xml.crypto.dsig
+
+interface CanonicalizationMethod
+interface DigestMethod
+interface Manifest
+interface Reference
+interface SignatureMethod
+interface SignatureProperties
+interface SignatureProperty
+interface SignedInfo
+interface Transform
+interface XMLObject
+interface XMLSignature
+interface XMLSignature.SignatureValue
+interface XMLSignContext
+interface XMLValidateContext
+class TransformService
+class XMLSignatureFactory
+class TransformException
+class XMLSignatureException

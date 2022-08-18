@@ -1,0 +1,19 @@
+package org.xml.sax
+
+interface AttributeList
+interface Attributes
+interface ContentHandler
+interface DocumentHandler
+interface DTDHandler
+interface EntityResolver
+interface ErrorHandler
+interface Locator
+interface Parser
+interface XMLFilter
+interface XMLReader
+class HandlerBase
+class InputSource
+class SAXException
+class SAXNotRecognizedException
+class SAXNotSupportedException
+class SAXParseException

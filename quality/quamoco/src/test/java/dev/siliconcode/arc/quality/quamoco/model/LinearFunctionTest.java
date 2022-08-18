@@ -1,0 +1,84 @@
+/**
+ * The MIT License (MIT)
+ *
+ * Empirilytics Quamoco Implementation
+ * Copyright (c) 2015-2021 Empirilytics
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+package dev.siliconcode.arc.quality.quamoco.model;
+
+import dev.siliconcode.arc.quality.quamoco.io.factories.FunctionType;
+import dev.siliconcode.arc.quality.quamoco.model.func.LinearFunction;
+import dev.siliconcode.arc.quality.quamoco.model.func.LinearIncreasingFunction;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+/**
+ * @author Isaac Griffith
+ * @version 1.3.0
+ */
+public class LinearFunctionTest {
+
+    LinearFunction element;
+
+    @Before
+    public void setUp() throws Exception {
+        element = LinearIncreasingFunction.builder()
+                .identifier("ID")
+                .upperBound(1.0)
+                .lowerBound(0.0)
+                .create();
+    }
+
+    @Test
+    public void getLowerBound() {
+        assertEquals(0.0, element.getLowerBound(), 0.001);
+    }
+
+    @Test
+    public void setLowerBound() {
+        element.setLowerBound(1.0);
+        assertEquals(1.0, element.getLowerBound(), 0.001);
+    }
+
+    @Test
+    public void getUpperBound() {
+        assertEquals(1.0, element.getUpperBound(), 0.001);
+    }
+
+    @Test
+    public void setUpperBound() {
+        element.setUpperBound(0.0);
+        assertEquals(0.0, element.getUpperBound(), 0.001);
+    }
+
+    @Test
+    public void generateXMLTag() {
+        String tag = element.generateXMLTag(FunctionType.LINEAR_INCREASING.type());
+        String value = "<function xmi:id=\"ID\" xsi:type=\"qm:LinearIncreasingFunction\" lowerBound=\"0.000000\" upperBound=\"1.000000\" />\n";
+        assertEquals(value, tag);
+
+        tag = element.generateXMLTag(FunctionType.LINEAR_DECREASING.type());
+        value = "<function xmi:id=\"ID\" xsi:type=\"qm:LinearDecreasingFunction\" lowerBound=\"0.000000\" upperBound=\"1.000000\" />\n";
+        assertEquals(value, tag);
+    }
+}

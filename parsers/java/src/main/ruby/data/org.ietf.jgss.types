@@ -1,0 +1,10 @@
+package org.ietf.jgss
+
+interface GSSContext
+interface GSSCredential
+interface GSSName
+class ChannelBinding
+class GSSManager
+class MessageProp
+class Oid
+class GSSException

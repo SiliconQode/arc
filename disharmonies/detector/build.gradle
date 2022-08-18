@@ -1,0 +1,11 @@
+plugins {
+    id 'groovy-conventions'
+
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':datamodel')
+    implementation project(':quality:metrics')
+    implementation project(':patterns:rbml')
+}

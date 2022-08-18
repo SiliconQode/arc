@@ -1,0 +1,48 @@
+plugins {
+  id 'java-conventions'
+  id 'groovy'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  //===================================================
+  //
+  // Groovy Dependencies
+  //
+  //===================================================
+
+  // Use the latest Groovy version for building this library
+  implementation 'org.apache.groovy:groovy-all:4.0.3'
+
+  // Use the latest Groovy SQL version
+  implementation 'org.apache.groovy:groovy-sql:4.0.3'
+
+  // Use the latest Groovy YAML version
+  implementation 'org.apache.groovy:groovy-yaml:3.0.11'
+
+  // GPars for Groovy Parallelization
+  implementation 'org.codehaus.gpars:gpars:1.2.1'
+
+  //===================================================
+  //
+  // Testing Dependencies
+  //
+  //===================================================
+
+  // Use the awesome Spock testing and specification framework even with Java
+  testImplementation 'org.spockframework:spock-core:2.2-M1-groovy-4.0'
+}
+
+groovydoc {
+    source = sourceSets.main.allGroovy
+}
+
+sourceSets {
+    main {
+        java { srcDirs = [] }
+        groovy { srcDirs = ['src/main/groovy', 'src/main/java'] }
+    }
+}

@@ -1,0 +1,10 @@
+package org.w3c.dom.events
+
+interface DocumentEvent
+interface Event
+interface EventListener
+interface EventTarget
+interface MouseEvent
+interface MutationEvent
+interface UIEvent
+class EventException

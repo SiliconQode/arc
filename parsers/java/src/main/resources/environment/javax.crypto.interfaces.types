@@ -1,0 +1,6 @@
+package javax.crypto.interfaces
+
+interface DHKey
+interface DHPrivateKey
+interface DHPublicKey
+interface PBEKey

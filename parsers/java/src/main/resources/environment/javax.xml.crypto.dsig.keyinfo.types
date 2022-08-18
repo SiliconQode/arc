@@ -1,0 +1,10 @@
+package javax.xml.crypto.dsig.keyinfo
+
+interface KeyInfo
+interface KeyName
+interface KeyValue
+interface PGPData
+interface RetrievalMethod
+interface X509Data
+interface X509IssuerSerial
+class KeyInfoFactory

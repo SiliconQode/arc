@@ -1,0 +1,9 @@
+package javax.naming.event
+
+interface EventContext
+interface EventDirContext
+interface NamespaceChangeListener
+interface NamingListener
+interface ObjectChangeListener
+class NamingEvent
+class NamingExceptionEvent
